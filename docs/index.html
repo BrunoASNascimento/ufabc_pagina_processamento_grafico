@@ -103,7 +103,7 @@
                 </p>
 
                 <p class="code">
-                    ./test
+                    ./&#60;your_file&#62;
                 </p>
 
                 <h2>Execução</h2>
@@ -115,6 +115,19 @@
                     <img src="./assets/img/lab01/img/img-vinicius.png" alt="vinicius" />
                     <img src="./assets/img/lab01/img/img-viviane.png" alt="viviane" />
                 </div>
+
+                <h2>Análise e Conclusão</h2>
+
+                <p class="longtext">
+                    As figuras geradas são simples, porem, são importantes para compreender o funcionamento 
+                    básico de funções openGl e do fluxo de renderização. Peguemos o exemplo do Cubo, com a 
+                    funçao <b>glBegin(GL_QUADS)</b> declaramos o inicio do desenho da forma, em seguida a função 
+                    <b>glVertex3f()</b> é chamada 4 vezes para definir 4 pontos no espaço 3D, formando uma área 
+                    quadrada que é preenchida com cor pela função <b>glColor3f()</b>. Assim para formar o cubo, 
+                    esse bloco de declarações é feito 6 vezes (1 para cada lado do cubo) em que mudamos 
+                    é apenas os parametros de posição no espaço 3D.
+                    <br>Concluindo, o que temos é um padrão na programação de figuras simples que é replicavel para figuras mais complexas.
+                </p>
             </div>
         </section>
     </div>
