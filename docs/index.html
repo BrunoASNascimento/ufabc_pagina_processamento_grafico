@@ -45,9 +45,76 @@
         <section class="box-content">
             <div>
                 <h2>Lab01: OpenGL linux</h2>
-                <p>Espaço reservado para o lab01. Working in progress.</p>
-                <img src="./assets/img/lab01/bruno/01.png" alt="bruno" />
-                <img src="./assets/img/lab01/matheus/01.png" alt="matheus" />
+
+                <p>Resumo dos passos que foram executados:</p>
+
+                <h3>
+                    1) Configurar o ambiente:
+                </h3>
+
+                <ul>
+                    <li>criar novo usuario com permissão de administrador no OS</li>
+                    <li>baixar as bibliotecas openGL e outras dependencias</li>
+                    <li>baixar o arquivo modelo do experimento</li>
+                </ul>
+
+                <h3>
+                    2) Compilar e executar o programa
+                </h3>
+
+                <ul>
+                    <li>compilar o arquivo C</li>
+                    <li>executar o programa a partir do terminal com</li>
+                    <li>analisar as figuras geradas e comparar com o código do arquivo.</li>
+                    <li>printar algumas amostras.</li>
+                </ul>
+
+                <p>Para fazer todos os passos seguimos o PDF disponibilizado no Moodle. Aqui no site não vamos colocar a
+                    parte de criação de um novo usuário admin porque é um processo especifico para os computadores da
+                    universidade.</p>
+
+                <h2>Instalação</h2>
+                <p>Após acessar o usuário admin podemos começar a instalação dos programas. Para isso devemos primeiro
+                    abrir o terminal usando o comando <b>CTRL+SHIFT+T</b> e digitar os seguintes comandos em ordem:</p>
+
+                <p class="code">
+                    sudo apt-get update<br /><br />
+
+                    sudo apt-get install build-essential<br /><br />
+
+                    sudo apt upgrade<br /><br />
+
+                    sudo apt-get install g++ freeglut3-dev buildessential libx11-dev libxmu-dev libxi-dev libglu1-mesa
+                    libglu1-mesa-dev<br /><br />
+
+                    sudo apt-get install geany<br /><br />
+                </p>
+
+                <h2>Compilar</h2>
+
+                <p>Após instalar as libs podemos baixar o arquivo <b>lesson5.cpp</b> disponibilizado no Moodle e rodar o
+                    seguinte comando para compilar o programa:</p>
+                <p class="code">
+                    gcc -o &#60;your_file&#62; &#60;your_file&#62;.cpp -lglut -lGL -lGLU
+                </p>
+
+                <p>O arquivo compilado será gerado com o nome <b>test</b> que foi o que passamos no parametro <b>-o</b>
+                    rodando o seguinte comando:
+                </p>
+
+                <p class="code">
+                    ./test
+                </p>
+
+                <h2>Execução</h2>
+
+                <div class="grid-imgs">
+                    <img src="./assets/img/lab01/img/img-bruno.png" alt="bruno" />
+                    <img src="./assets/img/lab01/img/img-eduardo.png" alt="eduardo" />
+                    <img src="./assets/img/lab01/img/img-matheus.png" alt="matheus" />
+                    <img src="./assets/img/lab01/img/img-vinicius.png" alt="vinicius" />
+                    <img src="./assets/img/lab01/img/img-viviane.png" alt="viviane" />
+                </div>
             </div>
         </section>
     </div>
