@@ -218,6 +218,51 @@
         </p>
         <img src="./assets/img/lab02/img/ex1.png" alt="ex1 resultado" />
 
+        <h2>Exercício 2</h2>
+
+        <p>Para fazer o exercício 2, iniciamos de maneira bem semelhante ao exercício 1. Começamos buscando as cores com
+          o color picker e mapeando os pontos.</p>
+
+        <p>
+          O OpenGL não cria círculos automaticamente, portanto foi necessário criar um looping usando a formula do
+          círculo para gerar as figuras, fizemos isso usando o código a seguir:
+        </p>
+
+        <p class="code">
+          GLdouble PI = 3.1415926535897;<br>
+          GLint circle_points = 1000;<br>
+          glBegin(GL_LINE_LOOP);<br>
+          for (i = 0; i &lt; circle_points; i++)<br>
+          {<br>
+          &emsp;angle = 2 * PI * i / circle_points;<br>
+          &emsp;glVertex2f(cos(angle), sin(angle));<br>
+          }<br>
+          glEnd();<br>
+        </p>
+
+        <p>
+          As demais figuras foram criadas usando as primitivas básicas: <b>GL_POLYGON</b>, <b>GL_QUADS</b> e
+          <b>GL_TRIANGLES</b>
+        </p>
+
+        <p>O código completo pode ser encontrado no seguinte link: <a
+            href="https://github.com/ufabc-processamento-grafico/ufabc_pagina_processamento_grafico/blob/main/labs/lab02/5.2.cpp"
+            target="_blank">https://github.com/ufabc-processamento-grafico/ufabc_pagina_processamento_grafico/blob/main/labs/lab02/5.2.cpp</a>
+        </p>
+
+        <p>
+          Para compilar o código no Linux foi necessário agregar a flag <b>-lm</b> para linkar a <b>libm</b> que possuí
+          métodos matemáticos usados para desenhar o círculo. O comando ficou assim:
+        </p>
+
+        <p class="code">
+          gcc 5.2.cpp -lglut -lGL -lGLU -lm
+        </p>
+
+        <p>
+          Resultado:
+        </p>
+        <img src="./assets/img/lab02/img/ex2.png" alt="ex2 resultado" />
       </div>
     </section>
   </div>

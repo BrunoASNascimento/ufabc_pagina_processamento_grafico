@@ -171,4 +171,6 @@ p.longtext {
   margin-left: 35px;
 }
 
-
+b {
+  font-weight: bold;
+}
