@@ -3,12 +3,15 @@
  * <NomeCompleto>, RA <RA>, data DD/MM/AAAA
  */
 
-#define GL_SILENCE_DEPRECATION
-#include <iostream>
-#include <stdlib.h>
+#include <GL/glut.h>
 #include <math.h>
-#include <GLUT/glut.h>
-#include <unistd.h> // needed to sleep
+
+// For MAC:
+// #define GL_SILENCE_DEPRECATION
+// #include <iostream>
+// #include <stdlib.h>
+// #include <GLUT/glut.h>
+// #include <unistd.h> // needed to sleep
 
 /* ASCII code for the escape key. */
 #define ESCAPE 27
@@ -26,7 +29,9 @@ void display(void)
     /* draw white polygon (rectangle) with corners at
      * (0.25, 0.25, 0.0) and (0.75, 0.75, 0.0)
      */
-    glColor3f(1.0, 1.0, 1.0);
+
+    // circulo
+    glColor3f(.0, .0, .0);
     GLdouble PI = 3.1415926535897;
     GLint circle_points = 1000;
     glBegin(GL_LINE_LOOP);
@@ -37,6 +42,7 @@ void display(void)
     }
     glEnd();
 
+    // hexagono
     glColor3f(1.0f, 0.0f, 0.0f);
     glBegin(GL_POLYGON);
     circle_points = 6;
@@ -46,17 +52,21 @@ void display(void)
         glVertex2f(cos(angle), sin(angle));
     }
     glEnd();
-    glClearColor(0.0, 0.0, 0.0, 0.0);
-    glColor3f(0.0f, 1.1f, 0.0f);
-    glBegin(GL_POLYGON);
+    glClearColor(1.0, 1.0, 1.0, 0.0);
+
+    // quadrado
+    glColor3f(0.0f, .5f, 0.0f);
+    glBegin(GL_QUADS);
     glVertex3f(-0.63f, -0.63f, 0.0f);
     glVertex3f(0.63f, -0.63f, 0.0f);
     glVertex3f(0.63f, 0.63f, 0.0f);
     glVertex3f(-0.63f, 0.63f, 0.0f);
     glEnd();
 
-    glClearColor(0.0, 0.0, 0.0, 0.0);
-    glColor3f(0.0f, 0.5f, 1.0f);
+    glClearColor(1.0, 1.0, 1.0, 0.0);
+
+    // circulo 2
+    glColor3f(.0f, 1.0f, 1.0f);
     glBegin(GL_POLYGON);
     circle_points = 1000;
     for (i = 0; i < circle_points; i++)
@@ -64,12 +74,13 @@ void display(void)
         angle = 2 * PI * i / circle_points;
         glVertex2f(cos(angle) * 0.63, sin(angle) * 0.63);
     }
-
     glEnd();
 
-    glClearColor(0.0, 0.0, 0.0, 0.0);
-    glColor3f(1.0f, 0.0f, 1.0f);
-    glBegin(GL_POLYGON);
+    glClearColor(1.0, 1.0, 1.0, 0.0);
+    
+    // circulo 2
+    glColor3f(1.0f, 0.6f, .8f);
+    glBegin(GL_TRIANGLES);
     glVertex3f(-0.45f, -0.45f, 0.0f);
     glVertex3f(0.45f, -0.45f, 0.0f);
     glVertex3f(-0.45f, 0.45f, 0.0f);
@@ -84,7 +95,7 @@ void display(void)
 void init(void)
 {
     /* select clearing color     */
-    glClearColor(0.0, 0.0, 0.0, 0.0);
+    glClearColor(1.0, 1.0, 1.0, .0);
 
     /* initialize viewing values  */
     glMatrixMode(GL_PROJECTION);
@@ -105,7 +116,7 @@ int main(int argc, char **argv)
     glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
     glutInitWindowSize(600, 600);
     glutInitWindowPosition(0, 0);
-    glutCreateWindow("Bruno Nascimento");
+    glutCreateWindow("Equipe Átomos");
     init();
     glutDisplayFunc(display);
     glutMainLoop();
