@@ -78,6 +78,7 @@ h1 {
 
 .box-content img {
   margin: 0 auto;
+  margin-bottom: 16px;
   display: block;
 }
 
