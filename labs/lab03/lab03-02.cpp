@@ -12,6 +12,8 @@
 #include <GL/glu.h>
 #include <GL/glut.h>
 
+static GLfloat spin = 0.0;
+static bool isSpinOn = false;
 
 /**********************************************************************/
 /*                        Declara��o de fun��es                       */
@@ -24,6 +26,22 @@ void keyboard_callback(unsigned char key, int x, int y);
 void keyboard_callback_special(int key, int x, int y);
 void menu_callback(int value);
 
+void mouse(int button, int state, int x, int y) 
+{
+   switch (button) {
+      case GLUT_LEFT_BUTTON:
+         if (state == GLUT_DOWN)
+            isSpinOn = true;
+         break;
+      case GLUT_MIDDLE_BUTTON:
+      case GLUT_RIGHT_BUTTON:
+         if (state == GLUT_DOWN)
+            isSpinOn = false;
+         break;
+      default:
+         break;
+   }
+}
 
 /**********************************************************************/
 /*                                                                    */
@@ -54,7 +72,7 @@ void drawArrow() {
 int main(int argc, char **argv){
 
    /* inicia o GLUT e alguns par�metros do OpenGL */
-   init_glut("Equipe átomos", &argc, argv);
+   init_glut("Equipe Átomos", &argc, argv);
 
    /* fun��o de controlo do GLUT */
    glutMainLoop();
@@ -89,6 +107,7 @@ void init_glut(const char *nome_janela, int *argcp, char **argv){
     glutReshapeFunc(reshape_callback);
     glutSpecialFunc(keyboard_callback_special);
     glutIdleFunc(animate_callback);
+    glutMouseFunc(mouse);
 
     /* define a c�r com a qual a tela ser� apagado */
     glClearColor(0.0,0.0,0.0,0.0);
@@ -104,24 +123,12 @@ void init_glut(const char *nome_janela, int *argcp, char **argv){
  * fun��o para controlar o display (desenhar na tela em cada frame)
  */
 void display_callback(void){
-    static GLfloat angulo = 0.0f; /* por ter sido declarada como "static" dentro *
-                                   * de uma fun��o, esta vari�vel tem "mem�ria"  */
-
     /* Apaga o ecr� e reinicia a matriz */
     glClear(GL_COLOR_BUFFER_BIT);
-    // glLoadIdentity();
 
-    // /* faz variar o �ngulo entre 0 e 360 graus */
-    // angulo++;
-    // if (angulo> 360.0) angulo -= 360.0;
-
-    // /* desenha um tri�ngulo rodado de acordo com "angulo" */
-    // glRotatef(angulo, 0.0, 0.0, 1.0);
-    // glBegin(GL_TRIANGLES);
-    //     glVertex2f(-0.5, -0.289);
-    //     glVertex2f( 0.5, -0.289);
-    //     glVertex2f( 0.0,  0.577);
-    // glEnd();
+    if (isSpinOn) {
+        glRotatef(spin, 0.0, 0.0, 1.0);
+    }
 
     drawArrow();
 
@@ -168,6 +175,12 @@ void reshape_callback(int w, int h){
  * Fun��o necess�ria para a anima��o
  */
 void animate_callback(void){
+    if (isSpinOn) {
+        spin = spin + .001;
+        if (spin > 360.0)
+            spin = spin - 360.0;
+    }
+
     glutPostRedisplay(); /* Manda o redesenhar o ecr� em cada frame */
     return;
 }

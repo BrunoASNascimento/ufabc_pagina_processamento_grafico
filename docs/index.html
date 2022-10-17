@@ -1,438 +1,443 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Equipe Átomos</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
-  </head>
 
-  <body>
-    <div class="container">
-      <div class="navbar">
-        <a href="#home">Home</a>
-        <div class="dropdown">
-          <button class="dropbtn">
-            Seminário
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <a href="#tema">Tema</a>
-            <a href="#modelagem">Modelagem</a>
-          </div>
-        </div>
-        <div class="dropdown">
-          <button class="dropbtn">
-            Laboratórios
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <a href="#lab01">Lab 01</a>
-            <a href="#lab02">Lab 02</a>
-            <a href="#lab03">Lab 03</a>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Equipe Átomos</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="navbar">
+      <a href="#home">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">
+          Seminário
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#tema">Tema</a>
+          <a href="#modelagem">Modelagem</a>
         </div>
       </div>
-
-      <br />
-
-      <header id="home">
-        <h1>
-          ESZI017-17SA - FPG - 2022.3<br />Fundamentos de Processamento Gráfico
-        </h1>
-        <h2>Turma A1 - noturno</h2>
-      </header>
-
-      <section class="box-content">
-        <h2>Integrantes da equipe</h2>
-
-        <p>BRUNO ARAUJO SANTOS DO NASCIMENTO - 11201720606</p>
-        <p>LUIZ EDUARDO GRACINDO SILVA - 11201921251</p>
-        <p>MATHEUS VICTOR SOARES DE ARAUJO - 11201920270</p>
-        <p>VINICIUS SOUZA DE OLIVEIRA - 11201920654</p>
-        <p>VIVIANE COPEDE - 11201722075</p>
-      </section>
-
-      <h2>Relatórios</h2>
-
-      <section class="box-content" id="tema">
-        <div>
-          <h2>Seminário S1 - TEMA</h2>
-          <p>
-            Nossa equipe pretende representar de forma didática o funcionamento
-            de um átomo. Para a primeira entrega pensamos em representar algum
-            modelo atômico e em seguida simular algum evento como fissão, fusão
-            ou decaimento.
-          </p>
+      <div class="dropdown">
+        <button class="dropbtn">
+          Laboratórios
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#lab01">Lab 01</a>
+          <a href="#lab02">Lab 02</a>
+          <a href="#lab03">Lab 03</a>
         </div>
-      </section>
-
-      <section class="box-content" id="modelagem">
-        <div>
-          <h2>Seminário S1 - Modelagem</h2>
-          <p>
-            Nossa equipe pretende representar de forma didática o funcionamento
-            de um átomo. Para a primeira entrega pensamos em representar algum
-            modelo atômico e em seguida simular algum evento como fissão, fusão
-            ou decaimento.
-          </p>
-        </div>
-      </section>
-
-      <section class="box-content" id="lab01">
-        <div>
-          <h2>Lab01: OpenGL linux</h2>
-
-          <p>Resumo dos passos que foram executados:</p>
-
-          <h3>1) Configurar o ambiente:</h3>
-
-          <ul class="topic-list">
-            <li>criar novo usuario com permissão de administrador no OS</li>
-            <li>baixar as bibliotecas openGL e outras dependencias</li>
-            <li>baixar o arquivo modelo do experimento</li>
-          </ul>
-
-          <h3>2) Compilar e executar o programa</h3>
-
-          <ul class="topic-list">
-            <li>compilar o arquivo C</li>
-            <li>executar o programa a partir do terminal com</li>
-            <li>
-              analisar as figuras geradas e comparar com o código do arquivo.
-            </li>
-            <li>printar algumas amostras.</li>
-          </ul>
-
-          <p>
-            Para fazer todos os passos seguimos o PDF disponibilizado no Moodle.
-            Aqui no site não vamos colocar a parte de criação de um novo usuário
-            admin porque é um processo especifico para os computadores da
-            universidade.
-          </p>
-
-          <h2>Instalação</h2>
-          <p>
-            Após acessar o usuário admin podemos começar a instalação dos
-            programas. Para isso devemos primeiro abrir o terminal usando o
-            comando <b>CTRL+SHIFT+T</b> e digitar os seguintes comandos em
-            ordem:
-          </p>
-
-          <p class="code">
-            sudo apt-get update<br /><br />
-
-            sudo apt-get install build-essential<br /><br />
-
-            sudo apt upgrade<br /><br />
-
-            sudo apt-get install g++ freeglut3-dev buildessential libx11-dev
-            libxmu-dev libxi-dev libglu1-mesa libglu1-mesa-dev<br /><br />
-
-            sudo apt-get install geany<br /><br />
-          </p>
-
-          <h2>Compilar</h2>
-
-          <p>
-            Após instalar as libs podemos baixar o arquivo
-            <b>lesson5.cpp</b> disponibilizado no Moodle e rodar o seguinte
-            comando para compilar o programa:
-          </p>
-          <p class="code">
-            gcc -o &#60;your_file&#62; &#60;your_file&#62;.cpp -lglut -lGL -lGLU
-          </p>
-
-          <p>
-            O arquivo compilado será gerado com o nome <b>test</b> que foi o que
-            passamos no parametro <b>-o</b>
-            rodando o seguinte comando:
-          </p>
-
-          <p class="code">./&#60;your_file&#62;</p>
-
-          <h2>Execução</h2>
-
-          <div class="grid-imgs">
-            <img src="./assets/img/lab01/img/img-bruno.png" alt="bruno" />
-            <img src="./assets/img/lab01/img/img-eduardo.png" alt="eduardo" />
-            <img src="./assets/img/lab01/img/img-matheus.png" alt="matheus" />
-            <img src="./assets/img/lab01/img/img-vinicius.png" alt="vinicius" />
-            <img src="./assets/img/lab01/img/img-viviane.png" alt="viviane" />
-          </div>
-
-          <h2>Análise e Conclusão</h2>
-
-          <p class="longtext">
-            As figuras geradas são simples, porem, são importantes para
-            compreender o funcionamento básico de funções openGl e do fluxo de
-            renderização. Peguemos o exemplo do Cubo, com a funçao
-            <b>glBegin(GL_QUADS)</b> declaramos o inicio do desenho da forma, em
-            seguida a função <b>glVertex3f()</b> é chamada 4 vezes para definir
-            4 pontos no espaço 3D, formando uma área quadrada que é preenchida
-            com cor pela função <b>glColor3f()</b>. Assim para formar o cubo,
-            esse bloco de declarações é feito 6 vezes (1 para cada lado do cubo)
-            em que mudamos é apenas os parametros de posição no espaço 3D.
-            <br />Concluindo, o que temos é um padrão na programação de figuras
-            simples que é replicavel para figuras mais complexas.
-          </p>
-        </div>
-      </section>
-
-      <section class="box-content" id="lab02">
-        <div>
-          <h2>Lab02: Introdução à Estrutura de OpenGL</h2>
-
-          <h2>Exercício 1</h2>
-
-          <p>
-            A primeira coisa que tentamos para desenhar a primeira figura foi
-            usar o comando <b>GL_POLYGON</b>, porém esse comando só funciona com
-            polígonos convexos. Portanto, foi necessário desenhar a figura como
-            combinação de tringulos e usar o comando <b>GL_TRIANGLES</b>. Para
-            obter as coordenadas de cada triângulo criamos um desenho no site
-            <a href="" target="_blank">Geograb 2D</a>
-          </p>
-
-          <p>
-            Para obter as coordenadas primeiro reproduzimos os pontos no
-            <a href="https://www.geogebra.org/m/Adc44ZZq" target="_blank"
-              >Geogebra 2D</a
-            >
-            e depois quebramos as figuras em 3 trinângulos como mostra a imagem
-            a seguir.
-          </p>
-
-          <img src="./assets/img/lab02/img/geo2d.png" alt="geogreba 2d" />
-
-          <p>
-            Para encontrar a cor, usamos a ferramenta de color picker do Chrome
-            e normalizamos a escala RGB para ficar entre 0 e 1 como exige o
-            OpenGL.
-          </p>
-          <img src="./assets/img/lab02/img/cor.png" alt="color picker chrome" />
-
-          <p>O código final ficou assim:</p>
-
-          <p class="code">
-            glBegin(GL_TRIANGLES);<br />
-            glColor3f(.89, 1.0, 1.0);<br />
-            glVertex3f(0.13, 0.73, 0.0); // p1 <br />
-            glVertex3f(0.26, 0.33, 0.0); // p2 <br />
-            glVertex3f(0.54, 0.61, 0.0); // p5 <br /><br />
-
-            glVertex3f(0.26, 0.33, 0.0); // p2 <br />
-            glVertex3f(0.95, 0.42, 0.0); // p3 <br />
-            glVertex3f(0.54, 0.61, 0.0); // p5 <br /><br />
-
-            glVertex3f(0.95, 0.42, 0.0); // p3 <br />
-            glVertex3f(0.84, 0.88, 0.0); // p4 <br />
-            glVertex3f(0.54, 0.61, 0.0); // p5 <br />
-            glEnd();
-          </p>
-
-          <p>
-            O código completo pode ser encontrado no seguinte link:
-            <a
-              href="https://github.com/ufabc-processamento-grafico/ufabc_pagina_processamento_grafico/blob/main/labs/lab02/5.1.cpp"
-              target="_blank"
-              >https://github.com/ufabc-processamento-grafico/ufabc_pagina_processamento_grafico/blob/main/labs/lab02/5.1.cpp</a
-            >
-          </p>
-
-          <p>Resultado:</p>
-          <img src="./assets/img/lab02/img/ex1.png" alt="ex1 resultado" />
-
-          <h2>Exercício 2</h2>
-
-          <p>
-            Para fazer o exercício 2, iniciamos de maneira bem semelhante ao
-            exercício 1. Começamos buscando as cores com o color picker e
-            mapeando os pontos.
-          </p>
-
-          <p>
-            O OpenGL não cria círculos automaticamente, portanto foi necessário
-            criar um looping usando a formula do círculo para gerar as figuras,
-            fizemos isso usando o código a seguir:
-          </p>
-
-          <p class="code">
-            GLdouble PI = 3.1415926535897;<br />
-            GLint circle_points = 1000;<br />
-            glBegin(GL_LINE_LOOP);<br />
-            for (i = 0; i &lt; circle_points; i++)<br />
-            {<br />
-            &emsp;angle = 2 * PI * i / circle_points;<br />
-            &emsp;glVertex2f(cos(angle), sin(angle));<br />
-            }<br />
-            glEnd();<br />
-          </p>
-
-          <p>
-            As demais figuras foram criadas usando as primitivas básicas:
-            <b>GL_POLYGON</b>, <b>GL_QUADS</b> e
-            <b>GL_TRIANGLES</b>
-          </p>
-
-          <p>
-            O código completo pode ser encontrado no seguinte link:
-            <a
-              href="https://github.com/ufabc-processamento-grafico/ufabc_pagina_processamento_grafico/blob/main/labs/lab02/5.2.cpp"
-              target="_blank"
-              >https://github.com/ufabc-processamento-grafico/ufabc_pagina_processamento_grafico/blob/main/labs/lab02/5.2.cpp</a
-            >
-          </p>
-
-          <p>
-            Para compilar o código no Linux foi necessário agregar a flag
-            <b>-lm</b> para linkar a <b>libm</b>
-            que possuí métodos matemáticos usados para desenhar o círculo. O
-            comando ficou assim:
-          </p>
-
-          <p class="code">gcc 5.2.cpp -lglut -lGL -lGLU -lm</p>
-
-          <p>Resultado:</p>
-          <img src="./assets/img/lab02/img/ex2.png" alt="ex2 resultado" />
-        </div>
-      </section>
-
-      <section class="box-content" id="lab03">
-        <div>
-          <h2>Lab03: Modelagem e Transform2D</h2>
-
-          <h3>1º. Projeto: “model.c”</h3>
-
-          <p><b>Matriz Indentidade. Por que ela foi carregada?</b></p>
-          <p>
-            Para reinicializar a matriz de transformação e garantir que não
-            vamos misturar com a anterior
-          </p>
-
-          <p>
-            <b
-              >Quais os valores dos argumentos das transformações realizadas?</b
-            >
-          </p>
-
-          <p><b>Translação: T(dx, dy)</b></p>
-          <p>(-20.0, 0.0)</p>
-
-          <p><b>Escalonamento: S(sx, sy)</b></p>
-          <p>(1.5, 0.5, 1.0)</p>
-
-          <p><b>Rotação: R(⊝)</b></p>
-          <p>(90.0, 0.0, 0.0, 1.0)</p>
-
-          <p><b>Tecla para saída da execução do programa:</b></p>
-          <p>ESC</p>
-
-          <h3>2º. Projeto: “double.c”</h3>
-          <p><b>Guarda da Matriz na Pilha. Por que isso deve ser feito?</b></p>
-          <p>
-            Para conseguir concatenar facilmente transformações de diferentes
-            matrizes e da mesma forma retirar transformações da stack antes de
-            aplicar no próximo modelo.
-          </p>
-
-          <p>
-            <b
-              >. Qual o valor do angulo de Rotação: R(⊝) em cada apresentação?</b
-            >
-          </p>
-          <p>(spin, 0.0, 0.0, 1.0)</p>
-          <p>com spin alterando em 2.0 graus a cada apresentação.</p>
-
-          <p>
-            <b
-              >Por que a animação (mudança do desenho na tela) ocorre no
-              programa?</b
-            >
-          </p>
-          <p>
-            Porque chamamos a função spinDisplay para o método glutIdleFunc que
-            fica executando em loop. Dentro da funçâo spinDisplay temos a
-            chamada do método glutPostRedisplay que repinta a tela.
-          </p>
-
-          <h3>3º. Projeto: “rotacao.c”</h3>
-          <p><b>Rotação: R(⊝)</b></p>
-          <p>(spin, 0.0, 0.0, 1.0)</p>
-          <p>com spin alterando em 1.0 graus a cada apresentação.</p>
-
-          <h3>4º. Projeto: “planet.c”</h3>
-          <p>
-            <b
-              >Quais as transformações utilizadas para os dois tipos de
-              movimento do planeta?</b
-            >
-          </p>
-          <p>
-            Para a rotação usamos glRotatef no mesmo eixo do planeta e para
-            translação usamos glRotatef e glTranslatef.
-          </p>
-
-          <p>
-            <b>Qual o valor do angulo de Rotação: R(⊝) em cada apresentação?</b>
-          </p>
-          <p>Rotação: (spin, 0.0, 1.0, 0.0)</p>
-          <p>com spin alterando em 10.0 graus a cada apresentação.</p>
-          <p>Translação: (spin, 0.0, 1.0, 0.0)</p>
-          <p>com spin alterando em 5.0 graus a cada apresentação.</p>
-
-          <h3>5º. Projeto: “robot.c”</h3>
-          <p>
-            <b>Qual a dimensão inicial de cada um dos objetos da cena?</b>
-          </p>
-          <p>Dimensão: (2.0, 0.4, 1.0)</p>
-          <p>
-            <b>Grafo:</b>
-          </p>
-          <img src="./assets/img/lab03/robot.png" alt="robot" style="width: 40%; height: 40%;" />
-
-          <h2>Exercício 2</h2>
-
-          <p>
-            A primeira coisa que fizemos foi criar uma perpectiva paralela
-            usando o comando <b>glOrtho</b> com as mesma dimensões da figura de
-            referência. Dessa forma foi possível reutilizar as mesmas posições
-            dos vértices da figura original.
-          </p>
-
-          <img src="./assets/img/lab03/ex-02-1.png" alt="figura original" />
-
-          <p>
-            O próximo passo foi desenhar a ponta esqurda da figura utilizando o
-            comando
-            <b>GL_TRIANGLE_STRIP</b>. A vantagem de usar o
-            <b>GL_TRIANGLE_STRIP</b> é que reutilizamos vértices de triângulos
-            adjacentes para criar os próximos triângulos, dessa maneira
-            economizamos memória e deixamos o programa mais performático.
-          </p>
-
-          <p>
-            Após criar o lado esquerdo da figura, separamos todo esse código em
-            uma função com nome de
-            <b>drawArrow</b> que é chamada novamente mais 3 vezes aplicando
-            rotações de 90 graus. Dessa forma, foi possível reutilizar as mesmas
-            coordenadas originais para desenhar o restante da figura. O
-            resultado final está apresentado na imagem a seguir:
-          </p>
-
-          <img src="./assets/img/lab03/ex-02-2.png" alt="resultado" />
-
-          <p>
-            O código completo pode ser encontrado no seguinte link:
-            <a
-              href="https://github.com/ufabc-processamento-grafico/ufabc_pagina_processamento_grafico/blob/main/labs/lab03/lab03-02.cpp"
-              target="_blank"
-              >https://github.com/ufabc-processamento-grafico/ufabc_pagina_processamento_grafico/blob/main/labs/lab03/lab03-02.cpp</a
-            >
-          </p>
-        </div>
-      </section>
+      </div>
     </div>
-  </body>
+
+    <br />
+
+    <header id="home">
+      <h1>
+        ESZI017-17SA - FPG - 2022.3<br />Fundamentos de Processamento Gráfico
+      </h1>
+      <h2>Turma A1 - noturno</h2>
+    </header>
+
+    <section class="box-content">
+      <h2>Integrantes da equipe</h2>
+
+      <p>BRUNO ARAUJO SANTOS DO NASCIMENTO - 11201720606</p>
+      <p>LUIZ EDUARDO GRACINDO SILVA - 11201921251</p>
+      <p>MATHEUS VICTOR SOARES DE ARAUJO - 11201920270</p>
+      <p>VINICIUS SOUZA DE OLIVEIRA - 11201920654</p>
+      <p>VIVIANE COPEDE - 11201722075</p>
+    </section>
+
+    <h2>Relatórios</h2>
+
+    <section class="box-content" id="tema">
+      <div>
+        <h2>Seminário S1 - TEMA</h2>
+        <p>
+          Nossa equipe pretende representar de forma didática o funcionamento
+          de um átomo. Para a primeira entrega pensamos em representar algum
+          modelo atômico e em seguida simular algum evento como fissão, fusão
+          ou decaimento.
+        </p>
+      </div>
+    </section>
+
+    <section class="box-content" id="modelagem">
+      <div>
+        <h2>Seminário S1 - Modelagem</h2>
+        <p>
+          Nossa equipe pretende representar de forma didática o funcionamento
+          de um átomo. Para a primeira entrega pensamos em representar algum
+          modelo atômico e em seguida simular algum evento como fissão, fusão
+          ou decaimento.
+        </p>
+      </div>
+    </section>
+
+    <section class="box-content" id="lab01">
+      <div>
+        <h2>Lab01: OpenGL linux</h2>
+
+        <p>Resumo dos passos que foram executados:</p>
+
+        <h3>1) Configurar o ambiente:</h3>
+
+        <ul class="topic-list">
+          <li>criar novo usuario com permissão de administrador no OS</li>
+          <li>baixar as bibliotecas openGL e outras dependencias</li>
+          <li>baixar o arquivo modelo do experimento</li>
+        </ul>
+
+        <h3>2) Compilar e executar o programa</h3>
+
+        <ul class="topic-list">
+          <li>compilar o arquivo C</li>
+          <li>executar o programa a partir do terminal com</li>
+          <li>
+            analisar as figuras geradas e comparar com o código do arquivo.
+          </li>
+          <li>printar algumas amostras.</li>
+        </ul>
+
+        <p>
+          Para fazer todos os passos seguimos o PDF disponibilizado no Moodle.
+          Aqui no site não vamos colocar a parte de criação de um novo usuário
+          admin porque é um processo especifico para os computadores da
+          universidade.
+        </p>
+
+        <h2>Instalação</h2>
+        <p>
+          Após acessar o usuário admin podemos começar a instalação dos
+          programas. Para isso devemos primeiro abrir o terminal usando o
+          comando <b>CTRL+SHIFT+T</b> e digitar os seguintes comandos em
+          ordem:
+        </p>
+
+        <p class="code">
+          sudo apt-get update<br /><br />
+
+          sudo apt-get install build-essential<br /><br />
+
+          sudo apt upgrade<br /><br />
+
+          sudo apt-get install g++ freeglut3-dev buildessential libx11-dev
+          libxmu-dev libxi-dev libglu1-mesa libglu1-mesa-dev<br /><br />
+
+          sudo apt-get install geany<br /><br />
+        </p>
+
+        <h2>Compilar</h2>
+
+        <p>
+          Após instalar as libs podemos baixar o arquivo
+          <b>lesson5.cpp</b> disponibilizado no Moodle e rodar o seguinte
+          comando para compilar o programa:
+        </p>
+        <p class="code">
+          gcc -o &#60;your_file&#62; &#60;your_file&#62;.cpp -lglut -lGL -lGLU
+        </p>
+
+        <p>
+          O arquivo compilado será gerado com o nome <b>test</b> que foi o que
+          passamos no parametro <b>-o</b>
+          rodando o seguinte comando:
+        </p>
+
+        <p class="code">./&#60;your_file&#62;</p>
+
+        <h2>Execução</h2>
+
+        <div class="grid-imgs">
+          <img src="./assets/img/lab01/img/img-bruno.png" alt="bruno" />
+          <img src="./assets/img/lab01/img/img-eduardo.png" alt="eduardo" />
+          <img src="./assets/img/lab01/img/img-matheus.png" alt="matheus" />
+          <img src="./assets/img/lab01/img/img-vinicius.png" alt="vinicius" />
+          <img src="./assets/img/lab01/img/img-viviane.png" alt="viviane" />
+        </div>
+
+        <h2>Análise e Conclusão</h2>
+
+        <p class="longtext">
+          As figuras geradas são simples, porem, são importantes para
+          compreender o funcionamento básico de funções openGl e do fluxo de
+          renderização. Peguemos o exemplo do Cubo, com a funçao
+          <b>glBegin(GL_QUADS)</b> declaramos o inicio do desenho da forma, em
+          seguida a função <b>glVertex3f()</b> é chamada 4 vezes para definir
+          4 pontos no espaço 3D, formando uma área quadrada que é preenchida
+          com cor pela função <b>glColor3f()</b>. Assim para formar o cubo,
+          esse bloco de declarações é feito 6 vezes (1 para cada lado do cubo)
+          em que mudamos é apenas os parametros de posição no espaço 3D.
+          <br />Concluindo, o que temos é um padrão na programação de figuras
+          simples que é replicavel para figuras mais complexas.
+        </p>
+      </div>
+    </section>
+
+    <section class="box-content" id="lab02">
+      <div>
+        <h2>Lab02: Introdução à Estrutura de OpenGL</h2>
+
+        <h2>Exercício 1</h2>
+
+        <p>
+          A primeira coisa que tentamos para desenhar a primeira figura foi
+          usar o comando <b>GL_POLYGON</b>, porém esse comando só funciona com
+          polígonos convexos. Portanto, foi necessário desenhar a figura como
+          combinação de tringulos e usar o comando <b>GL_TRIANGLES</b>. Para
+          obter as coordenadas de cada triângulo criamos um desenho no site
+          <a href="" target="_blank">Geograb 2D</a>
+        </p>
+
+        <p>
+          Para obter as coordenadas primeiro reproduzimos os pontos no
+          <a href="https://www.geogebra.org/m/Adc44ZZq" target="_blank">Geogebra 2D</a>
+          e depois quebramos as figuras em 3 trinângulos como mostra a imagem
+          a seguir.
+        </p>
+
+        <img src="./assets/img/lab02/img/geo2d.png" alt="geogreba 2d" />
+
+        <p>
+          Para encontrar a cor, usamos a ferramenta de color picker do Chrome
+          e normalizamos a escala RGB para ficar entre 0 e 1 como exige o
+          OpenGL.
+        </p>
+        <img src="./assets/img/lab02/img/cor.png" alt="color picker chrome" />
+
+        <p>O código final ficou assim:</p>
+
+        <p class="code">
+          glBegin(GL_TRIANGLES);<br />
+          glColor3f(.89, 1.0, 1.0);<br />
+          glVertex3f(0.13, 0.73, 0.0); // p1 <br />
+          glVertex3f(0.26, 0.33, 0.0); // p2 <br />
+          glVertex3f(0.54, 0.61, 0.0); // p5 <br /><br />
+
+          glVertex3f(0.26, 0.33, 0.0); // p2 <br />
+          glVertex3f(0.95, 0.42, 0.0); // p3 <br />
+          glVertex3f(0.54, 0.61, 0.0); // p5 <br /><br />
+
+          glVertex3f(0.95, 0.42, 0.0); // p3 <br />
+          glVertex3f(0.84, 0.88, 0.0); // p4 <br />
+          glVertex3f(0.54, 0.61, 0.0); // p5 <br />
+          glEnd();
+        </p>
+
+        <p>
+          O código completo pode ser encontrado no seguinte link:
+          <a href="https://github.com/ufabc-processamento-grafico/ufabc_pagina_processamento_grafico/blob/main/labs/lab02/5.1.cpp"
+            target="_blank">https://github.com/ufabc-processamento-grafico/ufabc_pagina_processamento_grafico/blob/main/labs/lab02/5.1.cpp</a>
+        </p>
+
+        <p>Resultado:</p>
+        <img src="./assets/img/lab02/img/ex1.png" alt="ex1 resultado" />
+
+        <h2>Exercício 2</h2>
+
+        <p>
+          Para fazer o exercício 2, iniciamos de maneira bem semelhante ao
+          exercício 1. Começamos buscando as cores com o color picker e
+          mapeando os pontos.
+        </p>
+
+        <p>
+          O OpenGL não cria círculos automaticamente, portanto foi necessário
+          criar um looping usando a formula do círculo para gerar as figuras,
+          fizemos isso usando o código a seguir:
+        </p>
+
+        <p class="code">
+          GLdouble PI = 3.1415926535897;<br />
+          GLint circle_points = 1000;<br />
+          glBegin(GL_LINE_LOOP);<br />
+          for (i = 0; i &lt; circle_points; i++)<br />
+          {<br />
+          &emsp;angle = 2 * PI * i / circle_points;<br />
+          &emsp;glVertex2f(cos(angle), sin(angle));<br />
+          }<br />
+          glEnd();<br />
+        </p>
+
+        <p>
+          As demais figuras foram criadas usando as primitivas básicas:
+          <b>GL_POLYGON</b>, <b>GL_QUADS</b> e
+          <b>GL_TRIANGLES</b>
+        </p>
+
+        <p>
+          O código completo pode ser encontrado no seguinte link:
+          <a href="https://github.com/ufabc-processamento-grafico/ufabc_pagina_processamento_grafico/blob/main/labs/lab02/5.2.cpp"
+            target="_blank">https://github.com/ufabc-processamento-grafico/ufabc_pagina_processamento_grafico/blob/main/labs/lab02/5.2.cpp</a>
+        </p>
+
+        <p>
+          Para compilar o código no Linux foi necessário agregar a flag
+          <b>-lm</b> para linkar a <b>libm</b>
+          que possuí métodos matemáticos usados para desenhar o círculo. O
+          comando ficou assim:
+        </p>
+
+        <p class="code">gcc 5.2.cpp -lglut -lGL -lGLU -lm</p>
+
+        <p>Resultado:</p>
+        <img src="./assets/img/lab02/img/ex2.png" alt="ex2 resultado" />
+      </div>
+    </section>
+
+    <section class="box-content" id="lab03">
+      <div>
+        <h2>Lab03: Modelagem e Transform2D</h2>
+
+        <h3>1º. Projeto: “model.c”</h3>
+
+        <p><b>Matriz Indentidade. Por que ela foi carregada?</b></p>
+        <p>
+          Para reinicializar a matriz de transformação e garantir que não
+          vamos misturar com a anterior
+        </p>
+
+        <p>
+          <b>Quais os valores dos argumentos das transformações realizadas?</b>
+        </p>
+
+        <p><b>Translação: T(dx, dy)</b></p>
+        <p>(-20.0, 0.0)</p>
+
+        <p><b>Escalonamento: S(sx, sy)</b></p>
+        <p>(1.5, 0.5, 1.0)</p>
+
+        <p><b>Rotação: R(⊝)</b></p>
+        <p>(90.0, 0.0, 0.0, 1.0)</p>
+
+        <p><b>Tecla para saída da execução do programa:</b></p>
+        <p>ESC</p>
+
+        <h3>2º. Projeto: “double.c”</h3>
+        <p><b>Guarda da Matriz na Pilha. Por que isso deve ser feito?</b></p>
+        <p>
+          Para conseguir concatenar facilmente transformações de diferentes
+          matrizes e da mesma forma retirar transformações da stack antes de
+          aplicar no próximo modelo.
+        </p>
+
+        <p>
+          <b>. Qual o valor do angulo de Rotação: R(⊝) em cada apresentação?</b>
+        </p>
+        <p>(spin, 0.0, 0.0, 1.0)</p>
+        <p>com spin alterando em 2.0 graus a cada apresentação.</p>
+
+        <p>
+          <b>Por que a animação (mudança do desenho na tela) ocorre no
+            programa?</b>
+        </p>
+        <p>
+          Porque chamamos a função spinDisplay para o método glutIdleFunc que
+          fica executando em loop. Dentro da funçâo spinDisplay temos a
+          chamada do método glutPostRedisplay que repinta a tela.
+        </p>
+
+        <h3>3º. Projeto: “rotacao.c”</h3>
+        <p><b>Rotação: R(⊝)</b></p>
+        <p>(spin, 0.0, 0.0, 1.0)</p>
+        <p>com spin alterando em 1.0 graus a cada apresentação.</p>
+
+        <h3>4º. Projeto: “planet.c”</h3>
+        <p>
+          <b>Quais as transformações utilizadas para os dois tipos de
+            movimento do planeta?</b>
+        </p>
+        <p>
+          Para a rotação usamos glRotatef no mesmo eixo do planeta e para
+          translação usamos glRotatef e glTranslatef.
+        </p>
+
+        <p>
+          <b>Qual o valor do angulo de Rotação: R(⊝) em cada apresentação?</b>
+        </p>
+        <p>Rotação: (spin, 0.0, 1.0, 0.0)</p>
+        <p>com spin alterando em 10.0 graus a cada apresentação.</p>
+        <p>Translação: (spin, 0.0, 1.0, 0.0)</p>
+        <p>com spin alterando em 5.0 graus a cada apresentação.</p>
+
+        <h3>5º. Projeto: “robot.c”</h3>
+        <p>
+          <b>Qual a dimensão inicial de cada um dos objetos da cena?</b>
+        </p>
+        <p>Dimensão: (2.0, 0.4, 1.0)</p>
+        <p>
+          <b>Grafo:</b>
+        </p>
+        <img src="./assets/img/lab03/robot.png" alt="robot" style="width: 40%; height: 40%;" />
+
+        <h2>Exercício 2</h2>
+
+        <p>
+          A primeira coisa que fizemos foi criar uma perpectiva paralela
+          usando o comando <b>glOrtho</b> com as mesma dimensões da figura de
+          referência. Dessa forma foi possível reutilizar as mesmas posições
+          dos vértices da figura original.
+        </p>
+
+        <img src="./assets/img/lab03/ex-02-1.png" alt="figura original" />
+
+        <p>
+          O próximo passo foi desenhar a ponta esqurda da figura utilizando o
+          comando
+          <b>GL_TRIANGLE_STRIP</b>. A vantagem de usar o
+          <b>GL_TRIANGLE_STRIP</b> é que reutilizamos vértices de triângulos
+          adjacentes para criar os próximos triângulos, dessa maneira
+          economizamos memória e deixamos o programa mais performático.
+        </p>
+
+        <p>
+          Após criar o lado esquerdo da figura, separamos todo esse código em
+          uma função com nome de
+          <b>drawArrow</b> que é chamada novamente mais 3 vezes aplicando
+          rotações de 90 graus. Dessa forma, foi possível reutilizar as mesmas
+          coordenadas originais para desenhar o restante da figura. O
+          resultado final está apresentado na imagem a seguir:
+        </p>
+
+        <img src="./assets/img/lab03/ex-02-2.png" alt="resultado" />
+
+        <p>O próximo passo foi adicionar as funções <b>glutMouseFunc</b> para escutar os eventos do mouse e
+          <b>glutSpecialFunc</b> para escutar os eventos do teclado. Deixamos os comandos da mesma forma uqe nos códigos
+          do lab:
+        </p>
+        <ul>
+          <li><b>Botão direito do mouse:</b> inicia a rotação</li>
+          <li><b>Botão esquerdo ou central do mouse:</b> para a rotação</li>
+          <li><b>F1:</b> Altera a cor para azul</li>
+          <li><b>F2:</b> Altera a cor para verde</li>
+          <li><b>F3:</b> Altera a cor para vermelho</li>
+        </ul>
+
+        <br>
+        <br>
+
+        <p>
+          O resultado final está apresentado no GIF a seguir:
+        </p>
+
+        <img src="./assets/img/lab03/result.gif" alt="resultado" />
+
+
+        <p>
+          O código completo pode ser encontrado no seguinte link:
+          <a href="https://github.com/ufabc-processamento-grafico/ufabc_pagina_processamento_grafico/blob/main/labs/lab03/lab03-02.cpp"
+            target="_blank">https://github.com/ufabc-processamento-grafico/ufabc_pagina_processamento_grafico/blob/main/labs/lab03/lab03-02.cpp</a>
+        </p>
+      </div>
+    </section>
+  </div>
+</body>
+
 </html>
