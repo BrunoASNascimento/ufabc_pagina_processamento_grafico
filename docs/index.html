@@ -331,7 +331,7 @@
         <h2>Lab03: Modelagem e Transform2D</h2>
 
         <h3>1º. Projeto: “model.c”</h3>
-
+        <img src="./assets/img/lab03/lab3_exemplo2-01.png" alt="model.cpp" style="width: 30%; height: 30%;" />
         <p><b>Matriz Indentidade. Por que ela foi carregada?</b></p>
         <p>
           Para reinicializar a matriz de transformação e garantir que não
@@ -355,6 +355,7 @@
         <p>ESC</p>
 
         <h3>2º. Projeto: “double.c”</h3>
+        <img src="./assets/img/lab03/lab3_exemplo2-02.gif" alt="double.cpp" style="width: 30%; height: 30%;"/>
         <p><b>Guarda da Matriz na Pilha. Por que isso deve ser feito?</b></p>
         <p>
           Para conseguir concatenar facilmente transformações de diferentes
@@ -379,11 +380,13 @@
         </p>
 
         <h3>3º. Projeto: “rotacao.c”</h3>
+        <img src="./assets/img/lab03/lab3_exemplo2-03.gif" alt="roracao.cpp" style="width: 30%; height: 30%;"/>
         <p><b>Rotação: R(⊝)</b></p>
         <p>(spin, 0.0, 0.0, 1.0)</p>
         <p>com spin alterando em 1.0 graus a cada apresentação.</p>
 
         <h3>4º. Projeto: “planet.c”</h3>
+        <img src="./assets/img/lab03/lab3_exemplo2-04.gif" alt="planet.cpp" style="width: 30%; height: 30%;" />
         <p>
           <b>Quais as transformações utilizadas para os dois tipos de
             movimento do planeta?</b>
@@ -406,6 +409,15 @@
           <b>Qual a dimensão inicial de cada um dos objetos da cena?</b>
         </p>
         <p>Dimensão: (2.0, 0.4, 1.0)</p>
+        <p>
+          <b>Qual a finalidade de cada caso de uso da pilha (push e pop) no método
+            “display”?</b>
+          <p>
+            Temos no código que glPopMatrix() e glPushMatrix() são chamados separadamente para cada objeto
+            (elbow e shouder), isso para que a transformacao de rotação ocorra de forma independente
+            alterando o estado de um objeto por vez a partir do comando no teclado.
+          </p>
+        </p>
         <p>
           <b>Grafo:</b>
         </p>
