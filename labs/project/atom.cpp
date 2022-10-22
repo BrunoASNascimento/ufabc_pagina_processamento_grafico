@@ -22,20 +22,35 @@ void init(void)
 
 void display(void)
 {
-    glClear(GL_COLOR_BUFFER_BIT);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    glEnable(GL_DEPTH_TEST);
+
+    glColor4f(1.0f, 0.0f, 0.0f, 0.0f); // Red
+    glPushMatrix();
+    glTranslatef(0.5, 0.0, 0.0);
+    glutSolidSphere(0.7, 20, 16); // nuclear
+    glColor3f(0.0f, 0.0f, 1.0f);  // Blue
+    glTranslatef(-0.5, 0.2, 0.0);
+    glutSolidSphere(0.7, 20, 16); // nuclear
+
+    glRotatef((GLfloat)year, 0.0, 1.0, 0.0); // eletron rotation around the nuclear
+    glTranslatef(3.5, 0.0, 0.0);             // eletron location
+
+    glPushMatrix(); // push eletron system
 
     glPushMatrix();
-    glColor3f(1.0, 0.37, 0.25);
-    glutSolidSphere(0.3, 20, 20); /* draw sun */
-    glClearColor(0.0, 0.0, 0.0, 0.0);
-    glColor3f(1.0, 1.0, 1.0);
-    glutWireSphere(2.0, 10, 20);
-    glRotatef((GLfloat)year, 0.0, 1.0, 0.0);
-    glTranslatef(2.0, 0.0, 0.0);
-    glRotatef((GLfloat)day, 0.0, 1.0, 0.0);
-    glClearColor(0.0, 0.0, 0.0, 0.0);
-    glColor3f(1.0, 1.0, 1.0);
-    glutWireSphere(0.2, 10, 8); /* draw smaller planet */
+
+    glRotatef((GLfloat)day, 0.0, 1.0, 0.0); // eletron spinn
+    glRotatef(90 - 23.4, 1.0, 0.0, 0.0);    // eletron axis
+    glColor4f(0.0f, 1.0f, 1.0f, 1.0f);      // light blue
+    glutSolidSphere(0.1, 10, 8);            // eletron
+    glPopMatrix();
+
+    glPushMatrix();
+    glPopMatrix();
+
+    glPopMatrix(); // pop eletron system
+
     glPopMatrix();
     glutSwapBuffers();
 }
@@ -45,7 +60,7 @@ void reshape(int w, int h)
     glViewport(0, 0, (GLsizei)w, (GLsizei)h);
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    gluPerspective(60.0, (GLfloat)w / (GLfloat)h, 1.0, 20.0);
+    gluPerspective(120.0, (GLfloat)w / (GLfloat)h, 1.0, 20.0);
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
     gluLookAt(0.0, 0.0, 5.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);
@@ -82,7 +97,7 @@ void keyboard(unsigned char key, int x, int y)
 int main(int argc, char **argv)
 {
     glutInit(&argc, argv);
-    glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
+    glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
     glutInitWindowSize(500, 500);
     glutInitWindowPosition(100, 100);
     glutCreateWindow(argv[0]);
