@@ -2,12 +2,12 @@
 #include <stdlib.h>
 #include <math.h>
 /* MAC ONLY */
-#include <GLUT/glut.h> // MAC ONLY
-#include <iostream>    // MAC ONLY
+// #include <GLUT/glut.h> // MAC ONLY
+// #include <iostream>    // MAC ONLY
 /* LINUX ONLY */
-// #include <GL/gl.h> // LINUX ONLY
-// #include <GL/glu.h> // LINUX ONLY
-// #include <GL/glut.h> // LINUX ONLY
+#include <GL/gl.h> // LINUX ONLY
+#include <GL/glu.h> // LINUX ONLY
+#include <GL/glut.h> // LINUX ONLY
 
 /* ASCII code for the escape key. */
 #define ESCAPE 27
@@ -66,6 +66,18 @@ void reshape(int w, int h)
     gluLookAt(0.0, 0.0, 5.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);
 }
 
+// Função callback chamada pela GLUT a cada intervalo de tempo
+// (a window não está sendo redimensionada ou movida)
+// source: https://www.inf.pucrs.br/~manssour/OpenGL/Animacao.html
+void Timer(int value)
+{
+    year = (year + 5) % 360;
+
+    // Redesenha o quadrado com as novas coordenadas 
+    glutPostRedisplay();
+    glutTimerFunc(33,Timer, 1);
+}
+
 void keyboard(unsigned char key, int x, int y)
 {
     switch (key)
@@ -105,6 +117,7 @@ int main(int argc, char **argv)
     glutDisplayFunc(display);
     glutReshapeFunc(reshape);
     glutKeyboardFunc(keyboard);
+    glutTimerFunc(33, Timer, 1);
     glutMainLoop();
     return 0;
 }
