@@ -33,7 +33,7 @@ void display(void)
     glTranslatef(-0.5, 0.2, 0.0);
     glutSolidSphere(0.7, 20, 16); // nuclear
 
-    glRotatef((GLfloat)year, 0.0, 1.0, 0.0); // eletron rotation around the nuclear
+    glRotatef((GLfloat)year, 0.0, 0.0, 1.0); // eletron rotation around the nuclear
     glTranslatef(3.5, 0.0, 0.0);             // eletron location
 
     glPushMatrix(); // push eletron system
