@@ -12,7 +12,7 @@
 /* ASCII code for the escape key. */
 #define ESCAPE 27
 
-static int translation = 0, rotation = 0, n = 1;
+static int current_angle = 0, rotation = 0, n = 1, angular_velocity = 50;
 
 void init(void)
 {
@@ -33,8 +33,8 @@ void display(void)
     glTranslatef(-0.5, 0.2, 0.0);
     glutSolidSphere(0.7, 20, 16); // nuclear
 
-    glRotatef((GLfloat)translation, 0.0, 0.0, 1.0); // eletron rotation around the nuclear
-    glTranslatef(1.5 * (n * n), 0.0, 0.0);             // eletron location
+    glRotatef((GLfloat)current_angle, 0.0, 0.0, 1.0); // eletron rotation around the nuclear
+    glTranslatef(1.9 * (n * n), 0.0, 0.0);             // eletron location
 
     glPushMatrix(); // push eletron system
 
@@ -71,7 +71,8 @@ void reshape(int w, int h)
 // source: https://www.inf.pucrs.br/~manssour/OpenGL/Animacao.html
 void Timer(int value)
 {
-    translation = (translation + 5) % 360;
+    
+    current_angle = (current_angle + (angular_velocity/n)) % 360;
 
     // Redesenha o quadrado com as novas coordenadas 
     glutPostRedisplay();
@@ -115,11 +116,11 @@ void keyboard(unsigned char key, int x, int y)
         glutPostRedisplay();
         break;
     case 'y':
-        translation = (translation + 5) % 360;
+        current_angle = (current_angle + 5) % 360;
         glutPostRedisplay();
         break;
     case 'Y':
-        translation = (translation - 5) % 360;
+        current_angle = (current_angle - 5) % 360;
         glutPostRedisplay();
         break;
     case 27:
