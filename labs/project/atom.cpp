@@ -12,7 +12,7 @@
 /* ASCII code for the escape key. */
 #define ESCAPE 27
 
-static int translation = 0, rotation = 0;
+static int translation = 0, rotation = 0, n = 1;
 
 void init(void)
 {
@@ -34,7 +34,7 @@ void display(void)
     glutSolidSphere(0.7, 20, 16); // nuclear
 
     glRotatef((GLfloat)translation, 0.0, 0.0, 1.0); // eletron rotation around the nuclear
-    glTranslatef(3.5, 0.0, 0.0);             // eletron location
+    glTranslatef(1.5 * (n * n), 0.0, 0.0);             // eletron location
 
     glPushMatrix(); // push eletron system
 
@@ -63,7 +63,7 @@ void reshape(int w, int h)
     gluPerspective(120.0, (GLfloat)w / (GLfloat)h, 1.0, 20.0);
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
-    gluLookAt(0.0, 0.0, 5.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);
+    gluLookAt(0.0, 0.0, 10.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);
 }
 
 // Função callback chamada pela GLUT a cada intervalo de tempo
@@ -78,10 +78,34 @@ void Timer(int value)
     glutTimerFunc(33,Timer, 1);
 }
 
+void increaseOrbital()
+{
+    if (n < 3) {
+        n = n + 1;
+    }
+}
+
+void decreaseOrbital()
+{
+    if (n > 1) {
+        n = n - 1;
+    }
+}
+
 void keyboard(unsigned char key, int x, int y)
 {
     switch (key)
     {
+    case 'w':
+    case 'W':
+        increaseOrbital();
+        glutPostRedisplay();
+        break;
+    case 's':
+    case 'S':
+        decreaseOrbital();
+        glutPostRedisplay();
+        break;
     case 'd':
         rotation = (rotation + 10) % 360;
         glutPostRedisplay();
@@ -106,6 +130,28 @@ void keyboard(unsigned char key, int x, int y)
     }
 }
 
+/*
+ * Controlo das teclas especiais (Cursores, F1 a F12, etc...)
+ */
+void keyboard_callback_special(int key, int x, int y){
+    switch (key)
+    {
+    case GLUT_KEY_UP:
+        increaseOrbital();
+        glutPostRedisplay();
+        break;
+    case GLUT_KEY_DOWN:
+        decreaseOrbital();
+        glutPostRedisplay();
+        break;
+    default:
+        break;
+    }
+
+    return;
+}
+
+
 int main(int argc, char **argv)
 {
     glutInit(&argc, argv);
@@ -117,6 +163,7 @@ int main(int argc, char **argv)
     glutDisplayFunc(display);
     glutReshapeFunc(reshape);
     glutKeyboardFunc(keyboard);
+    glutSpecialFunc(keyboard_callback_special);
     glutTimerFunc(33, Timer, 1);
     glutMainLoop();
     return 0;
