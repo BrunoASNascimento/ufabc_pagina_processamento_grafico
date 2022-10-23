@@ -1,4 +1,6 @@
 #define GL_SILENCE_DEPRECATION
+#include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 #include <math.h>
 /* MAC ONLY */
@@ -20,6 +22,18 @@ void init(void)
     glShadeModel(GL_FLAT);
 }
 
+// source: https://stackoverflow.com/a/2185753
+void printText(int x, int y, float r, float g, float b, void* font, char *string)
+{
+  glColor3f( r, g, b );
+  glRasterPos2f(x, y);
+  int len, i;
+  len = (int)strlen(string);
+  for (i = 0; i < len; i++) {
+    glutBitmapCharacter(font, string[i]);
+  }
+}
+
 void display(void)
 {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -28,10 +42,10 @@ void display(void)
     glColor4f(1.0f, 0.0f, 0.0f, 0.0f); // Red
     glPushMatrix();
     glTranslatef(0.5, 0.0, 0.0);
-    glutSolidSphere(0.7, 20, 16); // nuclear
+    glutSolidSphere(0.5, 20, 16); // nuclear
     glColor3f(0.0f, 0.0f, 1.0f);  // Blue
     glTranslatef(-0.5, 0.2, 0.0);
-    glutSolidSphere(0.7, 20, 16); // nuclear
+    glutSolidSphere(0.5, 20, 16); // nuclear
 
     glRotatef((GLfloat)current_angle, 0.0, 0.0, 1.0); // eletron rotation around the nuclear
     glTranslatef(1.9 * (n * n), 0.0, 0.0);             // eletron location
@@ -52,6 +66,15 @@ void display(void)
     glPopMatrix(); // pop eletron system
 
     glPopMatrix();
+
+    printText(-5, 15, 1, 1, 1, GLUT_BITMAP_HELVETICA_18, (char*)"MODELO DE BOHR");
+    printText(-2, 14, 1, 1, 1, GLUT_BITMAP_HELVETICA_12, (char*)"Equipe Atomos");
+
+    char energyStr[30];
+    sprintf(energyStr, "Nivel de energia(n): %d", n);
+    printText(-16, -14, 1, 1, 1, GLUT_BITMAP_HELVETICA_18, energyStr);
+    printText(-16, -16, 1, 1, 1, GLUT_BITMAP_HELVETICA_12, (char*)"W/S ou CIMA/BAIXO: Alterar nivel de energia");
+
     glutSwapBuffers();
 }
 
