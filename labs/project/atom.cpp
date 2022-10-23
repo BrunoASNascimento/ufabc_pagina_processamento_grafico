@@ -171,9 +171,9 @@ int main(int argc, char **argv)
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
     glutInitWindowSize(800, 500);
-    glutCreateWindow("MODELO DE BOHR");
     glutInitWindowPosition(100, 100);
-    glutCreateWindow(argv[0]);
+    // glutCreateWindow(argv[0]);
+    glutCreateWindow("MODELO DE BOHR");
     init();
     glutDisplayFunc(display);
     glutReshapeFunc(reshape);
