@@ -107,22 +107,6 @@ void keyboard(unsigned char key, int x, int y)
         decreaseOrbital();
         glutPostRedisplay();
         break;
-    case 'd':
-        rotation = (rotation + 10) % 360;
-        glutPostRedisplay();
-        break;
-    case 'D':
-        rotation = (rotation - 10) % 360;
-        glutPostRedisplay();
-        break;
-    case 'y':
-        current_angle = (current_angle + 5) % 360;
-        glutPostRedisplay();
-        break;
-    case 'Y':
-        current_angle = (current_angle - 5) % 360;
-        glutPostRedisplay();
-        break;
     case 27:
         exit(0);
         break;
