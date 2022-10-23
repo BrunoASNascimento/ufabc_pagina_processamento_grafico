@@ -96,7 +96,7 @@ void reshape(int w, int h)
 // source: https://www.inf.pucrs.br/~manssour/OpenGL/Animacao.html
 void Timer(int value)
 {
-    current_angle = (current_angle + (angular_velocity / n)) % 360;
+    current_angle = (current_angle + (angular_velocity / (n*n*n) )) % 360;
     if (angular_velocity % 45 > 0)
     {
         nuclear_rotation = nuclear_rotation + angular_velocity % 45;
