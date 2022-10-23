@@ -4,12 +4,12 @@
 #include <stdlib.h>
 #include <math.h>
 /* MAC ONLY */
-#include <GLUT/glut.h> // MAC ONLY
-#include <iostream>    // MAC ONLY
+// #include <GLUT/glut.h> // MAC ONLY
+// #include <iostream>    // MAC ONLY
 /* LINUX ONLY */
-//#include <GL/gl.h> // LINUX ONLY
-//#include <GL/glu.h> // LINUX ONLY
-//#include <GL/glut.h> // LINUX ONLY
+#include <GL/gl.h> // LINUX ONLY
+#include <GL/glu.h> // LINUX ONLY
+#include <GL/glut.h> // LINUX ONLY
 
 /* ASCII code for the escape key. */
 #define ESCAPE 27
@@ -44,11 +44,12 @@ void display(void)
     glPushMatrix();
     glRotatef((GLfloat)nuclear_rotation, 0.0, 0.0, 1.0);
     glTranslatef(0.5, 0.0, 0.0);
-    glutSolidSphere(0.5, 20, 16); // nuclear
+    glutSolidSphere(0.5, 20, 16); // nuclear - proton
+
     glColor3f(0.0f, 0.0f, 1.0f);  // Blue
     glRotatef((GLfloat)nuclear_rotation, 0.0, 0.0, 1.0);
     glTranslatef(-0.5, 0.2, 0.0);
-    glutSolidSphere(0.5, 20, 16); // nuclear
+    glutSolidSphere(0.5, 20, 16); // nuclear - neutron
 
     glRotatef((GLfloat)current_angle, 0.0, 0.0, 1.0); // eletron rotation around the nuclear
     glTranslatef(1.9 * (n * n), 0.0, 0.0);            // eletron location
@@ -95,9 +96,7 @@ void reshape(int w, int h)
 // source: https://www.inf.pucrs.br/~manssour/OpenGL/Animacao.html
 void Timer(int value)
 {
-
     current_angle = (current_angle + (angular_velocity / n)) % 360;
-
     if (angular_velocity % 45 > 0)
     {
         nuclear_rotation = nuclear_rotation + angular_velocity % 45;
@@ -106,7 +105,6 @@ void Timer(int value)
     {
         nuclear_rotation = nuclear_rotation * 0;
     }
-
     // Redesenha o quadrado com as novas coordenadas
     glutPostRedisplay();
     glutTimerFunc(33, Timer, 1);
