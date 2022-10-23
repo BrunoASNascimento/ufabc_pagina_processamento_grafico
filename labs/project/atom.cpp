@@ -123,12 +123,10 @@ void keyboard(unsigned char key, int x, int y)
     case 'w':
     case 'W':
         increaseOrbital();
-        glutPostRedisplay();
         break;
     case 's':
     case 'S':
         decreaseOrbital();
-        glutPostRedisplay();
         break;
     case 27:
         exit(0);
@@ -146,11 +144,9 @@ void keyboard_callback_special(int key, int x, int y){
     {
     case GLUT_KEY_UP:
         increaseOrbital();
-        glutPostRedisplay();
         break;
     case GLUT_KEY_DOWN:
         decreaseOrbital();
-        glutPostRedisplay();
         break;
     default:
         break;
