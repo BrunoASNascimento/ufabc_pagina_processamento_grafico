@@ -12,7 +12,7 @@
 /* ASCII code for the escape key. */
 #define ESCAPE 27
 
-static int year = 0, day = 0;
+static int translation = 0, rotation = 0;
 
 void init(void)
 {
@@ -33,14 +33,14 @@ void display(void)
     glTranslatef(-0.5, 0.2, 0.0);
     glutSolidSphere(0.7, 20, 16); // nuclear
 
-    glRotatef((GLfloat)year, 0.0, 0.0, 1.0); // eletron rotation around the nuclear
+    glRotatef((GLfloat)translation, 0.0, 0.0, 1.0); // eletron rotation around the nuclear
     glTranslatef(3.5, 0.0, 0.0);             // eletron location
 
     glPushMatrix(); // push eletron system
 
     glPushMatrix();
 
-    glRotatef((GLfloat)day, 0.0, 1.0, 0.0); // eletron spinn
+    glRotatef((GLfloat)rotation, 0.0, 1.0, 0.0); // eletron spinn
     glRotatef(90 - 23.4, 1.0, 0.0, 0.0);    // eletron axis
     glColor4f(0.0f, 1.0f, 1.0f, 1.0f);      // light blue
     glutSolidSphere(0.1, 10, 8);            // eletron
@@ -71,7 +71,7 @@ void reshape(int w, int h)
 // source: https://www.inf.pucrs.br/~manssour/OpenGL/Animacao.html
 void Timer(int value)
 {
-    year = (year + 5) % 360;
+    translation = (translation + 5) % 360;
 
     // Redesenha o quadrado com as novas coordenadas 
     glutPostRedisplay();
@@ -83,19 +83,19 @@ void keyboard(unsigned char key, int x, int y)
     switch (key)
     {
     case 'd':
-        day = (day + 10) % 360;
+        rotation = (rotation + 10) % 360;
         glutPostRedisplay();
         break;
     case 'D':
-        day = (day - 10) % 360;
+        rotation = (rotation - 10) % 360;
         glutPostRedisplay();
         break;
     case 'y':
-        year = (year + 5) % 360;
+        translation = (translation + 5) % 360;
         glutPostRedisplay();
         break;
     case 'Y':
-        year = (year - 5) % 360;
+        translation = (translation - 5) % 360;
         glutPostRedisplay();
         break;
     case 27:
