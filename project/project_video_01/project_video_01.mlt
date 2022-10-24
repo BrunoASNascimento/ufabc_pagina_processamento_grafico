@@ -1,18 +1,6 @@
 <?xml version="1.0" standalone="no"?>
 <mlt LC_NUMERIC="C" version="7.8.0" title="Shotcut version 22.06.23" producer="main_bin">
   <profile description="PAL 4:3 DV or DVD" width="1920" height="1080" progressive="1" sample_aspect_num="1" sample_aspect_den="1" display_aspect_num="16" display_aspect_den="9" frame_rate_num="60" frame_rate_den="1" colorspace="709"/>
-  <chain id="chain0" out="00:02:58.000">
-    <property name="length">00:02:58.017</property>
-    <property name="eof">pause</property>
-    <property name="resource">C:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/bruno.mkv</property>
-    <property name="mlt_service">avformat-novalidate</property>
-    <property name="seekable">1</property>
-    <property name="audio_index">1</property>
-    <property name="video_index">0</property>
-    <property name="mute_on_pause">0</property>
-    <property name="xml">was here</property>
-    <property name="shotcut:hash">5c79da6e8985f0f7a2bc917a168d9ac4</property>
-  </chain>
   <chain id="chain1" out="00:00:15.400">
     <property name="length">00:00:15.417</property>
     <property name="eof">pause</property>
@@ -27,7 +15,43 @@
     <property name="ignore_points">0</property>
     <property name="shotcut:caption">2022-10-23 22-15-35.mkv</property>
   </chain>
-  <chain id="chain2" out="00:01:56.300">
+  <chain id="chain0" out="00:05:22.300">
+    <property name="length">00:05:22.317</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/formulas-v1.mkv</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">4e4849b52cb41cd95cb1af4647361547</property>
+  </chain>
+  <chain id="chain2" out="00:02:13.167">
+    <property name="length">00:02:13.183</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/versao_aceitavel_vinicius.mkv</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">8be7ec4bd3ca092979abcbab308e3fcd</property>
+  </chain>
+  <chain id="chain3" out="00:02:58.000">
+    <property name="length">00:02:58.017</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/bruno.mkv</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">5c79da6e8985f0f7a2bc917a168d9ac4</property>
+  </chain>
+  <chain id="chain4" out="00:01:56.300">
     <property name="length">00:01:56.317</property>
     <property name="eof">pause</property>
     <property name="resource">C:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/Luiz Eduardo.mkv</property>
@@ -39,7 +63,7 @@
     <property name="xml">was here</property>
     <property name="shotcut:hash">e36c72c8a797bcefe802e88832fa943e</property>
   </chain>
-  <chain id="chain3" out="00:00:19.600">
+  <chain id="chain5" out="00:00:19.600">
     <property name="length">00:00:19.617</property>
     <property name="eof">pause</property>
     <property name="resource">C:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/Luiz Eduardo pt 2.mkv</property>
@@ -53,10 +77,12 @@
   </chain>
   <playlist id="main_bin">
     <property name="xml_retain">1</property>
-    <entry producer="chain0" in="00:00:00.000" out="00:02:58.000"/>
     <entry producer="chain1" in="00:00:00.000" out="00:00:15.400"/>
-    <entry producer="chain2" in="00:00:00.000" out="00:01:56.300"/>
-    <entry producer="chain3" in="00:00:00.000" out="00:00:19.600"/>
+    <entry producer="chain0" in="00:00:00.000" out="00:05:22.300"/>
+    <entry producer="chain2" in="00:00:00.000" out="00:02:13.167"/>
+    <entry producer="chain3" in="00:00:00.000" out="00:02:58.000"/>
+    <entry producer="chain4" in="00:00:00.000" out="00:01:56.300"/>
+    <entry producer="chain5" in="00:00:00.000" out="00:00:19.600"/>
   </playlist>
   <producer id="black" in="00:00:00.000" out="00:05:02.400">
     <property name="length">00:05:02.417</property>
@@ -70,7 +96,7 @@
   <playlist id="background">
     <entry producer="black" in="00:00:00.000" out="00:05:02.400"/>
   </playlist>
-  <chain id="chain4" out="00:00:15.400">
+  <chain id="chain6" out="00:00:15.400">
     <property name="length">00:00:15.417</property>
     <property name="eof">pause</property>
     <property name="resource">C:/Users/bruno/Videos/2022-10-23 22-15-35.mkv</property>
@@ -93,7 +119,7 @@
       <property name="disable">0</property>
     </filter>
   </chain>
-  <chain id="chain5" out="00:02:58.000">
+  <chain id="chain7" out="00:02:58.000">
     <property name="length">00:02:58.017</property>
     <property name="eof">pause</property>
     <property name="resource">c:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/bruno.mkv</property>
@@ -107,7 +133,7 @@
     <property name="xml">was here</property>
     <property name="shotcut:defaultAudioIndex">1</property>
   </chain>
-  <chain id="chain6" out="00:02:58.000">
+  <chain id="chain8" out="00:02:58.000">
     <property name="length">00:02:58.017</property>
     <property name="eof">pause</property>
     <property name="resource">c:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/bruno.mkv</property>
@@ -121,7 +147,7 @@
     <property name="xml">was here</property>
     <property name="shotcut:defaultAudioIndex">1</property>
   </chain>
-  <chain id="chain7" out="00:01:56.300">
+  <chain id="chain9" out="00:01:56.300">
     <property name="length">00:01:56.317</property>
     <property name="eof">pause</property>
     <property name="resource">C:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/Luiz Eduardo.mkv</property>
@@ -135,7 +161,7 @@
     <property name="shotcut:caption">Luiz Eduardo.mkv</property>
     <property name="shotcut:defaultAudioIndex">1</property>
   </chain>
-  <chain id="chain8" out="00:00:15.400">
+  <chain id="chain10" out="00:00:15.400">
     <property name="length">00:00:15.417</property>
     <property name="eof">pause</property>
     <property name="resource">C:/Users/bruno/Videos/2022-10-23 22-15-35.mkv</property>
@@ -157,7 +183,7 @@
       <property name="shotcut:animIn">00:00:00.167</property>
     </filter>
   </chain>
-  <chain id="chain9" out="00:00:15.400">
+  <chain id="chain11" out="00:00:15.400">
     <property name="length">00:00:15.417</property>
     <property name="eof">pause</property>
     <property name="resource">C:/Users/bruno/Videos/2022-10-23 22-15-35.mkv</property>
@@ -174,15 +200,15 @@
   <playlist id="playlist0">
     <property name="shotcut:video">1</property>
     <property name="shotcut:name">V1</property>
-    <entry producer="chain4" in="00:00:00.000" out="00:00:02.500"/>
-    <entry producer="chain5" in="00:00:01.067" out="00:02:38.567"/>
-    <entry producer="chain6" in="00:02:42.850" out="00:02:56.367"/>
-    <entry producer="chain7" in="00:00:01.567" out="00:01:52.717"/>
+    <entry producer="chain6" in="00:00:00.000" out="00:00:02.500"/>
+    <entry producer="chain7" in="00:00:01.067" out="00:02:38.567"/>
+    <entry producer="chain8" in="00:02:42.850" out="00:02:56.367"/>
+    <entry producer="chain9" in="00:00:01.567" out="00:01:52.717"/>
     <blank length="00:00:00.050"/>
-    <entry producer="chain8" in="00:00:00.000" out="00:00:15.400"/>
-    <entry producer="chain9" in="00:00:00.000" out="00:00:02.100"/>
+    <entry producer="chain10" in="00:00:00.000" out="00:00:15.400"/>
+    <entry producer="chain11" in="00:00:00.000" out="00:00:02.100"/>
   </playlist>
-  <chain id="chain10" out="00:02:58.000">
+  <chain id="chain12" out="00:02:58.000">
     <property name="length">00:02:58.017</property>
     <property name="eof">pause</property>
     <property name="resource">c:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/bruno.mkv</property>
@@ -202,7 +228,7 @@
       <property name="mlt_service">volume</property>
     </filter>
   </chain>
-  <chain id="chain11" out="00:02:58.000">
+  <chain id="chain13" out="00:02:58.000">
     <property name="length">00:02:58.017</property>
     <property name="eof">pause</property>
     <property name="resource">c:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/bruno.mkv</property>
@@ -222,7 +248,7 @@
       <property name="mlt_service">volume</property>
     </filter>
   </chain>
-  <chain id="chain12" out="00:01:56.300">
+  <chain id="chain14" out="00:01:56.300">
     <property name="length">00:01:56.317</property>
     <property name="eof">pause</property>
     <property name="resource">C:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/Luiz Eduardo.mkv</property>
@@ -272,7 +298,7 @@
       <property name="mlt_service">dynamic_loudness</property>
     </filter>
   </chain>
-  <chain id="chain13" out="00:00:19.600">
+  <chain id="chain15" out="00:00:19.600">
     <property name="length">00:00:19.617</property>
     <property name="eof">pause</property>
     <property name="resource">C:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/Luiz Eduardo pt 2.mkv</property>
@@ -322,7 +348,7 @@
       <property name="6">-90</property>
     </filter>
   </chain>
-  <chain id="chain14" out="00:01:56.300">
+  <chain id="chain16" out="00:01:56.300">
     <property name="length">00:01:56.317</property>
     <property name="eof">pause</property>
     <property name="resource">C:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/Luiz Eduardo.mkv</property>
@@ -348,11 +374,11 @@
     <property name="shotcut:audio">1</property>
     <property name="shotcut:name">A1</property>
     <blank length="00:00:02.517"/>
-    <entry producer="chain10" in="00:00:01.067" out="00:02:38.567"/>
-    <entry producer="chain11" in="00:02:42.850" out="00:02:56.367"/>
-    <entry producer="chain12" in="00:00:01.567" out="00:01:52.767"/>
-    <entry producer="chain13" in="00:00:03.483" out="00:00:19.600"/>
-    <entry producer="chain14" in="00:01:52.783" out="00:01:54.267"/>
+    <entry producer="chain12" in="00:00:01.067" out="00:02:38.567"/>
+    <entry producer="chain13" in="00:02:42.850" out="00:02:56.367"/>
+    <entry producer="chain14" in="00:00:01.567" out="00:01:52.767"/>
+    <entry producer="chain15" in="00:00:03.483" out="00:00:19.600"/>
+    <entry producer="chain16" in="00:01:52.783" out="00:01:54.267"/>
   </playlist>
   <tractor id="tractor0" title="Shotcut version 22.06.23" in="00:00:00.000" out="00:05:02.400">
     <property name="shotcut">1</property>
