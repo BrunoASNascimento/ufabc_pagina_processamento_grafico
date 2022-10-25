@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Equipe Átomos</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <a href="/ufabc_pagina_processamento_grafico/#home">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">
+                    Seminário
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/ufabc_pagina_processamento_grafico/#tema">Tema</a>
+                    <a href="/ufabc_pagina_processamento_grafico/#modelagem">Modelagem</a>
+                    <a href="./relatorio">Relatório</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">
+                    Laboratórios
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/ufabc_pagina_processamento_grafico/#lab01">Lab 01</a>
+                    <a href="/ufabc_pagina_processamento_grafico/#lab02">Lab 02</a>
+                    <a href="/ufabc_pagina_processamento_grafico/#lab03">Lab 03</a>
+                </div>
+            </div>
+        </div>
+
+        <br />
+
+        <header id="home">
+            <h1>
+                ESZI017-17SA - FPG - 2022.3<br />Fundamentos de Processamento Gráfico
+            </h1>
+            <h2>Turma A1 - noturno</h2>
+        </header>
+
+        <section class="box-content">
+            <h2>Integrantes da equipe</h2>
+
+            <p>BRUNO ARAUJO SANTOS DO NASCIMENTO - 11201720606</p>
+            <p>LUIZ EDUARDO GRACINDO SILVA - 11201921251</p>
+            <p>MATHEUS VICTOR SOARES DE ARAUJO - 11201920270</p>
+            <p>VINICIUS SOUZA DE OLIVEIRA - 11201920654</p>
+            <p>VIVIANE COPEDE - 11201722075</p>
+        </section>
+
+        <section class="box-content">
+            <div>
+                <h2>Vídeo e Slides</h2>
+
+                <h3>Vídeo</h3>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/45uuaakv3-E"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <br>
+                <br>
+
+                <h3>Slides</h3>
+                <p>
+                    Link:
+                    <a href="https://docs.google.com/presentation/d/1iTPylNykUpogXetHl3zs2Vm3eqen9Gi9/edit?usp=sharing&ouid=102473699136569745177&rtpof=true&sd=true"
+                        target="_blank">https://docs.google.com/presentation/d/1iTPylNykUpogXetHl3zs2Vm3eqen9Gi9/edit?usp=sharing&ouid=102473699136569745177&rtpof=true&sd=true</a>
+                </p>
+
+                <h3>Questionário</h3>
+                <p>
+                    Link:
+                    <a href="https://docs.google.com/presentation/d/1iTPylNykUpogXetHl3zs2Vm3eqen9Gi9/edit?usp=sharing&ouid=102473699136569745177&rtpof=true&sd=true"
+                        target="_blank">https://docs.google.com/presentation/d/1iTPylNykUpogXetHl3zs2Vm3eqen9Gi9/edit?usp=sharing&ouid=102473699136569745177&rtpof=true&sd=true</a>
+                </p>
+
+                <h3>Código</h3>
+                <p>
+                    <a href="https://github.com/ufabc-processamento-grafico/ufabc_pagina_processamento_grafico/blob/main/project/atom.cpp"
+                        target="_blank">https://github.com/ufabc-processamento-grafico/ufabc_pagina_processamento_grafico/blob/main/project/atom.cpp</a>
+                </p>
+            </div>
+        </section>
+
+        <section class="box-content">
+            <div>
+                <h2>Relatório</h2>
+
+                <h3>Introdução</h3>
+                <p>
+                    O modelo atômico de Bohr, formulado com base no átomo de hidrogênio, foi o primeiro a introduzir as
+                    ideias de quantização de energia (Planck e Einsten) no modelo nuclear de Rutherford.
+                </p>
+
+                <p>
+                    O modelo foi fundamentado através dos seguintes postulados:
+                </p>
+
+                <ul>
+                    <li>Leis de Newton: para descrever o movimento do elétron ao redor do núcleo;</li>
+                    <li>Ocupação do elétron em determinados orbitais ao redor do núcleo (utilizando aconstante de
+                        Planck);</li>
+                    <li>Órbitas estacionárias e os estados correspondentes;</li>
+                    <li>O átomo passa de um estado
+                        estacionário para o outro atavés da emissão ou absorção de energia.</li>
+                </ul>
+                <br />
+                <br />
+
+                <h3>Objetivo</h3>
+                <p>O objetivo do projeto é mostrar a aplicação dos conceitos de modelagem e animação gráfica, que
+                    foram demonstrados durante os laboratórios, em um modelo atômico que todos possuem um básico
+                    conhecimento.
+                </p>
+                <p>
+                    O projeto foi pensado e desenvolvido de maneira simples, para que um usuário leigo consiga executar
+                    o código sem grande dificuldade, e possa observar as mudanças de níveis de energia que ocorrem no
+                    modelo atômico de Bohr.
+                </p>
+                <h3>Implementação</h3>
+
+                <h3>Implementação - Fórmulas</h3>
+
+                <p>Antes de iniciar a implementação do projeto foi necessário o entendimento das principais fórmulas do
+                    Modelo de Bohr. Para isso nos baseamos nos vídeos a seguir:</p>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Qcd0IhW_85I"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <br />
+                <br />
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/PhFYMf70GrQ"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <br />
+                <br />
+
+                <p>E também no conteúdo da seguinte Playlist: <a
+                        href="https://www.khanacademy.org/science/physics/quantum-physics/atoms-and-electrons/v/de-broglie-wavelength"
+                        target="_blank">https://www.khanacademy.org/science/physics/quantum-physics/atoms-and-electrons/v/de-broglie-wavelength</a>
+                </p>
+
+                <p>Através dos vídeos acima tivemos o entendimento básico do funcionamento do Modelo de Bohr e as
+                    principais manipulações
+                    algébricas estão listadas a seguir:</p>
+
+                <p>Primeiro usamos fórmulas elementares para descrever a movitação do elétron ao redor do núcleo:</p>
+
+                <img src="../assets/img/seminario/formula-01.png" alt="formula 01" />
+
+                <p>O próximo passo é onde surge a genialidade de Bohr. Ele iguala o momento angular com as descobertas
+                    De Broglie mostrando que a matéria também pode se comportar como onda. E por último resolvemos para
+                    a velocidade linear</p>
+
+                <img src="../assets/img/seminario/formula-02.png" alt="formula 02" />
+
+                <p>Outro ponto interessante das fórmulas anteriores é a adição da variável <b>n</b> que adiciona a ideia
+                    de quantização ao modelo. Essa variável só pode assumir valores positivos inteiros. A ideia por trás
+                    dessa variável é que somente raios de tamanhos especificos podem comportar perfeitamente o elétron
+                    que tenha um comportamento de onda com amplitute estavél. Essa ideia é representada na imagem a
+                    seguir:</p>
+
+                <img src="../assets/img/seminario/eletron-onda.png" alt="eletron onda" />
+
+                <p>O próximo passo foi usar a velocidade linear descoberta nas fórmulas de força anteriores. Com isso
+                    foi possível resolver para o raio:</p>
+
+                <img src="../assets/img/seminario/formula-03.png" alt="formula 03" />
+
+                <p>Nesse momento já chegamos em algumas conclusões interessantes:</p>
+
+                <img src="../assets/img/seminario/formula-04.png" alt="formula 04" />
+
+                <p>Conseguimos perceber que:
+
+                <ul>
+                    <li>O raio aumenta ao quadrado do nível de energia</li>
+                    <li>A velocidade linear é inversamente proporcional ao nível de energia</li>
+                </ul>
+                </p>
+
+                <p>Porém no OpenGL usamos a velocidade angular e não a linerar. Portanto voltamos para as fórmulas de
+                    física básica para fazer essa conversão:</p>
+
+                <img src="../assets/img/seminario/formula-05.png" alt="formula 05" />
+
+                <p>Substituindo v e r na fórmula da velocidade angular chegamos nas seguintes fórmulas usadas no projeto
+                </p>
+
+                <img src="../assets/img/seminario/formula-06.png" alt="formula 06" />
+
+                <p>
+                    Com isso chegamos às fórmulas que são usadas no nosso projeto:
+                </p>
+
+                <img src="../assets/img/seminario/formula-07.png" alt="formula 07" />
+
+                <p>
+                    Com isso chegamos às fórmulas que são usadas no nosso projeto:
+                <ul>
+                    <li>Repare que boa parte das expressões é constante</li>
+                    <li>Substituímos a parte constante por um valor simbólico para melhorar a visualização(sem essa
+                        alteração o raio ficaria muito grande em relação ao núcleo)</li>
+                    <li>Mantivemos a relação quadrática do raio e cúbica da velocidade angular(Quanto mais distante
+                        menor a velocidade angular)</li>
+                </ul>
+                </p>
+
+                <h3>Implementação - Modelagem</h3>
+
+                <p>
+                    O diagrama de blocos a seguir representa de maneira resumida o funcionamento do nosso sistema:
+                </p>
+
+                <img src="../assets/img/seminario/modelo.png" alt="Modelo de Bohr formulas" />
+
+                <p>
+                    Link do diagrama:
+                    <a href="https://excalidraw.com/#json=3hDjswOzdmAV5Drum8gr8,BvwDkdHcE1N8LjssXyqz8Q"
+                        target="_blank">https://excalidraw.com/#json=3hDjswOzdmAV5Drum8gr8,BvwDkdHcE1N8LjssXyqz8Q</a>
+                </p>
+
+                <p>
+                    O modelo segue um pipeline comum à gráficos mais simples e pode ser dividido em 4 etapas
+                    fundamentais:
+
+                </p>
+
+                <p><b>Configuração de Display e Objetos:</b></p>
+
+                <p>
+                    Onde os objetos que compõem o desenho gráfico são definidos e configurados para a cena, bem como as
+                    transformações e o controle da stack de transformações.
+                </p>
+                <p><b>funções callback e controle de cena.</b></p>
+
+                <p>
+                    Onde definimos e/ou instanciamos funções de dinâmica da cena, i.e, incrementam posição, ângulo, ou
+                    escala etc. Outras funções específicas de fluxo e visualização.
+                </p>
+
+                <p><b>funções controle de interação (Input)
+                    </b></p>
+
+                <p>
+                    As interações com usuário (via teclado, por exemplo) executam ações predefinidas para o modelo, no
+                    código, toda interação possível/desejada é configurada.
+                </p>
+
+
+                <p><b>função main e render em loop.
+                    </b></p>
+
+                <p> A função main organiza o chamado a todas as outras funções do fluxo, e em particular, a
+                    glutMainLoop() garante que o pipeline gráfico permaneça executando até ser finalizado manualmente.
+                </p>
+
+                <h3>Implementação - Código</h3>
+
+                <p>Para a construção do modelo atômico de Bohr utilizamos a linguagem c++ com a biblioteca do OpenGL. E
+                    para esse desenvolvimento foi necessário configurar para termos profundidade (ser 3D).</p>
+
+                <img src="../assets/img/seminario/code-01.png" alt="code 01" />
+
+                <p>Como queríamos dar a visão atômica com o núcleo ao centro e o elétron rotacionando em seu entorno,
+                    optamos pela configuração da câmera como está ao lado.
+                </p>
+
+                <img src="../assets/img/seminario/code-02.png" alt="code 02" />
+
+                <p>Para criar o deutério, utilizamos três objetos, sendo: 1 próton (de coloração vermelha), 1 neutro (de
+                    coloração azul escuro) e 1 elétron (de coloração azul claro).
+                </p>
+
+                <p>
+                    Os objetos são esferas sólidas que têm uma movimentação baseada nas Fórmulas de Bohr. Logo, o núcleo
+                    se movimenta e o elétron, com seu spin (rotação no próprio eixo) e a rotação em torno do núcleo com
+                    seu respectivo nível de energia.
+
+                </p>
+
+                <img src="../assets/img/seminario/code-03.png" alt="code 03" />
+                <p>
+                    Utilizando as teclas “w”, “s”, Up ou Down, é possível subir o nível de energia do átomo ou diminuir,
+                    ficando de 1 a 3.
+
+                </p>
+                <p>
+                    A rotação utiliza o tempo como fator de incremento do eixo rotacional para não termos grandes
+                    diferenças de velocidade de execução do script em diferentes ambientes.
+                </p>
+                <img src="../assets/img/seminario/code-04.png" alt="code 04" />
+
+                <h2>Conclusões</h2>
+
+                <p>
+                <ul>
+                    <li>Ao apertar "w"/"s" ou "up"/"down" altera o nível de energia.</li>
+                    <li>Mudanças do orbital com raio mudando ao quadrado do nível de energia.</li>
+                    <li>A velocidade linear do elétron é inversamente proporcional ao nível de energia.</li>
+                    <b>Pontos positivos:</b>
+                    <ul>
+                        <li>Representação simples através da aplicação de modelagem;</li>
+                        <li>Conseguimos executar o que foi aprendido em aulas;</li>
+                        <li>Zero bugs.</li>
+                    </ul>
+                    <b>Pontos negativos:</b>
+
+                    <ul>
+                        <li>Limitação de nível de energia porque não movimentamos a câmera ;</li>
+                        <li>O Modelo de Bohr não reflete necessariamente a realidade.</li>
+                    </ul>
+                </ul>
+                </p>
+
+
+                <p>Vídeo do funcionamento do programa:</p>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/0jggH_59ATc"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+
+                <br>
+                <br>
+
+                <h2>Referências Bibliográficas</h2>
+                <p><a href="https://www.khanacademy.org/science/physics/quantum-physics/atoms-and-electrons/v/de-broglie-wavelength"
+                        target="_blank">https://www.khanacademy.org/science/physics/quantum-physics/atoms-and-electrons/v/de-broglie-wavelength</a>
+                </p>
+
+                <p><a href="https://pt.wikipedia.org/wiki/%C3%81tomo_de_Bohr"
+                        target="_blank">https://pt.wikipedia.org/wiki/%C3%81tomo_de_Bohr</a>
+                </p>
+
+                <p><a href="https://www.youtube.com/watch?v=PhFYMf70GrQ"
+                        target="_blank">https://www.youtube.com/watch?v=PhFYMf70GrQ</a>
+                </p>
+
+                <p><a href="https://www.opengl.org/" target="_blank">https://www.opengl.org/</a>
+                </p>
+
+                <p><a href="https://www.inf.pucrs.br/~manssour/OpenGL/"
+                        target="_blank">https://www.inf.pucrs.br/~manssour/OpenGL/</a>
+                </p>
+
+                <p><a href="https://moodle.ufabc.edu.br/course/view.php?id=4002"
+                        target="_blank">https://moodle.ufabc.edu.br/course/view.php?id=4002</a>
+                </p>
+
+                <p><a href="https://www.physicslens.com/angular-velocity/"
+                        target="_blank">https://www.physicslens.com/angular-velocity/</a>
+                </p>
+
+                <h2>Anexo 1 - funcionamento</h2>
+
+                <p>
+                <ul>
+                    <li>Ao apertar "w"/"s" ou "up"/"down" altera o nível de energia.</li>
+                    <li>Mudanças do orbital com raio mudando ao quadrado do nível de energia.</li>
+                    <li>A velocidade linear do elétron é inversamente proporcional ao nível de energia.</li>
+                </ul>
+                </p>
+
+                <h2>Anexo 2 - listagem dos códigos.</h2>
+                <p>
+                    <a href="https://github.com/ufabc-processamento-grafico/ufabc_pagina_processamento_grafico/blob/main/project/atom.cpp"
+                        target="_blank">https://github.com/ufabc-processamento-grafico/ufabc_pagina_processamento_grafico/blob/main/project/atom.cpp</a>
+                </p>
+            </div>
+        </section>
+
+    </div>
+</body>
+
+</html>
