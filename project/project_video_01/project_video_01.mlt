@@ -15,7 +15,19 @@
     <property name="ignore_points">0</property>
     <property name="shotcut:caption">2022-10-23 22-15-35.mkv</property>
   </chain>
-  <chain id="chain0" out="00:05:22.300">
+  <chain id="chain0" out="00:01:23.850">
+    <property name="length">00:01:23.867</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/viviane.mkv</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">8806c3e790c8a0eaec3d2f94345ae5b0</property>
+  </chain>
+  <chain id="chain2" out="00:05:22.300">
     <property name="length">00:05:22.317</property>
     <property name="eof">pause</property>
     <property name="resource">C:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/formulas-v1.mkv</property>
@@ -26,18 +38,6 @@
     <property name="mute_on_pause">0</property>
     <property name="xml">was here</property>
     <property name="shotcut:hash">4e4849b52cb41cd95cb1af4647361547</property>
-  </chain>
-  <chain id="chain2" out="00:02:13.167">
-    <property name="length">00:02:13.183</property>
-    <property name="eof">pause</property>
-    <property name="resource">C:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/versao_aceitavel_vinicius.mkv</property>
-    <property name="mlt_service">avformat-novalidate</property>
-    <property name="seekable">1</property>
-    <property name="audio_index">1</property>
-    <property name="video_index">0</property>
-    <property name="mute_on_pause">0</property>
-    <property name="xml">was here</property>
-    <property name="shotcut:hash">8be7ec4bd3ca092979abcbab308e3fcd</property>
   </chain>
   <chain id="chain3" out="00:02:58.000">
     <property name="length">00:02:58.017</property>
@@ -51,7 +51,19 @@
     <property name="xml">was here</property>
     <property name="shotcut:hash">5c79da6e8985f0f7a2bc917a168d9ac4</property>
   </chain>
-  <chain id="chain4" out="00:01:56.300">
+  <chain id="chain4" out="00:02:13.167">
+    <property name="length">00:02:13.183</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/versao_aceitavel_vinicius.mkv</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">8be7ec4bd3ca092979abcbab308e3fcd</property>
+  </chain>
+  <chain id="chain5" out="00:01:56.300">
     <property name="length">00:01:56.317</property>
     <property name="eof">pause</property>
     <property name="resource">C:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/Luiz Eduardo.mkv</property>
@@ -63,7 +75,7 @@
     <property name="xml">was here</property>
     <property name="shotcut:hash">e36c72c8a797bcefe802e88832fa943e</property>
   </chain>
-  <chain id="chain5" out="00:00:19.600">
+  <chain id="chain6" out="00:00:19.600">
     <property name="length">00:00:19.617</property>
     <property name="eof">pause</property>
     <property name="resource">C:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/Luiz Eduardo pt 2.mkv</property>
@@ -75,17 +87,31 @@
     <property name="xml">was here</property>
     <property name="shotcut:hash">bca0029da163d64f80aba2b12f09ca20</property>
   </chain>
+  <chain id="chain7" out="00:12:55.350">
+    <property name="length">00:12:55.367</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/bruno/Downloads/Interstellar Main Theme - Extra Extended - Soundtrack by Hans Zimmer.mp3</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="mute_on_pause">0</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">ad7cd9a6ca242baddaf26fe3ca0d262f</property>
+  </chain>
   <playlist id="main_bin">
     <property name="xml_retain">1</property>
     <entry producer="chain1" in="00:00:00.000" out="00:00:15.400"/>
-    <entry producer="chain0" in="00:00:00.000" out="00:05:22.300"/>
-    <entry producer="chain2" in="00:00:00.000" out="00:02:13.167"/>
+    <entry producer="chain0" in="00:00:00.000" out="00:01:23.850"/>
+    <entry producer="chain2" in="00:00:00.000" out="00:05:22.300"/>
     <entry producer="chain3" in="00:00:00.000" out="00:02:58.000"/>
-    <entry producer="chain4" in="00:00:00.000" out="00:01:56.300"/>
-    <entry producer="chain5" in="00:00:00.000" out="00:00:19.600"/>
+    <entry producer="chain4" in="00:00:00.000" out="00:02:13.167"/>
+    <entry producer="chain5" in="00:00:00.000" out="00:01:56.300"/>
+    <entry producer="chain6" in="00:00:00.000" out="00:00:19.600"/>
+    <entry producer="chain7" in="00:00:00.000" out="00:12:55.350"/>
   </playlist>
-  <producer id="black" in="00:00:00.000" out="00:05:02.400">
-    <property name="length">00:05:02.417</property>
+  <producer id="black" in="00:00:00.000" out="00:13:46.817">
+    <property name="length">00:13:46.833</property>
     <property name="eof">pause</property>
     <property name="resource">0</property>
     <property name="aspect_ratio">1</property>
@@ -94,9 +120,9 @@
     <property name="set.test_audio">0</property>
   </producer>
   <playlist id="background">
-    <entry producer="black" in="00:00:00.000" out="00:05:02.400"/>
+    <entry producer="black" in="00:00:00.000" out="00:13:46.817"/>
   </playlist>
-  <chain id="chain6" out="00:00:15.400">
+  <chain id="chain8" out="00:00:15.400">
     <property name="length">00:00:15.417</property>
     <property name="eof">pause</property>
     <property name="resource">C:/Users/bruno/Videos/2022-10-23 22-15-35.mkv</property>
@@ -118,8 +144,178 @@
       <property name="shotcut:filter">cropCircle</property>
       <property name="disable">0</property>
     </filter>
+    <filter id="filter1" out="00:00:02.500">
+      <property name="start">1</property>
+      <property name="level">00:00:02.183=1;00:00:02.500=0</property>
+      <property name="mlt_service">brightness</property>
+      <property name="shotcut:filter">fadeOutBrightness</property>
+      <property name="alpha">1</property>
+      <property name="shotcut:animOut">00:00:00.333</property>
+    </filter>
   </chain>
-  <chain id="chain7" out="00:02:58.000">
+  <chain id="chain9" out="00:01:23.850">
+    <property name="length">00:01:23.867</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/viviane.mkv</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">-1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">8806c3e790c8a0eaec3d2f94345ae5b0</property>
+    <property name="shotcut:caption">viviane.mkv</property>
+    <property name="shotcut:defaultAudioIndex">1</property>
+    <filter id="filter2" in="00:00:01.483" out="00:00:09.600">
+      <property name="start">1</property>
+      <property name="level">00:00:00.000=0;00:00:00.233=1</property>
+      <property name="mlt_service">brightness</property>
+      <property name="shotcut:filter">fadeInBrightness</property>
+      <property name="alpha">1</property>
+      <property name="shotcut:animIn">00:00:00.250</property>
+    </filter>
+  </chain>
+  <chain id="chain10" out="00:01:23.850">
+    <property name="length">00:01:23.867</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/viviane.mkv</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">-1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">8806c3e790c8a0eaec3d2f94345ae5b0</property>
+    <property name="shotcut:caption">viviane.mkv</property>
+    <property name="shotcut:defaultAudioIndex">1</property>
+  </chain>
+  <chain id="chain11" out="00:01:23.850">
+    <property name="length">00:01:23.867</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/viviane.mkv</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">-1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">8806c3e790c8a0eaec3d2f94345ae5b0</property>
+    <property name="shotcut:caption">viviane.mkv</property>
+    <property name="shotcut:defaultAudioIndex">1</property>
+  </chain>
+  <chain id="chain12" out="00:01:23.850">
+    <property name="length">00:01:23.867</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/viviane.mkv</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">-1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">8806c3e790c8a0eaec3d2f94345ae5b0</property>
+    <property name="shotcut:caption">viviane.mkv</property>
+    <property name="shotcut:defaultAudioIndex">1</property>
+  </chain>
+  <chain id="chain13" out="00:01:23.850">
+    <property name="length">00:01:23.867</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/viviane.mkv</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">-1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">8806c3e790c8a0eaec3d2f94345ae5b0</property>
+    <property name="shotcut:caption">viviane.mkv</property>
+    <property name="shotcut:defaultAudioIndex">1</property>
+  </chain>
+  <chain id="chain14" out="00:05:22.300">
+    <property name="length">00:05:22.317</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/formulas-v1.mkv</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">-1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">4e4849b52cb41cd95cb1af4647361547</property>
+    <property name="shotcut:caption">formulas-v1.mkv</property>
+    <property name="shotcut:defaultAudioIndex">1</property>
+  </chain>
+  <chain id="chain15" out="00:02:13.167">
+    <property name="length">00:02:13.183</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/versao_aceitavel_vinicius.mkv</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">-1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">8be7ec4bd3ca092979abcbab308e3fcd</property>
+    <property name="shotcut:caption">versao_aceitavel_vinicius.mkv</property>
+    <property name="shotcut:defaultAudioIndex">1</property>
+  </chain>
+  <chain id="chain16" out="00:02:13.167">
+    <property name="length">00:02:13.183</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/versao_aceitavel_vinicius.mkv</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">-1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">8be7ec4bd3ca092979abcbab308e3fcd</property>
+    <property name="shotcut:caption">versao_aceitavel_vinicius.mkv</property>
+    <property name="shotcut:defaultAudioIndex">1</property>
+  </chain>
+  <chain id="chain17" out="00:02:13.167">
+    <property name="length">00:02:13.183</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/versao_aceitavel_vinicius.mkv</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">-1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">8be7ec4bd3ca092979abcbab308e3fcd</property>
+    <property name="shotcut:caption">versao_aceitavel_vinicius.mkv</property>
+    <property name="shotcut:defaultAudioIndex">1</property>
+  </chain>
+  <chain id="chain18" out="00:02:13.167">
+    <property name="length">00:02:13.183</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/versao_aceitavel_vinicius.mkv</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">-1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">8be7ec4bd3ca092979abcbab308e3fcd</property>
+    <property name="shotcut:caption">versao_aceitavel_vinicius.mkv</property>
+    <property name="shotcut:defaultAudioIndex">1</property>
+  </chain>
+  <chain id="chain19" out="00:02:13.167">
+    <property name="length">00:02:13.183</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/versao_aceitavel_vinicius.mkv</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">-1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">8be7ec4bd3ca092979abcbab308e3fcd</property>
+    <property name="shotcut:caption">versao_aceitavel_vinicius.mkv</property>
+    <property name="shotcut:defaultAudioIndex">1</property>
+  </chain>
+  <chain id="chain20" out="00:02:58.000">
     <property name="length">00:02:58.017</property>
     <property name="eof">pause</property>
     <property name="resource">c:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/bruno.mkv</property>
@@ -133,7 +329,7 @@
     <property name="xml">was here</property>
     <property name="shotcut:defaultAudioIndex">1</property>
   </chain>
-  <chain id="chain8" out="00:02:58.000">
+  <chain id="chain21" out="00:02:58.000">
     <property name="length">00:02:58.017</property>
     <property name="eof">pause</property>
     <property name="resource">c:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/bruno.mkv</property>
@@ -147,7 +343,7 @@
     <property name="xml">was here</property>
     <property name="shotcut:defaultAudioIndex">1</property>
   </chain>
-  <chain id="chain9" out="00:01:56.300">
+  <chain id="chain22" out="00:01:56.300">
     <property name="length">00:01:56.317</property>
     <property name="eof">pause</property>
     <property name="resource">C:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/Luiz Eduardo.mkv</property>
@@ -161,7 +357,7 @@
     <property name="shotcut:caption">Luiz Eduardo.mkv</property>
     <property name="shotcut:defaultAudioIndex">1</property>
   </chain>
-  <chain id="chain10" out="00:00:15.400">
+  <chain id="chain23" out="00:00:15.400">
     <property name="length">00:00:15.417</property>
     <property name="eof">pause</property>
     <property name="resource">C:/Users/bruno/Videos/2022-10-23 22-15-35.mkv</property>
@@ -174,7 +370,7 @@
     <property name="shotcut:hash">3508d0069783b4e2ad94e10ae70ff93b</property>
     <property name="ignore_points">0</property>
     <property name="shotcut:caption">2022-10-23 22-15-35.mkv</property>
-    <filter id="filter1" out="00:00:15.400">
+    <filter id="filter3" out="00:00:15.400">
       <property name="start">1</property>
       <property name="level">00:00:00.000=0;00:00:00.150=1</property>
       <property name="mlt_service">brightness</property>
@@ -183,7 +379,7 @@
       <property name="shotcut:animIn">00:00:00.167</property>
     </filter>
   </chain>
-  <chain id="chain11" out="00:00:15.400">
+  <chain id="chain24" out="00:00:15.400">
     <property name="length">00:00:15.417</property>
     <property name="eof">pause</property>
     <property name="resource">C:/Users/bruno/Videos/2022-10-23 22-15-35.mkv</property>
@@ -200,15 +396,576 @@
   <playlist id="playlist0">
     <property name="shotcut:video">1</property>
     <property name="shotcut:name">V1</property>
-    <entry producer="chain6" in="00:00:00.000" out="00:00:02.500"/>
-    <entry producer="chain7" in="00:00:01.067" out="00:02:38.567"/>
-    <entry producer="chain8" in="00:02:42.850" out="00:02:56.367"/>
-    <entry producer="chain9" in="00:00:01.567" out="00:01:52.717"/>
+    <entry producer="chain8" in="00:00:00.000" out="00:00:02.500"/>
+    <entry producer="chain9" in="00:00:01.483" out="00:00:09.600"/>
+    <entry producer="chain10" in="00:00:10.350" out="00:00:19.917"/>
+    <entry producer="chain11" in="00:00:22.117" out="00:00:29.200"/>
+    <entry producer="chain12" in="00:00:30.183" out="00:00:45.750"/>
+    <entry producer="chain13" in="00:00:47.033" out="00:01:22.683"/>
+    <entry producer="chain14" in="00:00:00.550" out="00:05:21.367"/>
+    <entry producer="chain15" in="00:00:01.200" out="00:00:21.167"/>
+    <entry producer="chain16" in="00:00:21.983" out="00:00:54.483"/>
+    <entry producer="chain17" in="00:00:55.850" out="00:01:20.017"/>
+    <entry producer="chain18" in="00:01:21.433" out="00:01:41.250"/>
+    <entry producer="chain19" in="00:01:42.183" out="00:02:13.167"/>
+    <entry producer="chain20" in="00:00:01.067" out="00:02:38.567"/>
+    <entry producer="chain21" in="00:02:42.850" out="00:02:56.367"/>
+    <entry producer="chain22" in="00:00:01.567" out="00:01:52.717"/>
     <blank length="00:00:00.050"/>
-    <entry producer="chain10" in="00:00:00.000" out="00:00:15.400"/>
-    <entry producer="chain11" in="00:00:00.000" out="00:00:02.100"/>
+    <entry producer="chain23" in="00:00:00.000" out="00:00:15.400"/>
+    <entry producer="chain24" in="00:00:00.000" out="00:00:02.100"/>
   </playlist>
-  <chain id="chain12" out="00:02:58.000">
+  <chain id="chain25" out="00:01:23.850">
+    <property name="length">00:01:23.867</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/viviane.mkv</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">-1</property>
+    <property name="mute_on_pause">0</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">8806c3e790c8a0eaec3d2f94345ae5b0</property>
+    <property name="shotcut:caption">viviane.mkv</property>
+    <property name="shotcut:defaultAudioIndex">1</property>
+    <filter id="filter4" in="00:00:01.483" out="00:00:09.600">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">00:00:08.083=0;00:00:08.117=-60</property>
+      <property name="mlt_service">volume</property>
+      <property name="shotcut:filter">fadeOutVolume</property>
+      <property name="shotcut:animOut">00:00:00.050</property>
+    </filter>
+    <filter id="filter5" in="00:00:01.483" out="00:00:09.600">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">3.6</property>
+      <property name="mlt_service">volume</property>
+    </filter>
+    <filter id="filter6" in="00:00:01.483" out="00:00:09.600">
+      <property name="mlt_service">ladspa.1410</property>
+      <property name="instances">2</property>
+      <property name="0">33.6</property>
+      <property name="1">23520</property>
+      <property name="2">-70</property>
+      <property name="3">250.008</property>
+      <property name="4">1500.5</property>
+      <property name="5">2001</property>
+      <property name="6">-90</property>
+    </filter>
+    <filter id="filter7" in="00:00:01.483" out="00:00:09.600">
+      <property name="target_loudness">-23.0</property>
+      <property name="window">10</property>
+      <property name="max_gain">15.0</property>
+      <property name="min_gain">-15.0</property>
+      <property name="max_rate">3.0</property>
+      <property name="in_loudness">-33.1245</property>
+      <property name="out_gain">10.1245</property>
+      <property name="reset_count">24</property>
+      <property name="mlt_service">dynamic_loudness</property>
+    </filter>
+  </chain>
+  <chain id="chain26" out="00:01:23.850">
+    <property name="length">00:01:23.867</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/viviane.mkv</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">-1</property>
+    <property name="mute_on_pause">0</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">8806c3e790c8a0eaec3d2f94345ae5b0</property>
+    <property name="shotcut:caption">viviane.mkv</property>
+    <property name="shotcut:defaultAudioIndex">1</property>
+    <filter id="filter8" in="00:00:10.350" out="00:00:19.917">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">00:00:09.533=0;00:00:09.567=-60</property>
+      <property name="mlt_service">volume</property>
+      <property name="shotcut:filter">fadeOutVolume</property>
+      <property name="shotcut:animOut">00:00:00.050</property>
+    </filter>
+    <filter id="filter9" in="00:00:10.350" out="00:00:19.917">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">3.6</property>
+      <property name="mlt_service">volume</property>
+    </filter>
+    <filter id="filter10" in="00:00:10.350" out="00:00:19.917">
+      <property name="mlt_service">ladspa.1410</property>
+      <property name="instances">2</property>
+      <property name="0">33.6</property>
+      <property name="1">23520</property>
+      <property name="2">-70</property>
+      <property name="3">250.008</property>
+      <property name="4">1500.5</property>
+      <property name="5">2001</property>
+      <property name="6">-90</property>
+    </filter>
+    <filter id="filter11" in="00:00:10.350" out="00:00:19.917">
+      <property name="target_loudness">-23.0</property>
+      <property name="window">10</property>
+      <property name="max_gain">15.0</property>
+      <property name="min_gain">-15.0</property>
+      <property name="max_rate">3.0</property>
+      <property name="in_loudness">-32.2228</property>
+      <property name="out_gain">9.22277</property>
+      <property name="reset_count">24</property>
+      <property name="mlt_service">dynamic_loudness</property>
+    </filter>
+  </chain>
+  <chain id="chain27" out="00:01:23.850">
+    <property name="length">00:01:23.867</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/viviane.mkv</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">-1</property>
+    <property name="mute_on_pause">0</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">8806c3e790c8a0eaec3d2f94345ae5b0</property>
+    <property name="shotcut:caption">viviane.mkv</property>
+    <property name="shotcut:defaultAudioIndex">1</property>
+    <filter id="filter12" in="00:00:22.117" out="00:00:29.200">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">00:00:07.050=0;00:00:07.083=-60</property>
+      <property name="mlt_service">volume</property>
+      <property name="shotcut:filter">fadeOutVolume</property>
+      <property name="shotcut:animOut">00:00:00.050</property>
+    </filter>
+    <filter id="filter13" in="00:00:22.117" out="00:00:29.200">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">3.6</property>
+      <property name="mlt_service">volume</property>
+    </filter>
+    <filter id="filter14" in="00:00:22.117" out="00:00:29.200">
+      <property name="mlt_service">ladspa.1410</property>
+      <property name="instances">2</property>
+      <property name="0">33.6</property>
+      <property name="1">23520</property>
+      <property name="2">-70</property>
+      <property name="3">250.008</property>
+      <property name="4">1500.5</property>
+      <property name="5">2001</property>
+      <property name="6">-90</property>
+    </filter>
+    <filter id="filter15" in="00:00:22.117" out="00:00:29.200">
+      <property name="target_loudness">-23.0</property>
+      <property name="window">10</property>
+      <property name="max_gain">15.0</property>
+      <property name="min_gain">-15.0</property>
+      <property name="max_rate">3.0</property>
+      <property name="in_loudness">-31.3599</property>
+      <property name="out_gain">8.35989</property>
+      <property name="reset_count">24</property>
+      <property name="mlt_service">dynamic_loudness</property>
+    </filter>
+  </chain>
+  <chain id="chain28" out="00:01:23.850">
+    <property name="length">00:01:23.867</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/viviane.mkv</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">-1</property>
+    <property name="mute_on_pause">0</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">8806c3e790c8a0eaec3d2f94345ae5b0</property>
+    <property name="shotcut:caption">viviane.mkv</property>
+    <property name="shotcut:defaultAudioIndex">1</property>
+    <filter id="filter16" in="00:00:30.183" out="00:00:45.750">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">00:00:15.533=0;00:00:15.567=-60</property>
+      <property name="mlt_service">volume</property>
+      <property name="shotcut:filter">fadeOutVolume</property>
+      <property name="shotcut:animOut">00:00:00.050</property>
+    </filter>
+    <filter id="filter17" in="00:00:30.183" out="00:00:45.750">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">3.6</property>
+      <property name="mlt_service">volume</property>
+    </filter>
+    <filter id="filter18" in="00:00:30.183" out="00:00:45.750">
+      <property name="mlt_service">ladspa.1410</property>
+      <property name="instances">2</property>
+      <property name="0">33.6</property>
+      <property name="1">23520</property>
+      <property name="2">-70</property>
+      <property name="3">250.008</property>
+      <property name="4">1500.5</property>
+      <property name="5">2001</property>
+      <property name="6">-90</property>
+    </filter>
+    <filter id="filter19" in="00:00:30.183" out="00:00:45.750">
+      <property name="target_loudness">-23.0</property>
+      <property name="window">10</property>
+      <property name="max_gain">15.0</property>
+      <property name="min_gain">-15.0</property>
+      <property name="max_rate">3.0</property>
+      <property name="in_loudness">-31.5888</property>
+      <property name="out_gain">8.58885</property>
+      <property name="reset_count">24</property>
+      <property name="mlt_service">dynamic_loudness</property>
+    </filter>
+  </chain>
+  <chain id="chain29" out="00:01:23.850">
+    <property name="length">00:01:23.867</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/viviane.mkv</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">-1</property>
+    <property name="mute_on_pause">0</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">8806c3e790c8a0eaec3d2f94345ae5b0</property>
+    <property name="shotcut:caption">viviane.mkv</property>
+    <property name="shotcut:defaultAudioIndex">1</property>
+    <filter id="filter20" in="00:00:47.033" out="00:01:22.683">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">00:00:35.617=0;00:00:35.650=-60</property>
+      <property name="mlt_service">volume</property>
+      <property name="shotcut:filter">fadeOutVolume</property>
+      <property name="shotcut:animOut">00:00:00.050</property>
+    </filter>
+    <filter id="filter21" in="00:00:47.033" out="00:01:22.683">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">3.6</property>
+      <property name="mlt_service">volume</property>
+    </filter>
+    <filter id="filter22" in="00:00:47.033" out="00:01:22.683">
+      <property name="mlt_service">ladspa.1410</property>
+      <property name="instances">2</property>
+      <property name="0">33.6</property>
+      <property name="1">23520</property>
+      <property name="2">-70</property>
+      <property name="3">250.008</property>
+      <property name="4">1500.5</property>
+      <property name="5">2001</property>
+      <property name="6">-90</property>
+    </filter>
+    <filter id="filter23" in="00:00:47.033" out="00:01:22.683">
+      <property name="target_loudness">-23.0</property>
+      <property name="window">10</property>
+      <property name="max_gain">15.0</property>
+      <property name="min_gain">-15.0</property>
+      <property name="max_rate">3.0</property>
+      <property name="in_loudness">-31.0803</property>
+      <property name="out_gain">8.08031</property>
+      <property name="reset_count">25</property>
+      <property name="mlt_service">dynamic_loudness</property>
+    </filter>
+  </chain>
+  <chain id="chain30" out="00:05:22.300">
+    <property name="length">00:05:22.317</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/formulas-v1.mkv</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">-1</property>
+    <property name="mute_on_pause">0</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">4e4849b52cb41cd95cb1af4647361547</property>
+    <property name="shotcut:caption">formulas-v1.mkv</property>
+    <property name="shotcut:defaultAudioIndex">1</property>
+    <filter id="filter24" in="00:00:00.550" out="00:05:21.367">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">00:05:20.783=0;00:05:20.817=-60</property>
+      <property name="mlt_service">volume</property>
+      <property name="shotcut:filter">fadeOutVolume</property>
+      <property name="shotcut:animOut">00:00:00.050</property>
+    </filter>
+    <filter id="filter25" in="00:00:00.550" out="00:05:21.367">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">3.6</property>
+      <property name="mlt_service">volume</property>
+    </filter>
+    <filter id="filter26" in="00:00:00.550" out="00:05:21.367">
+      <property name="mlt_service">ladspa.1410</property>
+      <property name="instances">2</property>
+      <property name="0">33.6</property>
+      <property name="1">23520</property>
+      <property name="2">-70</property>
+      <property name="3">250.008</property>
+      <property name="4">1500.5</property>
+      <property name="5">2001</property>
+      <property name="6">-90</property>
+    </filter>
+    <filter id="filter27" in="00:00:00.550" out="00:05:21.367">
+      <property name="target_loudness">-23.0</property>
+      <property name="window">10</property>
+      <property name="max_gain">15.0</property>
+      <property name="min_gain">-15.0</property>
+      <property name="max_rate">3.0</property>
+      <property name="in_loudness">-28.3473</property>
+      <property name="out_gain">5.34735</property>
+      <property name="reset_count">26</property>
+      <property name="mlt_service">dynamic_loudness</property>
+    </filter>
+  </chain>
+  <chain id="chain31" out="00:02:13.167">
+    <property name="length">00:02:13.183</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/versao_aceitavel_vinicius.mkv</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">-1</property>
+    <property name="mute_on_pause">0</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">8be7ec4bd3ca092979abcbab308e3fcd</property>
+    <property name="shotcut:caption">versao_aceitavel_vinicius.mkv</property>
+    <property name="shotcut:defaultAudioIndex">1</property>
+    <filter id="filter28" in="00:00:01.200" out="00:00:21.167">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">00:00:19.933=0;00:00:19.967=-60</property>
+      <property name="mlt_service">volume</property>
+      <property name="shotcut:filter">fadeOutVolume</property>
+      <property name="shotcut:animOut">00:00:00.050</property>
+    </filter>
+    <filter id="filter29" in="00:00:01.200" out="00:00:21.167">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">3.6</property>
+      <property name="mlt_service">volume</property>
+    </filter>
+    <filter id="filter30" in="00:00:01.200" out="00:00:21.167">
+      <property name="mlt_service">ladspa.1410</property>
+      <property name="instances">2</property>
+      <property name="0">33.6</property>
+      <property name="1">23520</property>
+      <property name="2">-70</property>
+      <property name="3">250.008</property>
+      <property name="4">1500.5</property>
+      <property name="5">2001</property>
+      <property name="6">-90</property>
+    </filter>
+    <filter id="filter31" in="00:00:01.200" out="00:00:21.167">
+      <property name="target_loudness">-23.0</property>
+      <property name="window">10</property>
+      <property name="max_gain">15.0</property>
+      <property name="min_gain">-15.0</property>
+      <property name="max_rate">3.0</property>
+      <property name="in_loudness">-19.8621</property>
+      <property name="out_gain">-3.13795</property>
+      <property name="reset_count">25</property>
+      <property name="mlt_service">dynamic_loudness</property>
+    </filter>
+  </chain>
+  <chain id="chain32" out="00:02:13.167">
+    <property name="length">00:02:13.183</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/versao_aceitavel_vinicius.mkv</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">-1</property>
+    <property name="mute_on_pause">0</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">8be7ec4bd3ca092979abcbab308e3fcd</property>
+    <property name="shotcut:caption">versao_aceitavel_vinicius.mkv</property>
+    <property name="shotcut:defaultAudioIndex">1</property>
+    <filter id="filter32" in="00:00:21.983" out="00:00:54.483">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">00:00:32.467=0;00:00:32.500=-60</property>
+      <property name="mlt_service">volume</property>
+      <property name="shotcut:filter">fadeOutVolume</property>
+      <property name="shotcut:animOut">00:00:00.050</property>
+    </filter>
+    <filter id="filter33" in="00:00:21.983" out="00:00:54.483">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">3.6</property>
+      <property name="mlt_service">volume</property>
+    </filter>
+    <filter id="filter34" in="00:00:21.983" out="00:00:54.483">
+      <property name="mlt_service">ladspa.1410</property>
+      <property name="instances">2</property>
+      <property name="0">33.6</property>
+      <property name="1">23520</property>
+      <property name="2">-70</property>
+      <property name="3">250.008</property>
+      <property name="4">1500.5</property>
+      <property name="5">2001</property>
+      <property name="6">-90</property>
+    </filter>
+    <filter id="filter35" in="00:00:21.983" out="00:00:54.483">
+      <property name="target_loudness">-23.0</property>
+      <property name="window">10</property>
+      <property name="max_gain">15.0</property>
+      <property name="min_gain">-15.0</property>
+      <property name="max_rate">3.0</property>
+      <property name="in_loudness">-17.3691</property>
+      <property name="out_gain">-5.63087</property>
+      <property name="reset_count">25</property>
+      <property name="mlt_service">dynamic_loudness</property>
+    </filter>
+  </chain>
+  <chain id="chain33" out="00:02:13.167">
+    <property name="length">00:02:13.183</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/versao_aceitavel_vinicius.mkv</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">-1</property>
+    <property name="mute_on_pause">0</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">8be7ec4bd3ca092979abcbab308e3fcd</property>
+    <property name="shotcut:caption">versao_aceitavel_vinicius.mkv</property>
+    <property name="shotcut:defaultAudioIndex">1</property>
+    <filter id="filter36" in="00:00:55.850" out="00:01:20.017">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">00:00:24.133=0;00:00:24.167=-60</property>
+      <property name="mlt_service">volume</property>
+      <property name="shotcut:filter">fadeOutVolume</property>
+      <property name="shotcut:animOut">00:00:00.050</property>
+    </filter>
+    <filter id="filter37" in="00:00:55.850" out="00:01:20.017">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">3.6</property>
+      <property name="mlt_service">volume</property>
+    </filter>
+    <filter id="filter38" in="00:00:55.850" out="00:01:20.017">
+      <property name="mlt_service">ladspa.1410</property>
+      <property name="instances">2</property>
+      <property name="0">33.6</property>
+      <property name="1">23520</property>
+      <property name="2">-70</property>
+      <property name="3">250.008</property>
+      <property name="4">1500.5</property>
+      <property name="5">2001</property>
+      <property name="6">-90</property>
+    </filter>
+    <filter id="filter39" in="00:00:55.850" out="00:01:20.017">
+      <property name="target_loudness">-23.0</property>
+      <property name="window">10</property>
+      <property name="max_gain">15.0</property>
+      <property name="min_gain">-15.0</property>
+      <property name="max_rate">3.0</property>
+      <property name="in_loudness">-18.4316</property>
+      <property name="out_gain">-4.56839</property>
+      <property name="reset_count">23</property>
+      <property name="mlt_service">dynamic_loudness</property>
+    </filter>
+  </chain>
+  <chain id="chain34" out="00:02:13.167">
+    <property name="length">00:02:13.183</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/versao_aceitavel_vinicius.mkv</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">-1</property>
+    <property name="mute_on_pause">0</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">8be7ec4bd3ca092979abcbab308e3fcd</property>
+    <property name="shotcut:caption">versao_aceitavel_vinicius.mkv</property>
+    <property name="shotcut:defaultAudioIndex">1</property>
+    <filter id="filter40" in="00:01:21.433" out="00:01:41.250">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">00:00:19.783=0;00:00:19.817=-60</property>
+      <property name="mlt_service">volume</property>
+      <property name="shotcut:filter">fadeOutVolume</property>
+      <property name="shotcut:animOut">00:00:00.050</property>
+    </filter>
+    <filter id="filter41" in="00:01:21.433" out="00:01:41.250">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">3.6</property>
+      <property name="mlt_service">volume</property>
+    </filter>
+    <filter id="filter42" in="00:01:21.433" out="00:01:41.250">
+      <property name="mlt_service">ladspa.1410</property>
+      <property name="instances">2</property>
+      <property name="0">33.6</property>
+      <property name="1">23520</property>
+      <property name="2">-70</property>
+      <property name="3">250.008</property>
+      <property name="4">1500.5</property>
+      <property name="5">2001</property>
+      <property name="6">-90</property>
+    </filter>
+    <filter id="filter43" in="00:01:21.433" out="00:01:41.250">
+      <property name="target_loudness">-23.0</property>
+      <property name="window">10</property>
+      <property name="max_gain">15.0</property>
+      <property name="min_gain">-15.0</property>
+      <property name="max_rate">3.0</property>
+      <property name="in_loudness">-16.8303</property>
+      <property name="out_gain">-6.16973</property>
+      <property name="reset_count">23</property>
+      <property name="mlt_service">dynamic_loudness</property>
+    </filter>
+  </chain>
+  <chain id="chain35" out="00:02:13.167">
+    <property name="length">00:02:13.183</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/versao_aceitavel_vinicius.mkv</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">-1</property>
+    <property name="mute_on_pause">0</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">8be7ec4bd3ca092979abcbab308e3fcd</property>
+    <property name="shotcut:caption">versao_aceitavel_vinicius.mkv</property>
+    <property name="shotcut:defaultAudioIndex">1</property>
+    <filter id="filter44" in="00:01:42.183" out="00:02:13.167">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">00:00:30.950=0;00:00:30.983=-60</property>
+      <property name="mlt_service">volume</property>
+      <property name="shotcut:filter">fadeOutVolume</property>
+      <property name="shotcut:animOut">00:00:00.050</property>
+    </filter>
+    <filter id="filter45" in="00:01:42.183" out="00:02:13.167">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">3.6</property>
+      <property name="mlt_service">volume</property>
+    </filter>
+    <filter id="filter46" in="00:01:42.183" out="00:02:13.167">
+      <property name="mlt_service">ladspa.1410</property>
+      <property name="instances">2</property>
+      <property name="0">33.6</property>
+      <property name="1">23520</property>
+      <property name="2">-70</property>
+      <property name="3">250.008</property>
+      <property name="4">1500.5</property>
+      <property name="5">2001</property>
+      <property name="6">-90</property>
+    </filter>
+    <filter id="filter47" in="00:01:42.183" out="00:02:13.167">
+      <property name="target_loudness">-23.0</property>
+      <property name="window">10</property>
+      <property name="max_gain">15.0</property>
+      <property name="min_gain">-15.0</property>
+      <property name="max_rate">3.0</property>
+      <property name="in_loudness">-18.7987</property>
+      <property name="out_gain">-4.21477</property>
+      <property name="reset_count">24</property>
+      <property name="mlt_service">dynamic_loudness</property>
+    </filter>
+  </chain>
+  <chain id="chain36" out="00:02:58.000">
     <property name="length">00:02:58.017</property>
     <property name="eof">pause</property>
     <property name="resource">c:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/bruno.mkv</property>
@@ -221,14 +978,22 @@
     <property name="shotcut:caption">bruno.mkv</property>
     <property name="xml">was here</property>
     <property name="shotcut:defaultAudioIndex">1</property>
-    <filter id="filter2" in="00:00:01.067" out="00:02:38.567">
+    <filter id="filter48" in="00:00:01.067" out="00:02:38.567">
       <property name="window">75</property>
       <property name="max_gain">20dB</property>
-      <property name="level">24</property>
+      <property name="level">15.1</property>
       <property name="mlt_service">volume</property>
     </filter>
+    <filter id="filter49" in="00:00:01.067" out="00:02:38.567">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">00:00:00.000=-60;00:00:00.067=0</property>
+      <property name="mlt_service">volume</property>
+      <property name="shotcut:filter">fadeInVolume</property>
+      <property name="shotcut:animIn">00:00:00.083</property>
+    </filter>
   </chain>
-  <chain id="chain13" out="00:02:58.000">
+  <chain id="chain37" out="00:02:58.000">
     <property name="length">00:02:58.017</property>
     <property name="eof">pause</property>
     <property name="resource">c:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/bruno.mkv</property>
@@ -241,14 +1006,14 @@
     <property name="shotcut:caption">bruno.mkv</property>
     <property name="xml">was here</property>
     <property name="shotcut:defaultAudioIndex">1</property>
-    <filter id="filter3" in="00:02:42.850" out="00:02:56.367">
+    <filter id="filter50" in="00:02:42.850" out="00:02:56.367">
       <property name="window">75</property>
       <property name="max_gain">20dB</property>
-      <property name="level">24</property>
+      <property name="level">15.1</property>
       <property name="mlt_service">volume</property>
     </filter>
   </chain>
-  <chain id="chain14" out="00:01:56.300">
+  <chain id="chain38" out="00:01:56.300">
     <property name="length">00:01:56.317</property>
     <property name="eof">pause</property>
     <property name="resource">C:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/Luiz Eduardo.mkv</property>
@@ -261,7 +1026,7 @@
     <property name="shotcut:hash">e36c72c8a797bcefe802e88832fa943e</property>
     <property name="shotcut:caption">Luiz Eduardo.mkv</property>
     <property name="shotcut:defaultAudioIndex">1</property>
-    <filter id="filter4" in="00:00:01.567" out="00:01:52.767">
+    <filter id="filter51" in="00:00:01.567" out="00:01:52.767">
       <property name="window">75</property>
       <property name="max_gain">20dB</property>
       <property name="level">00:01:51.167=0;00:01:51.200=-60</property>
@@ -269,13 +1034,13 @@
       <property name="shotcut:filter">fadeOutVolume</property>
       <property name="shotcut:animOut">00:00:00.050</property>
     </filter>
-    <filter id="filter5" in="00:00:01.567" out="00:01:52.767">
+    <filter id="filter52" in="00:00:01.567" out="00:01:52.767">
       <property name="window">75</property>
       <property name="max_gain">20dB</property>
       <property name="level">3.6</property>
       <property name="mlt_service">volume</property>
     </filter>
-    <filter id="filter6" in="00:00:01.567" out="00:01:52.767">
+    <filter id="filter53" in="00:00:01.567" out="00:01:52.767">
       <property name="mlt_service">ladspa.1410</property>
       <property name="instances">2</property>
       <property name="0">33.6</property>
@@ -286,19 +1051,19 @@
       <property name="5">2001</property>
       <property name="6">-90</property>
     </filter>
-    <filter id="filter7" in="00:00:01.567" out="00:01:52.767">
+    <filter id="filter54" in="00:00:01.567" out="00:01:52.767">
       <property name="target_loudness">-23.0</property>
       <property name="window">10</property>
       <property name="max_gain">15.0</property>
       <property name="min_gain">-15.0</property>
       <property name="max_rate">3.0</property>
-      <property name="in_loudness">-22.6197</property>
-      <property name="out_gain">-0.380348</property>
-      <property name="reset_count">13</property>
+      <property name="in_loudness">-20.607</property>
+      <property name="out_gain">-2.39301</property>
+      <property name="reset_count">27</property>
       <property name="mlt_service">dynamic_loudness</property>
     </filter>
   </chain>
-  <chain id="chain15" out="00:00:19.600">
+  <chain id="chain39" out="00:00:19.600">
     <property name="length">00:00:19.617</property>
     <property name="eof">pause</property>
     <property name="resource">C:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/Luiz Eduardo pt 2.mkv</property>
@@ -311,7 +1076,7 @@
     <property name="shotcut:hash">bca0029da163d64f80aba2b12f09ca20</property>
     <property name="shotcut:caption">Luiz Eduardo pt 2.mkv</property>
     <property name="shotcut:defaultAudioIndex">1</property>
-    <filter id="filter8" in="00:00:03.483" out="00:00:19.600">
+    <filter id="filter55" in="00:00:03.483" out="00:00:19.600">
       <property name="window">75</property>
       <property name="max_gain">20dB</property>
       <property name="level">00:00:00.000=-60;00:00:00.033=0</property>
@@ -319,7 +1084,7 @@
       <property name="shotcut:filter">fadeInVolume</property>
       <property name="shotcut:animIn">00:00:00.050</property>
     </filter>
-    <filter id="filter9" in="00:00:03.483" out="00:00:19.600">
+    <filter id="filter56" in="00:00:03.483" out="00:00:19.600">
       <property name="target_loudness">-23.0</property>
       <property name="window">10</property>
       <property name="max_gain">15.0</property>
@@ -327,16 +1092,16 @@
       <property name="max_rate">3.0</property>
       <property name="in_loudness">-18.9263</property>
       <property name="out_gain">-4.07366</property>
-      <property name="reset_count">13</property>
+      <property name="reset_count">18</property>
       <property name="mlt_service">dynamic_loudness</property>
     </filter>
-    <filter id="filter10" in="00:00:03.483" out="00:00:19.600">
+    <filter id="filter57" in="00:00:03.483" out="00:00:19.600">
       <property name="window">75</property>
       <property name="max_gain">20dB</property>
       <property name="level">-0.5</property>
       <property name="mlt_service">volume</property>
     </filter>
-    <filter id="filter11" in="00:00:03.483" out="00:00:19.600">
+    <filter id="filter58" in="00:00:03.483" out="00:00:19.600">
       <property name="mlt_service">ladspa.1410</property>
       <property name="instances">2</property>
       <property name="0">33.6</property>
@@ -348,7 +1113,7 @@
       <property name="6">-90</property>
     </filter>
   </chain>
-  <chain id="chain16" out="00:01:56.300">
+  <chain id="chain40" out="00:01:56.300">
     <property name="length">00:01:56.317</property>
     <property name="eof">pause</property>
     <property name="resource">C:/Users/bruno/developer/github.com/ufabc_pagina_processamento_grafico/project/video_01/Luiz Eduardo.mkv</property>
@@ -361,7 +1126,7 @@
     <property name="shotcut:hash">e36c72c8a797bcefe802e88832fa943e</property>
     <property name="shotcut:caption">Luiz Eduardo.mkv</property>
     <property name="shotcut:defaultAudioIndex">1</property>
-    <filter id="filter12" in="00:01:52.783" out="00:01:54.267">
+    <filter id="filter59" in="00:01:52.783" out="00:01:54.267">
       <property name="window">75</property>
       <property name="max_gain">20dB</property>
       <property name="level">00:00:00.000=-60;00:00:00.033=0</property>
@@ -374,28 +1139,112 @@
     <property name="shotcut:audio">1</property>
     <property name="shotcut:name">A1</property>
     <blank length="00:00:02.517"/>
-    <entry producer="chain12" in="00:00:01.067" out="00:02:38.567"/>
-    <entry producer="chain13" in="00:02:42.850" out="00:02:56.367"/>
-    <entry producer="chain14" in="00:00:01.567" out="00:01:52.767"/>
-    <entry producer="chain15" in="00:00:03.483" out="00:00:19.600"/>
-    <entry producer="chain16" in="00:01:52.783" out="00:01:54.267"/>
+    <entry producer="chain25" in="00:00:01.483" out="00:00:09.600"/>
+    <entry producer="chain26" in="00:00:10.350" out="00:00:19.917"/>
+    <entry producer="chain27" in="00:00:22.117" out="00:00:29.200"/>
+    <entry producer="chain28" in="00:00:30.183" out="00:00:45.750"/>
+    <entry producer="chain29" in="00:00:47.033" out="00:01:22.683"/>
+    <entry producer="chain30" in="00:00:00.550" out="00:05:21.367"/>
+    <entry producer="chain31" in="00:00:01.200" out="00:00:21.167"/>
+    <entry producer="chain32" in="00:00:21.983" out="00:00:54.483"/>
+    <entry producer="chain33" in="00:00:55.850" out="00:01:20.017"/>
+    <entry producer="chain34" in="00:01:21.433" out="00:01:41.250"/>
+    <entry producer="chain35" in="00:01:42.183" out="00:02:13.167"/>
+    <entry producer="chain36" in="00:00:01.067" out="00:02:38.567"/>
+    <entry producer="chain37" in="00:02:42.850" out="00:02:56.367"/>
+    <entry producer="chain38" in="00:00:01.567" out="00:01:52.767"/>
+    <entry producer="chain39" in="00:00:03.483" out="00:00:19.600"/>
+    <entry producer="chain40" in="00:01:52.783" out="00:01:54.267"/>
   </playlist>
-  <tractor id="tractor0" title="Shotcut version 22.06.23" in="00:00:00.000" out="00:05:02.400">
+  <chain id="chain41" out="00:12:55.350">
+    <property name="length">00:12:55.367</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/bruno/Downloads/Interstellar Main Theme - Extra Extended - Soundtrack by Hans Zimmer.mp3</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="mute_on_pause">0</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">ad7cd9a6ca242baddaf26fe3ca0d262f</property>
+    <property name="shotcut:caption">Interstellar Main Theme - Extra Extended - Soundtrack by Hans Zimmer.mp3</property>
+    <filter id="filter60" out="00:08:49.167">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">-41</property>
+      <property name="mlt_service">volume</property>
+    </filter>
+  </chain>
+  <chain id="chain42" out="00:12:55.350">
+    <property name="length">00:12:55.367</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/bruno/Downloads/Interstellar Main Theme - Extra Extended - Soundtrack by Hans Zimmer.mp3</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="mute_on_pause">0</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">ad7cd9a6ca242baddaf26fe3ca0d262f</property>
+    <property name="shotcut:caption">Interstellar Main Theme - Extra Extended - Soundtrack by Hans Zimmer.mp3</property>
+    <filter id="filter61" in="00:08:49.183" out="00:10:27.717">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">-41</property>
+      <property name="mlt_service">volume</property>
+    </filter>
+  </chain>
+  <chain id="chain43" out="00:12:55.350">
+    <property name="length">00:12:55.367</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/bruno/Downloads/Interstellar Main Theme - Extra Extended - Soundtrack by Hans Zimmer.mp3</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="mute_on_pause">0</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">ad7cd9a6ca242baddaf26fe3ca0d262f</property>
+    <property name="shotcut:caption">Interstellar Main Theme - Extra Extended - Soundtrack by Hans Zimmer.mp3</property>
+    <filter id="filter62" in="00:08:49.183" out="00:12:08.267">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">00:03:16.100=0;00:03:19.083=-60</property>
+      <property name="mlt_service">volume</property>
+      <property name="shotcut:filter">fadeOutVolume</property>
+      <property name="shotcut:animOut">00:00:03.000</property>
+    </filter>
+    <filter id="filter63" in="00:08:49.183" out="00:12:08.267">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">-41</property>
+      <property name="mlt_service">volume</property>
+    </filter>
+  </chain>
+  <playlist id="playlist2">
+    <property name="shotcut:audio">1</property>
+    <property name="shotcut:name">A2</property>
+    <entry producer="chain41" in="00:00:00.000" out="00:08:49.167"/>
+    <entry producer="chain42" in="00:08:49.183" out="00:10:27.717"/>
+    <entry producer="chain43" in="00:08:49.183" out="00:12:08.267"/>
+  </playlist>
+  <tractor id="tractor0" title="Shotcut version 22.06.23" in="00:00:00.000" out="00:13:46.817">
     <property name="shotcut">1</property>
     <property name="shotcut:projectAudioChannels">2</property>
     <property name="shotcut:projectFolder">1</property>
-    <property name="shotcut:scaleFactor">0.107336</property>
+    <property name="shotcut:scaleFactor">0.074</property>
     <track producer="background"/>
     <track producer="playlist0"/>
     <track producer="playlist1" hide="video"/>
-    <transition id="transition0">
+    <track producer="playlist2" hide="video"/>
+    <transition id="transition2">
       <property name="a_track">0</property>
-      <property name="b_track">1</property>
+      <property name="b_track">2</property>
       <property name="mlt_service">mix</property>
       <property name="always_active">1</property>
       <property name="sum">1</property>
     </transition>
-    <transition id="transition1">
+    <transition id="transition0">
       <property name="a_track">0</property>
       <property name="b_track">1</property>
       <property name="version">0.1</property>
@@ -403,9 +1252,16 @@
       <property name="threads">0</property>
       <property name="disable">1</property>
     </transition>
-    <transition id="transition2">
+    <transition id="transition1">
       <property name="a_track">0</property>
-      <property name="b_track">2</property>
+      <property name="b_track">1</property>
+      <property name="mlt_service">mix</property>
+      <property name="always_active">1</property>
+      <property name="sum">1</property>
+    </transition>
+    <transition id="transition3">
+      <property name="a_track">0</property>
+      <property name="b_track">3</property>
       <property name="mlt_service">mix</property>
       <property name="always_active">1</property>
       <property name="sum">1</property>
