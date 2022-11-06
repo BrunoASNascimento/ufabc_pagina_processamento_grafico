@@ -1,5 +1,11 @@
 # ufabc_pagina_processamento_grafico
 
+## Code:
+
+Compile:
+```
+gcc -o <your_file> <your_file>.cpp -lglut -lGL -lGLU
+```
 
 ## URLs:
 
