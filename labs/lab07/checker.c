@@ -126,9 +126,9 @@ int main(int argc, char **argv)
 {
    glutInit(&argc, argv);
    glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB | GLUT_DEPTH);
-   glutInitWindowSize(250, 250);
+   glutInitWindowSize(500, 500);
    glutInitWindowPosition(100, 100);
-   glutCreateWindow("Checker.c");
+   glutCreateWindow("Equipe Átomos");
    init();
    glutDisplayFunc(display);
    glutReshapeFunc(reshape);
