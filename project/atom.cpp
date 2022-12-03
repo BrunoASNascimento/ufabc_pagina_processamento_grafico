@@ -20,6 +20,13 @@ void init(void)
 {
     //    glClearColor(0.0, 0.0, 0.0, 0.0);
     glShadeModel(GL_FLAT);
+    glEnable(GL_LIGHTING);
+    glEnable(GL_LIGHT0);
+    glEnable(GL_DEPTH_TEST);
+
+    GLfloat lmodel_ambient[] = {0.4, 0.4, 0.4, 1.0};
+    glLightModelfv(GL_LIGHT_MODEL_AMBIENT, lmodel_ambient);
+    glEnable(GL_COLOR_MATERIAL);
 }
 
 // source: https://stackoverflow.com/a/2185753
@@ -31,6 +38,7 @@ void printText(int x, int y, float r, float g, float b, void *font, char *string
     len = (int)strlen(string);
     for (i = 0; i < len; i++)
     {
+        glDisable(GL_LIGHTING);
         glutBitmapCharacter(font, string[i]);
     }
 }
@@ -43,10 +51,10 @@ void display(void)
 
     glColor3f(.5, .5, .5);
     glBegin(GL_QUADS);
-    glVertex3f(-30.0f, 30.0f, 0.0f);
-    glVertex3f(-30.0f, -30.0f, 0.0f);
-    glVertex3f(30.0f, -30.0f, 0.0f);
-    glVertex3f(30.0f, 30.0f, 0.0f);
+    glVertex3f(-30.0f, 30.0f, -1.0f);
+    glVertex3f(-30.0f, -30.0f, -1.0f);
+    glVertex3f(30.0f, -30.0f, -1.0f);
+    glVertex3f(30.0f, 30.0f, -1.0f);
     glEnd();
     
     glColor4f(1.0f, 0.0f, 0.0f, 0.0f); // Red
