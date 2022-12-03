@@ -40,6 +40,15 @@ void display(void)
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glEnable(GL_DEPTH_TEST);
 
+
+    glColor3f(.5, .5, .5);
+    glBegin(GL_QUADS);
+    glVertex3f(-30.0f, 30.0f, 0.0f);
+    glVertex3f(-30.0f, -30.0f, 0.0f);
+    glVertex3f(30.0f, -30.0f, 0.0f);
+    glVertex3f(30.0f, 30.0f, 0.0f);
+    glEnd();
+    
     glColor4f(1.0f, 0.0f, 0.0f, 0.0f); // Red
     glPushMatrix();
     glRotatef((GLfloat)nuclear_rotation, 0.0, 0.0, 1.0);
