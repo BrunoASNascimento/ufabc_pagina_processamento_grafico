@@ -19,7 +19,8 @@ static int current_angle = 0, rotation = 0, n = 1, angular_velocity = 50, nuclea
 void init(void)
 {
     //    glClearColor(0.0, 0.0, 0.0, 0.0);
-    glShadeModel(GL_FLAT);
+    // glShadeModel(GL_FLAT);
+    glShadeModel (GL_SMOOTH);
     glEnable(GL_LIGHTING);
     glEnable(GL_LIGHT0);
     glEnable(GL_DEPTH_TEST);
@@ -67,11 +68,10 @@ void display(void)
     glRotatef((GLfloat)nuclear_rotation, 0.0, 0.0, 1.0);
     glTranslatef(-0.5, 0.2, 0.0);
     glutSolidSphere(0.5, 20, 16); // nuclear - neutron
-
+    
     glRotatef((GLfloat)current_angle, 0.0, 0.0, 1.0); // eletron rotation around the nuclear
     glTranslatef(1.9 * (n * n), 0.0, 0.0);            // eletron location
     glPushMatrix();                                   // push eletron system
-    glPushMatrix();
 
     glRotatef((GLfloat)rotation, 0.0, 1.0, 0.0); // eletron spinn
     glRotatef(90 - 23.4, 1.0, 0.0, 0.0);         // eletron axis
@@ -79,12 +79,7 @@ void display(void)
     glutSolidSphere(0.1, 10, 8);                 // eletron
     glPopMatrix();
 
-    glPushMatrix();
-    glPopMatrix();
-
     glPopMatrix(); // pop eletron system
-
-    glPopMatrix();
 
     printText(-5, 15, 1, 1, 1, GLUT_BITMAP_HELVETICA_18, (char *)"MODELO DE BOHR");
     printText(-2, 14, 1, 1, 1, GLUT_BITMAP_HELVETICA_12, (char *)"Equipe Atomos");
