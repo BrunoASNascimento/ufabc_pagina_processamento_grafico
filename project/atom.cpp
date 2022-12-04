@@ -106,7 +106,7 @@ void display(void)
     glRotated((GLdouble)fotonAngle, .0, .0, 1.0);
     glTranslated(fotonPosition, 0.0, .1);
     glDisable(GL_LIGHTING);
-    glColor3f(0.0, 1.0, 1.0);
+    glColor3f(1.0, 1.0, 1.0);
     //    glutWireCube (0.1);
     glEnable(GL_LIGHTING);
     glPopMatrix();
@@ -122,10 +122,11 @@ void display(void)
 
     glColor4f(1.0f, 1.0f, 1.0f, 0.0f);
     glPushMatrix();
-    glTranslatef(0.0, 0.0, 0.0);
-    glutSolidSphere(10, 20, 16);
+    glTranslatef(0.0, 0.0, -250.0);
+    glutSolidSphere(250, 50, 50);
 
     glEnd();
+    glTranslatef(0.0, 0.0, 250.0);
 
     glDisable(GL_LIGHTING);
     // glPushMatrix();
@@ -159,6 +160,7 @@ void display(void)
     printText(-2, 14, 1, 1, 1, GLUT_BITMAP_HELVETICA_12, (char *)"Equipe Atomos");
 
     char energyStr[30];
+
     sprintf(energyStr, "Nivel de energia(n): %d", n);
     printText(-16, -14, 1, 1, 1, GLUT_BITMAP_HELVETICA_18, energyStr);
     printText(-16, -16, 1, 1, 1, GLUT_BITMAP_HELVETICA_12, (char *)"W/S ou CIMA/BAIXO: Alterar nivel de energia");
