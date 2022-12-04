@@ -19,11 +19,12 @@ static GLfloat spin = 0.0;
 static int fotonAngle = 0;
 static GLfloat fotonPosition = 50.0;
 
-int randAngle() {
+int randAngle()
+{
     int min = 0;
     int max = 360;
 
-    return rand()%(max-min + 1) + min;
+    return rand() % (max - min + 1) + min;
 }
 
 void init(void)
@@ -47,12 +48,11 @@ void init(void)
     glLightModelfv(GL_LIGHT_MODEL_AMBIENT, lmodel_ambient);
     glLightModelfv(GL_LIGHT_MODEL_LOCAL_VIEWER, local_view);
 
-
     GLfloat high_shininess[] = {100.0};
     GLfloat mat_specular[] = {1.0, 1.0, 1.0, 1.0};
     GLfloat diffuse1[] = {.0, .0, 1.0, 1.0};
-    
-    glLightfv(GL_LIGHT1, GL_SPECULAR, mat_specular); 
+
+    glLightfv(GL_LIGHT1, GL_SPECULAR, mat_specular);
     glMaterialfv(GL_FRONT, GL_SHININESS, high_shininess);
     glLightfv(GL_LIGHT1, GL_DIFFUSE, diffuse1);
     // glLightfv(GL_LIGHT0, GL_AMBIENT, ambient);
@@ -96,36 +96,38 @@ void display(void)
     GLfloat high_shininess[] = {100.0};
     GLfloat mat_emission[] = {0.3, 0.2, 0.2, 0.0};
 
-    GLfloat position[] = { fotonPosition, 0.0, .1, 1.0 };
-    GLfloat mat_shininess[] = { 1.0 };
+    GLfloat position[] = {fotonPosition, 0.0, .1, 1.0};
+    GLfloat mat_shininess[] = {1.0};
 
-    glPushMatrix ();
+    glPushMatrix();
     // glMaterialfv(GL_FRONT, GL_SPECULAR, mat_specular);
     // glMaterialfv(GL_FRONT, GL_SHININESS, mat_shininess);
-    glLightfv (GL_LIGHT1, GL_POSITION, position);
-    glRotated ((GLdouble) fotonAngle, .0, .0, 1.0);
-    glTranslated (fotonPosition, 0.0, .1);
-    glDisable (GL_LIGHTING);
-    glColor3f (0.0, 1.0, 1.0);
-    glutWireCube (0.1);
-    glEnable (GL_LIGHTING);
-    glPopMatrix ();
+    glLightfv(GL_LIGHT1, GL_POSITION, position);
+    glRotated((GLdouble)fotonAngle, .0, .0, 1.0);
+    glTranslated(fotonPosition, 0.0, .1);
+    glDisable(GL_LIGHTING);
+    glColor3f(0.0, 1.0, 1.0);
+    //    glutWireCube (0.1);
+    glEnable(GL_LIGHTING);
+    glPopMatrix();
 
     glColor3f(1.0, 1.0, 1.0);
-    glNormal3f(0,0,1);
-    glBegin(GL_QUADS);
+    glNormal3f(0, 0, 1);
+    //    glBegin(GL_QUADS);
     // glMaterialfv(GL_FRONT, GL_AMBIENT, no_mat);
     // glMaterialfv(GL_FRONT, GL_DIFFUSE, no_mat);
     glMaterialfv(GL_FRONT, GL_SPECULAR, mat_specular);
     // glMaterialfv(GL_FRONT, GL_SHININESS, no_shininess);
     // glMaterialfv(GL_FRONT, GL_EMISSION, no_mat);
-    glVertex3f(-30.0f, 30.0f, -1.5f);
-    glVertex3f(-30.0f, -30.0f, -1.5f);
-    glVertex3f(30.0f, -30.0f, -1.5f);
-    glVertex3f(30.0f, 30.0f, -1.5f);
+
+    glColor4f(1.0f, 1.0f, 1.0f, 0.0f);
+    glPushMatrix();
+    glTranslatef(0.0, 0.0, 0.0);
+    glutSolidSphere(10, 20, 16);
+
     glEnd();
 
-    glDisable (GL_LIGHTING);
+    glDisable(GL_LIGHTING);
     // glPushMatrix();
     // glTranslatef(-0.5, 0.2, -2.0f);
     // glutSolidCube (20.0);
@@ -137,11 +139,11 @@ void display(void)
     glTranslatef(0.5, 0.0, 0.0);
     glutSolidSphere(0.5, 20, 16); // nuclear - proton
 
-    glColor3f(0.0f, 0.0f, 1.0f);  // Blue
+    glColor3f(0.0f, 0.0f, 1.0f); // Blue
     glRotatef((GLfloat)nuclear_rotation, 0.0, 0.0, 1.0);
     glTranslatef(-0.5, 0.2, 0.0);
     glutSolidSphere(0.5, 20, 16); // nuclear - neutron
-    
+
     glRotatef((GLfloat)current_angle, 0.0, 0.0, 1.0); // eletron rotation around the nuclear
     glTranslatef(1.9 * (n * n), 0.0, 0.0);            // eletron location
     glPushMatrix();                                   // push eletron system
@@ -152,7 +154,7 @@ void display(void)
     glutSolidSphere(0.1, 10, 8);                 // eletron
     glPopMatrix();
     glPopMatrix(); // pop eletron system
-    
+
     printText(-5, 15, 1, 1, 1, GLUT_BITMAP_HELVETICA_18, (char *)"MODELO DE BOHR");
     printText(-2, 14, 1, 1, 1, GLUT_BITMAP_HELVETICA_12, (char *)"Equipe Atomos");
 
@@ -161,8 +163,7 @@ void display(void)
     printText(-16, -14, 1, 1, 1, GLUT_BITMAP_HELVETICA_18, energyStr);
     printText(-16, -16, 1, 1, 1, GLUT_BITMAP_HELVETICA_12, (char *)"W/S ou CIMA/BAIXO: Alterar nivel de energia");
 
-    glEnable (GL_LIGHTING);
-
+    glEnable(GL_LIGHTING);
 
     glutSwapBuffers();
 }
@@ -183,7 +184,7 @@ void reshape(int w, int h)
 // source: https://www.inf.pucrs.br/~manssour/OpenGL/Animacao.html
 void Timer(int value)
 {
-    current_angle = (current_angle + (angular_velocity / (n*n*n) )) % 360;
+    current_angle = (current_angle + (angular_velocity / (n * n * n))) % 360;
     if (angular_velocity % 45 > 0)
     {
         nuclear_rotation = nuclear_rotation + angular_velocity % 45;
@@ -193,9 +194,10 @@ void Timer(int value)
         nuclear_rotation = nuclear_rotation * 0;
     }
 
-    //foton
+    // foton
     fotonPosition = fotonPosition + .7;
-    if (fotonPosition > 30.0) {
+    if (fotonPosition > 30.0)
+    {
         glDisable(GL_LIGHT1);
     }
 
