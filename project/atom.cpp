@@ -15,14 +15,23 @@
 #define ESCAPE 27
 
 static int current_angle = 0, rotation = 0, n = 1, angular_velocity = 50, nuclear_rotation = 0;
-static int spin = 0;
+static GLfloat spin = 0.0;
+static int fotonAngle = 0;
+static GLfloat fotonPosition = 50.0;
+
+int randAngle() {
+    int min = 0;
+    int max = 360;
+
+    return rand()%(max-min + 1) + min;
+}
 
 void init(void)
 {
     //    glClearColor(0.0, 0.0, 0.0, 0.0);
     // glShadeModel(GL_FLAT);
-    GLfloat ambient[] = {0.0, 0.0, 0.0, 1.0};
-    GLfloat diffuse[] = {1.0, 1.0, 1.0, 1.0};
+    GLfloat ambient[] = {0.1, 0.1, 0.1, 1.0};
+    GLfloat diffuse[] = {.2, .2, .2, 1.0};
     GLfloat specular[] = {1.0, 1.0, 1.0, 1.0};
     GLfloat position[] = {-4.0, 3.0, 2.0, 0.0};
     GLfloat lmodel_ambient[] = {0.4, 0.4, 0.4, 1.0};
@@ -38,8 +47,20 @@ void init(void)
     glLightModelfv(GL_LIGHT_MODEL_AMBIENT, lmodel_ambient);
     glLightModelfv(GL_LIGHT_MODEL_LOCAL_VIEWER, local_view);
 
+
+    GLfloat high_shininess[] = {100.0};
+    GLfloat mat_specular[] = {1.0, 1.0, 1.0, 1.0};
+    GLfloat diffuse1[] = {.0, .0, 1.0, 1.0};
+    
+    glLightfv(GL_LIGHT1, GL_SPECULAR, mat_specular); 
+    glMaterialfv(GL_FRONT, GL_SHININESS, high_shininess);
+    glLightfv(GL_LIGHT1, GL_DIFFUSE, diffuse1);
+    // glLightfv(GL_LIGHT0, GL_AMBIENT, ambient);
     glEnable(GL_LIGHTING);
     glEnable(GL_LIGHT0);
+    glEnable(GL_LIGHT1);
+    glDisable(GL_LIGHT0);
+    glDisable(GL_LIGHT1);
 
     // GLfloat lmodel_ambient[] = {0.4, 0.4, 0.4, 1.0};
     // glLightModelfv(GL_LIGHT_MODEL_AMBIENT, lmodel_ambient);
@@ -75,28 +96,27 @@ void display(void)
     GLfloat high_shininess[] = {100.0};
     GLfloat mat_emission[] = {0.3, 0.2, 0.2, 0.0};
 
-    GLfloat position[] = { 0.0, 0.0, 1.5, 1.0 };
+    GLfloat position[] = { fotonPosition, 0.0, .1, 1.0 };
     GLfloat mat_shininess[] = { 1.0 };
 
     glPushMatrix ();
-    glRotated ((GLdouble) spin, .0, 1.0, 0.0);
     // glMaterialfv(GL_FRONT, GL_SPECULAR, mat_specular);
     // glMaterialfv(GL_FRONT, GL_SHININESS, mat_shininess);
-    glLightfv (GL_LIGHT0, GL_POSITION, position);
-
-    glTranslated (0.0, 0.0, 1.5);
+    glLightfv (GL_LIGHT1, GL_POSITION, position);
+    glRotated ((GLdouble) fotonAngle, .0, .0, 1.0);
+    glTranslated (fotonPosition, 0.0, .1);
     glDisable (GL_LIGHTING);
     glColor3f (0.0, 1.0, 1.0);
     glutWireCube (0.1);
     glEnable (GL_LIGHTING);
     glPopMatrix ();
 
-    // glColor3f(1.0, 1.0, 1.0);
+    glColor3f(1.0, 1.0, 1.0);
     glNormal3f(0,0,1);
     glBegin(GL_QUADS);
     // glMaterialfv(GL_FRONT, GL_AMBIENT, no_mat);
     // glMaterialfv(GL_FRONT, GL_DIFFUSE, no_mat);
-    // glMaterialfv(GL_FRONT, GL_SPECULAR, mat_specular);
+    glMaterialfv(GL_FRONT, GL_SPECULAR, mat_specular);
     // glMaterialfv(GL_FRONT, GL_SHININESS, no_shininess);
     // glMaterialfv(GL_FRONT, GL_EMISSION, no_mat);
     glVertex3f(-30.0f, 30.0f, -1.5f);
@@ -105,6 +125,7 @@ void display(void)
     glVertex3f(30.0f, 30.0f, -1.5f);
     glEnd();
 
+    glDisable (GL_LIGHTING);
     // glPushMatrix();
     // glTranslatef(-0.5, 0.2, -2.0f);
     // glutSolidCube (20.0);
@@ -140,6 +161,9 @@ void display(void)
     printText(-16, -14, 1, 1, 1, GLUT_BITMAP_HELVETICA_18, energyStr);
     printText(-16, -16, 1, 1, 1, GLUT_BITMAP_HELVETICA_12, (char *)"W/S ou CIMA/BAIXO: Alterar nivel de energia");
 
+    glEnable (GL_LIGHTING);
+
+
     glutSwapBuffers();
 }
 
@@ -168,6 +192,13 @@ void Timer(int value)
     {
         nuclear_rotation = nuclear_rotation * 0;
     }
+
+    //foton
+    fotonPosition = fotonPosition + .7;
+    if (fotonPosition > 30.0) {
+        glDisable(GL_LIGHT1);
+    }
+
     // Redesenha o quadrado com as novas coordenadas
     glutPostRedisplay();
     glutTimerFunc(33, Timer, 1);
@@ -186,6 +217,9 @@ void decreaseOrbital()
     if (n > 1)
     {
         n = n - 1;
+        glEnable(GL_LIGHT1);
+        fotonAngle = randAngle();
+        fotonPosition = 1.9 * (n * n);
     }
 }
 
@@ -229,20 +263,6 @@ void keyboard_callback_special(int key, int x, int y)
     return;
 }
 
-void mouse(int button, int state, int x, int y)
-{
-   switch (button) {
-      case GLUT_LEFT_BUTTON:
-         if (state == GLUT_DOWN) {
-            spin = (spin + 30) % 360;
-            glutPostRedisplay();
-         }
-         break;
-      default:
-         break;
-   }
-}
-
 int main(int argc, char **argv)
 {
     glutInit(&argc, argv);
@@ -256,7 +276,6 @@ int main(int argc, char **argv)
     glutReshapeFunc(reshape);
     glutKeyboardFunc(keyboard);
     glutSpecialFunc(keyboard_callback_special);
-    glutMouseFunc(mouse);
     glutTimerFunc(33, Timer, 1);
     glutMainLoop();
     return 0;
