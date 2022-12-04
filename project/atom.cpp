@@ -112,147 +112,15 @@ void display(void)
 
     glColor4f(1.0f, 0.0f, 0.0f, 0.0f); // Red
     glPushMatrix();
-    glRotatef((GLfloat)nuclear_rotation, 0.0, 1.0, 0.0);
+    glRotatef((GLfloat)nuclear_rotation, 0.0, 0.0, 1.0);
     glTranslatef(0.5, 0.0, 0.0);
     glutSolidSphere(0.5, 20, 16); // nuclear - proton
 
-    glColor3f(0.0f, 0.0f, 1.0f); // Blue
-    glRotatef(-(GLfloat)nuclear_rotation, 0.0, 0.0, 1.0);
+    glColor3f(0.0f, 0.0f, 1.0f);  // Blue
+    glRotatef((GLfloat)nuclear_rotation, 0.0, 0.0, 1.0);
     glTranslatef(-0.5, 0.2, 0.0);
     glutSolidSphere(0.5, 20, 16); // nuclear - neutron
-
-    glColor3f(0.0f, 0.0f, 1.0f); // Blue
-    glRotatef(-(GLfloat)nuclear_rotation, 1.0, 0.0, 1.0);
-    glTranslatef(-0.5, 0.2, 0.0);
-    glutSolidSphere(0.5, 20, 16); // nuclear - neutron
-
-    glColor4f(1.0f, 0.0f, 0.0f, 0.0f); // Red
-    glPushMatrix();
-    glRotatef((GLfloat)nuclear_rotation, 1.0, 0.0, 1.0);
-    glTranslatef(0.5, 0.0, 0.0);
-    glutSolidSphere(0.5, 20, 16); // nuclear - proton
-
-    glColor4f(1.0f, 0.0f, 0.0f, 0.0f); // Red
-    glPushMatrix();
-    glRotatef((GLfloat)nuclear_rotation, 0.0, 1.0, 0.0);
-    glTranslatef(0.5, 0.0, 0.0);
-    glutSolidSphere(0.5, 20, 16); // nuclear - proton
-
-    glColor3f(0.0f, 0.0f, 1.0f); // Blue
-    glRotatef(-(GLfloat)nuclear_rotation, 0.0, 1.0, 0.0);
-    glTranslatef(-0.5, 0.2, 0.0);
-    glutSolidSphere(0.5, 20, 16); // nuclear - neutron
-
-    glColor4f(1.0f, 0.0f, 0.0f, 0.0f); // Red
-    glPushMatrix();
-    glRotatef(-(GLfloat)nuclear_rotation, 0.0, 0.0, 1.0);
-    glTranslatef(0.5, 0.0, 0.0);
-    glutSolidSphere(0.5, 20, 16); // nuclear - proton
-
-    glColor3f(0.0f, 0.0f, 1.0f); // Blue
-    glRotatef((GLfloat)nuclear_rotation, 1.0, 0.0, 1.0);
-    glTranslatef(-0.5, 0.2, 0.0);
-    glutSolidSphere(0.5, 20, 16); // nuclear - neutron
-
-    glColor3f(0.0f, 0.0f, 1.0f); // Blue
-    glRotatef(-(GLfloat)nuclear_rotation, 1.0, 1.0, 1.0);
-    glTranslatef(-0.5, 0.2, 0.0);
-    glutSolidSphere(0.5, 20, 16); // nuclear - neutron
-
-    glColor4f(1.0f, 0.0f, 0.0f, 0.0f); // Red
-    glPushMatrix();
-    glRotatef((GLfloat)nuclear_rotation, 1.0, 0.0, 1.0);
-    glTranslatef(0.5, 0.0, 0.0);
-    glutSolidSphere(0.5, 20, 16); // nuclear - proton
-
-    glColor4f(1.0f, 0.0f, 0.0f, 0.0f); // Red
-    glPushMatrix();
-    glRotatef(-(GLfloat)nuclear_rotation, 1.0, 1.0, 0.0);
-    glTranslatef(0.5, 0.0, 0.0);
-    glutSolidSphere(0.5, 20, 16); // nuclear - proton
-
-    glColor3f(0.0f, 0.0f, 1.0f); // Blue
-    glRotatef(-(GLfloat)nuclear_rotation, 1.0, 1.0, 0.0);
-    glTranslatef(-0.5, 0.2, 0.0);
-    glutSolidSphere(0.5, 20, 16); // nuclear - neutron
-
-    glColor3f(0.0f, 0.0f, 1.0f); // Blue
-    glRotatef(-(GLfloat)nuclear_rotation, 1.0, 0.0, 1.0);
-    glTranslatef(0.5, 0.2, 0.0);
-    glutSolidSphere(0.5, 20, 16); // nuclear - neutron
-
-    glColor4f(1.0f, 0.0f, 0.0f, 0.0f); // Red
-    glPushMatrix();
-    glRotatef((GLfloat)nuclear_rotation, 1.0, 0.0, 1.0);
-    glTranslatef(-0.5, 0.0, 0.0);
-    glutSolidSphere(0.5, 20, 16); // nuclear - proton
-
-    glColor3f(0.0f, 0.0f, 1.0f); // Blue
-    glRotatef(-(GLfloat)nuclear_rotation, 1.0, 0.0, 1.0);
-    glTranslatef(-0.5, 0.2, 0.0);
-    glutSolidSphere(0.5, 20, 16); // nuclear - neutron
-
-    glColor4f(1.0f, 0.0f, 0.0f, 0.0f); // Red
-    glPushMatrix();
-    glRotatef(-(GLfloat)nuclear_rotation, 1.0, 0.0, 1.0);
-    glTranslatef(0.5, 0.0, 0.0);
-    glutSolidSphere(0.5, 20, 16); // nuclear - proton
-
-    glColor4f(1.0f, 0.0f, 0.0f, 0.0f); // Red
-    glPushMatrix();
-    glRotatef((GLfloat)nuclear_rotation, 0.0, 0.0, 0.0);
-    glTranslatef(0.5, 0.0, 0.0);
-    glutSolidSphere(0.5, 20, 16); // nuclear - proton
-
-    glColor3f(0.0f, 0.0f, 1.0f); // Blue
-    glRotatef(-(GLfloat)nuclear_rotation, 0.0, 0.0, 0.0);
-    glTranslatef(-0.5, 0.2, 0.0);
-    glutSolidSphere(0.5, 20, 16); // nuclear - neutron
-
-    glColor4f(1.0f, 0.0f, 0.0f, 0.0f); // Red
-    glPushMatrix();
-    glRotatef(-(GLfloat)nuclear_rotation, 1.0, 0.0, 1.0);
-    glTranslatef(0.5, 0.0, 0.0);
-    glutSolidSphere(0.5, 20, 16); // nuclear - proton
-
-    glColor3f(0.0f, 0.0f, 1.0f); // Blue
-    glRotatef((GLfloat)nuclear_rotation, 1.0, 0.0, 1.0);
-    glTranslatef(-0.5, 0.2, 0.0);
-    glutSolidSphere(0.5, 20, 16); // nuclear - neutron
-
-    glColor3f(0.0f, 0.0f, 1.0f); // Blue
-    glRotatef(-(GLfloat)nuclear_rotation, 1.0, 0.0, 1.0);
-    glTranslatef(-0.5, 0.2, 0.0);
-    glutSolidSphere(0.5, 20, 16); // nuclear - neutron
-
-    glColor4f(1.0f, 0.0f, 0.0f, 0.0f); // Red
-    glPushMatrix();
-    glRotatef((GLfloat)nuclear_rotation, 1.0, 0.0, 1.0);
-    glTranslatef(0.5, 0.0, 0.0);
-    glutSolidSphere(0.5, 20, 16); // nuclear - proton
-
-    glColor4f(1.0f, 0.0f, 0.0f, 0.0f); // Red
-    glPushMatrix();
-    glRotatef((GLfloat)nuclear_rotation, 1.0, 1.0, 0.0);
-    glTranslatef(0.5, 0.0, 0.0);
-    glutSolidSphere(0.5, 20, 16); // nuclear - proton
-
-    glColor3f(0.0f, 0.0f, 1.0f); // Blue
-    glRotatef(-(GLfloat)nuclear_rotation, 1.0, 1.0, 0.0);
-    glTranslatef(-0.5, 0.2, 0.0);
-    glutSolidSphere(0.5, 20, 16); // nuclear - neutron
-
-    glColor3f(0.0f, 0.0f, 1.0f); // Blue
-    glRotatef(-(GLfloat)nuclear_rotation, 1.0, 1.0, 1.0);
-    glTranslatef(0.5, 0.2, 0.0);
-    glutSolidSphere(0.5, 20, 16); // nuclear - neutron
-
-    glColor4f(1.0f, 0.0f, 0.0f, 0.0f); // Red
-    glPushMatrix();
-    glRotatef((GLfloat)nuclear_rotation, 1.0, 1.0, 1.0);
-    glTranslatef(-0.5, 0.0, 0.0);
-    glutSolidSphere(0.5, 20, 16); // nuclear - proton
-
+    
     glRotatef((GLfloat)current_angle, 0.0, 0.0, 1.0); // eletron rotation around the nuclear
     glTranslatef(1.9 * (n * n), 0.0, 0.0);            // eletron location
     glPushMatrix();                                   // push eletron system
