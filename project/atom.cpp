@@ -111,14 +111,10 @@ void init(void)
     glLightModelfv(GL_LIGHT_MODEL_AMBIENT, lmodel_ambient);
     glLightModelfv(GL_LIGHT_MODEL_LOCAL_VIEWER, local_view);
     
-
-    // glLightfv(GL_LIGHT0, GL_AMBIENT, ambient);
     glEnable(GL_LIGHTING);
     glEnable(GL_LIGHT0);
     glDisable(GL_LIGHT0);
 
-    // GLfloat lmodel_ambient[] = {0.4, 0.4, 0.4, 1.0};
-    // glLightModelfv(GL_LIGHT_MODEL_AMBIENT, lmodel_ambient);
     glEnable(GL_COLOR_MATERIAL);
 }
 
@@ -161,26 +157,17 @@ void display(void)
     GLfloat mat_shininess[] = {1.0};
 
     glPushMatrix();
-    // glMaterialfv(GL_FRONT, GL_SPECULAR, mat_specular);
-    // glMaterialfv(GL_FRONT, GL_SHININESS, mat_shininess);
     glRotated((GLdouble)fotonAngle, .0, .0, 1.0);
     glLightfv(GL_LIGHT1, GL_POSITION, position);
-    glTranslated(fotonPosition, 0.0, .1);
+    glTranslated(fotonPosition, 0.0, .4);
     glDisable(GL_LIGHTING);
-    glColor3f(1.0, 1.0, 1.0);
-    // glutWireCube (0.1);
+    glColor3f(diffuse1[0], diffuse1[1], diffuse1[2]);
+    glutSolidSphere(0.2, 10, 8); 
     glEnable(GL_LIGHTING);
     glPopMatrix();
 
     glColor3f(1.0, 1.0, 1.0);
-    glNormal3f(0, 0, 1);
-    //    glBegin(GL_QUADS);
-    // glMaterialfv(GL_FRONT, GL_AMBIENT, no_mat);
-    // glMaterialfv(GL_FRONT, GL_DIFFUSE, no_mat);
     glMaterialfv(GL_FRONT, GL_SPECULAR, mat_specular);
-    // glMaterialfv(GL_FRONT, GL_SHININESS, no_shininess);
-    // glMaterialfv(GL_FRONT, GL_EMISSION, no_mat);
-
     glColor4f(1.0f, 1.0f, 1.0f, 0.0f);
     glPushMatrix();
     glTranslatef(0.0, 0.0, -250.0);
@@ -190,10 +177,6 @@ void display(void)
     glTranslatef(0.0, 0.0, 250.0);
 
     glDisable(GL_LIGHTING);
-    // glPushMatrix();
-    // glTranslatef(-0.5, 0.2, -2.0f);
-    // glutSolidCube (20.0);
-    // glPopMatrix();
 
     glColor4f(1.0f, 0.0f, 0.0f, 0.0f); // Red
     glPushMatrix();
