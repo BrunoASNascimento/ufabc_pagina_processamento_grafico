@@ -14,7 +14,7 @@
 /* ASCII code for the escape key. */
 #define ESCAPE 27
 
-static int current_angle = 0, rotation = 0, n = 1, angular_velocity = 50, nuclear_rotation = 0;
+static int current_angle = 0, rotation = 0, n = 2, angular_velocity = 50, nuclear_rotation = 0;
 static GLfloat spin = 0.0;
 static int fotonAngle = 0;
 static GLfloat fotonPosition = 50.0;
@@ -107,7 +107,7 @@ void display(void)
     glTranslated(fotonPosition, 0.0, .1);
     glDisable(GL_LIGHTING);
     glColor3f(1.0, 1.0, 1.0);
-    //    glutWireCube (0.1);
+    glutWireCube (0.1);
     glEnable(GL_LIGHTING);
     glPopMatrix();
 
@@ -146,7 +146,7 @@ void display(void)
     glutSolidSphere(0.5, 20, 16); // nuclear - neutron
 
     glRotatef((GLfloat)current_angle, 0.0, 0.0, 1.0); // eletron rotation around the nuclear
-    glTranslatef(1.9 * (n * n), 0.0, 0.0);            // eletron location
+    glTranslatef(.4 * (n * n), 0.5, 0.0);            // eletron location
     glPushMatrix();                                   // push eletron system
 
     glRotatef((GLfloat)rotation, 0.0, 1.0, 0.0); // eletron spinn
@@ -208,24 +208,33 @@ void Timer(int value)
     glutTimerFunc(33, Timer, 1);
 }
 
-void increaseOrbital()
-{
-    if (n < 3)
-    {
-        n = n + 1;
-    }
+void emitFoton() {
+    glEnable(GL_LIGHT1);
+    fotonAngle = randAngle();
+    fotonPosition = 1.0;
 }
 
 void setOrbital(int x)
 {
     if (x > 0 && x < 7)
     {
+        if (x < n) {
+            emitFoton();
+        }
+        
         n = x;
-        glEnable(GL_LIGHT1);
-        fotonAngle = randAngle();
-        fotonPosition = 1.9 * (n * n);
     }
 }
+
+void increaseOrbital()
+{
+    if (n < 6)
+    {
+        setOrbital(n + 1);
+    }
+}
+
+
 
 void decreaseOrbital()
 {
