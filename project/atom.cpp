@@ -145,7 +145,7 @@ void display(void)
     glPopMatrix();
 
 
-    GLfloat position2[] = {photonPosition2, 0.0, .4, 1.0};
+    GLfloat position2[] = {photonPosition2, 0.0, .1, 1.0};
     GLfloat diffuse2[] = {.5, .5, .5, 1.0};
 
     if (showPhoton2 == 1) {
@@ -155,7 +155,7 @@ void display(void)
         glLightfv(GL_LIGHT0, GL_DIFFUSE, diffuse2);
         glRotated((GLdouble)fotonAngle, .0, .0, 1.0);
         glLightfv(GL_LIGHT0, GL_POSITION, position2);
-        glTranslated(photonPosition2, 0.0, .4);
+        glTranslated(photonPosition2, 0.0, .1);
         glDisable(GL_LIGHTING);
         glColor3f(1.0, 1.0, 1.0);
         glutSolidSphere(0.2, 10, 8); 
@@ -163,7 +163,7 @@ void display(void)
         glPopMatrix();
     }
 
-    GLfloat sphere_mat_specular[] = {.5, .5, .5, 1.0};
+    GLfloat sphere_mat_specular[] = {.7, .7, .7, 1.0};
     glColor3f(1.0, 1.0, 1.0);
     glMaterialfv(GL_FRONT, GL_SPECULAR, sphere_mat_specular);
     glColor4f(1.0f, 1.0f, 1.0f, 0.0f);
