@@ -92,12 +92,6 @@ double balmerFormula(double ni, double nf)
 
 void init(void)
 {
-    //    glClearColor(0.0, 0.0, 0.0, 0.0);
-    // glShadeModel(GL_FLAT);
-    GLfloat ambient[] = {0.1, 0.1, 0.1, 1.0};
-    GLfloat diffuse[] = {.2, .2, .2, 1.0};
-    GLfloat specular[] = {1.0, 1.0, 1.0, 1.0};
-    GLfloat position[] = {-4.0, 3.0, 2.0, 0.0};
     GLfloat lmodel_ambient[] = {0.4, 0.4, 0.4, 1.0};
     GLfloat local_view[] = {0.0};
 
@@ -105,15 +99,10 @@ void init(void)
     glEnable(GL_DEPTH_TEST);
     glShadeModel(GL_SMOOTH);
 
-    glLightfv(GL_LIGHT0, GL_AMBIENT, ambient);
-    glLightfv(GL_LIGHT0, GL_DIFFUSE, diffuse);
-    glLightfv(GL_LIGHT0, GL_POSITION, position);
     glLightModelfv(GL_LIGHT_MODEL_AMBIENT, lmodel_ambient);
     glLightModelfv(GL_LIGHT_MODEL_LOCAL_VIEWER, local_view);
     
     glEnable(GL_LIGHTING);
-    glEnable(GL_LIGHT0);
-    glDisable(GL_LIGHT0);
 
     glEnable(GL_COLOR_MATERIAL);
 }
@@ -143,18 +132,8 @@ void display(void)
     glMaterialfv(GL_FRONT, GL_SHININESS, high_shininess);
     glLightfv(GL_LIGHT1, GL_DIFFUSE, diffuse1);
 
-    GLfloat no_mat[] = {0.0, 0.0, 0.0, 1.0};
-    GLfloat mat_ambient[] = {0.7, 0.7, 0.7, 1.0};
-    GLfloat mat_ambient_color[] = {0.8, 0.8, 0.2, 1.0};
-    GLfloat mat_diffuse[] = {0.1, 0.5, 0.8, 1.0};
-    GLfloat mat_diffuse2[] = {0.8, 0.5, 0.1, 1.0};
     GLfloat mat_specular[] = {.5, .5, .5, 1.0};
-    GLfloat no_shininess[] = {0.0};
-    GLfloat low_shininess[] = {5.0};
-    GLfloat mat_emission[] = {0.3, 0.2, 0.2, 0.0};
-
     GLfloat position[] = {fotonPosition, 0.0, .4, 1.0};
-    GLfloat mat_shininess[] = {1.0};
 
     glPushMatrix();
     glRotated((GLdouble)fotonAngle, .0, .0, 1.0);
