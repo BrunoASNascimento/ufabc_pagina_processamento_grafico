@@ -157,14 +157,14 @@ void display(void)
     GLfloat low_shininess[] = {5.0};
     GLfloat mat_emission[] = {0.3, 0.2, 0.2, 0.0};
 
-    GLfloat position[] = {fotonPosition, 0.0, .1, 1.0};
+    GLfloat position[] = {fotonPosition, 0.0, .4, 1.0};
     GLfloat mat_shininess[] = {1.0};
 
     glPushMatrix();
     // glMaterialfv(GL_FRONT, GL_SPECULAR, mat_specular);
     // glMaterialfv(GL_FRONT, GL_SHININESS, mat_shininess);
-    glLightfv(GL_LIGHT1, GL_POSITION, position);
     glRotated((GLdouble)fotonAngle, .0, .0, 1.0);
+    glLightfv(GL_LIGHT1, GL_POSITION, position);
     glTranslated(fotonPosition, 0.0, .1);
     glDisable(GL_LIGHTING);
     glColor3f(1.0, 1.0, 1.0);
@@ -262,7 +262,7 @@ void Timer(int value)
     }
 
     // foton
-    fotonPosition = fotonPosition + .7;
+    fotonPosition = fotonPosition + .5;
     if (fotonPosition > 30.0)
     {
         glDisable(GL_LIGHT1);
