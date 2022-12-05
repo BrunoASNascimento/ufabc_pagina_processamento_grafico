@@ -12,16 +12,17 @@
 <body>
     <div class="container">
         <div class="navbar">
-            <a href="/ufabc_pagina_processamento_grafico/#home">Home</a>
+            <a href="#home">Home</a>
             <div class="dropdown">
                 <button class="dropbtn">
                     Seminário
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
-                    <a href="/ufabc_pagina_processamento_grafico/#tema">Tema</a>
-                    <a href="/ufabc_pagina_processamento_grafico/#modelagem">Modelagem</a>
+                    <a href="#tema">Tema</a>
+                    <a href="#modelagem">Modelagem</a>
                     <a href="./relatorio">Relatório</a>
+                    <a href="./relatorio2">Relatório 2</a>
                 </div>
             </div>
             <div class="dropdown">
@@ -30,9 +31,11 @@
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
-                    <a href="/ufabc_pagina_processamento_grafico/#lab01">Lab 01</a>
-                    <a href="/ufabc_pagina_processamento_grafico/#lab02">Lab 02</a>
-                    <a href="/ufabc_pagina_processamento_grafico/#lab03">Lab 03</a>
+                    <a href="#lab01">Lab 01</a>
+                    <a href="#lab02">Lab 02</a>
+                    <a href="#lab03">Lab 03</a>
+                    <a href="#lab05">Lab 05</a>
+                    <a href="#lab06">Lab 06</a>
                 </div>
             </div>
         </div>
@@ -135,7 +138,7 @@
                 </p>
                 <h3>Implementação</h3>
 
-                <h3>Implementação - Fórmulas</h3>
+                <h3>Implementação - Fórmulas Bohr</h3>
 
                 <p>Antes de iniciar a implementação do projeto foi necessário o entendimento das principais fórmulas do
                     Modelo de Bohr. Para isso nos baseamos nos vídeos a seguir:</p>
@@ -224,13 +227,49 @@
                 </ul>
                 </p>
 
+                <h3>Fórmula Balmer</h3>
+                <p>
+                    Para a segunda etapa do projeto, também incluimos a emissão e absorção de elétrons de acordo com as
+                    mudanças nos níveis de energia. Diferentes mudanças de níveis de energia emitem fótons de diferentes
+                    tonalidades. Para saber a tonalidade resultante usamos a Fórmula Balmer que da os comprimentos de
+                    ondas visiveis que são causados quando o elétron pula entre as camadas da imagem a seguir:
+                </p>
+
+                <img src="../assets/img/seminario/formula-08.png" alt="formula 08" />
+
+                <p>
+                    A seguir temos a Fórmula Balmer:
+                </p>
+
+                <img src="../assets/img/seminario/formula-09.png" alt="formula 09" />
+
+                <p>
+                    Ela nos da comprimentos de onda como mostra a imagem a seguir:
+                </p>
+
+                <img src="../assets/img/seminario/formula-10.png" alt="formula 10" />
+
+                <p>
+                    Como OpenGL trabalha com valores de cores entre 0 e 1, também foi necessário criar uma função para
+                    fazer a conversão dos valores de comprimentos de ondas para RGB. Mais informações sobre como isso
+                    funciona podem ser encontradas no link a seguir:
+                    <a href="https://www.fourmilab.ch/documents/specrend/"
+                        target="_blank">https://www.fourmilab.ch/documents/specrend/</a>
+                </p>
+
+
+                <p>E aqui há uma visualização da função de conversão:</p>
+
+                <img src="../assets/img/seminario/formula-11.jpg" alt="formula 11" />
+
+
                 <h3>Implementação - Modelagem</h3>
 
                 <p>
                     O diagrama de blocos a seguir representa de maneira resumida o funcionamento do nosso sistema:
                 </p>
 
-                <img src="../assets/img/seminario/modelo.png" alt="Modelo de Bohr formulas" />
+                <img src="../assets/img/seminario/modelo2.png" alt="Modelo de Bohr formulas" />
 
                 <p>
                     Link do diagrama:
