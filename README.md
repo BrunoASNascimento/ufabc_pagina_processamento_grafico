@@ -5,6 +5,7 @@
 Compile:
 ```
 gcc -o <your_file> <your_file>.cpp -lglut -lGL -lGLU
+gcc -o <your_file> <your_file>.cpp -lglut -lGL -lGLU -ldl -lm
 ```
 
 ## URLs:
