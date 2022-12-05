@@ -17,7 +17,9 @@
 static int current_angle = 0, rotation = 0, n = 2, angular_velocity = 50, nuclear_rotation = 0;
 static GLfloat spin = 0.0;
 static int fotonAngle = 0;
-static GLfloat fotonPosition = 50.0;
+static GLfloat photonPosition = 50.0;
+static GLfloat photonPosition2 = 20.0;
+static int showPhoton2 = 0;
 static GLfloat diffuse1[] = {.0, .0, 0.0, 1.0};
 static double RydbergConstant = 10973731.6;
 static double waveLength = 0.0;
@@ -126,32 +128,48 @@ void display(void)
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
     GLfloat high_shininess[] = {100.0};
-    GLfloat mat_specular1[] = {1.0, 1.0, 1.0, 1.0};
-
-    glLightfv(GL_LIGHT1, GL_SPECULAR, mat_specular1);
-    glMaterialfv(GL_FRONT, GL_SHININESS, high_shininess);
-    glLightfv(GL_LIGHT1, GL_DIFFUSE, diffuse1);
-
-    GLfloat mat_specular[] = {.5, .5, .5, 1.0};
-    GLfloat position[] = {fotonPosition, 0.0, .4, 1.0};
+    GLfloat mat_specular[] = {1.0, 1.0, 1.0, 1.0};
+    GLfloat position[] = {photonPosition, 0.0, .4, 1.0};
 
     glPushMatrix();
+    glLightfv(GL_LIGHT1, GL_SPECULAR, mat_specular);
+    glMaterialfv(GL_FRONT, GL_SHININESS, high_shininess);
+    glLightfv(GL_LIGHT1, GL_DIFFUSE, diffuse1);
     glRotated((GLdouble)fotonAngle, .0, .0, 1.0);
     glLightfv(GL_LIGHT1, GL_POSITION, position);
-    glTranslated(fotonPosition, 0.0, .4);
+    glTranslated(photonPosition, 0.0, .4);
     glDisable(GL_LIGHTING);
     glColor3f(diffuse1[0], diffuse1[1], diffuse1[2]);
     glutSolidSphere(0.2, 10, 8); 
     glEnable(GL_LIGHTING);
     glPopMatrix();
 
+
+    GLfloat position2[] = {photonPosition2, 0.0, .4, 1.0};
+    GLfloat diffuse2[] = {.5, .5, .5, 1.0};
+
+    if (showPhoton2 == 1) {
+        glPushMatrix();
+        glLightfv(GL_LIGHT0, GL_SPECULAR, mat_specular);
+        glMaterialfv(GL_FRONT, GL_SHININESS, high_shininess);
+        glLightfv(GL_LIGHT0, GL_DIFFUSE, diffuse2);
+        glRotated((GLdouble)fotonAngle, .0, .0, 1.0);
+        glLightfv(GL_LIGHT0, GL_POSITION, position2);
+        glTranslated(photonPosition2, 0.0, .4);
+        glDisable(GL_LIGHTING);
+        glColor3f(1.0, 1.0, 1.0);
+        glutSolidSphere(0.2, 10, 8); 
+        glEnable(GL_LIGHTING);
+        glPopMatrix();
+    }
+
+    GLfloat sphere_mat_specular[] = {.5, .5, .5, 1.0};
     glColor3f(1.0, 1.0, 1.0);
-    glMaterialfv(GL_FRONT, GL_SPECULAR, mat_specular);
+    glMaterialfv(GL_FRONT, GL_SPECULAR, sphere_mat_specular);
     glColor4f(1.0f, 1.0f, 1.0f, 0.0f);
     glPushMatrix();
     glTranslatef(0.0, 0.0, -250.0);
     glutSolidSphere(250, 50, 50);
-
     glEnd();
     glTranslatef(0.0, 0.0, 250.0);
 
@@ -224,10 +242,18 @@ void Timer(int value)
     }
 
     // foton
-    fotonPosition = fotonPosition + .5;
-    if (fotonPosition > 30.0)
+    photonPosition = photonPosition + .5;
+    if (photonPosition > 20.0)
     {
         glDisable(GL_LIGHT1);
+    }
+
+    photonPosition2 = photonPosition2 - .5;
+    if (photonPosition2 < .5)
+    {
+        photonPosition2 = 20.0;
+        showPhoton2 = 0;
+        glDisable(GL_LIGHT0);
     }
 
     // Redesenha o quadrado com as novas coordenadas
@@ -238,17 +264,23 @@ void Timer(int value)
 void emitPhoton(int ni, int nf) {
     waveLength = balmerFormula(ni, nf);
     waveLengthToRGB(waveLength);
+    glDisable(GL_LIGHT0);
     glEnable(GL_LIGHT1);
-    fotonAngle = randAngle();
-    fotonPosition = 1.0;
+    photonPosition = 1.0;
 }
 
 void setOrbital(int x)
 {
     if (x > 0 && x < 7)
     {
+        fotonAngle = randAngle();
         if (x < n) {
             emitPhoton(n, x);
+        }
+
+        if (x > n) {
+            showPhoton2 = 1;
+            glEnable(GL_LIGHT0);
         }
         
         n = x;
