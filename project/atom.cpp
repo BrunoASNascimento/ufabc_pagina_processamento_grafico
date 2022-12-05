@@ -216,16 +216,26 @@ void increaseOrbital()
     }
 }
 
-void decreaseOrbital()
+void setOrbital(int x)
 {
-    if (n > 1)
+    if (x > 0 && x < 7)
     {
-        n = n - 1;
+        n = x;
         glEnable(GL_LIGHT1);
         fotonAngle = randAngle();
         fotonPosition = 1.9 * (n * n);
     }
 }
+
+void decreaseOrbital()
+{
+    if (n > 1)
+    {
+        setOrbital(n - 1);
+    }
+}
+
+
 
 void keyboard(unsigned char key, int x, int y)
 {
@@ -238,6 +248,14 @@ void keyboard(unsigned char key, int x, int y)
     case 's':
     case 'S':
         decreaseOrbital();
+        break;
+    case '1':
+    case '2':
+    case '3':
+    case '4':
+    case '5':
+    case '6':
+        setOrbital(key - '0');
         break;
     case 27:
         exit(0);
