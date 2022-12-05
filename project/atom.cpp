@@ -20,6 +20,7 @@ static int fotonAngle = 0;
 static GLfloat fotonPosition = 50.0;
 static GLfloat diffuse1[] = {.0, .0, 0.0, 1.0};
 static double RydbergConstant = 10973731.6;
+static double waveLength = 0.0;
 
 int randAngle()
 {
@@ -67,7 +68,6 @@ void waveLengthToRGB(double Wavelength) {
     }
 
     // Let the intensity fall off near the vision limits
-
     if((Wavelength >= 380) && (Wavelength < 420)) {
         factor = 0.3 + 0.7 * (Wavelength - 380) / (420 - 380);
     } else if((Wavelength >= 420) && (Wavelength < 701)) {
@@ -82,6 +82,12 @@ void waveLengthToRGB(double Wavelength) {
     diffuse1[0] = Red == 0.0 ? 0 : (IntensityMax * pow(Red * factor, Gamma)) / 255.0;
     diffuse1[1] = Green == 0.0 ? 0 : (IntensityMax * pow(Green * factor, Gamma)) / 255.0;
     diffuse1[2] = Blue == 0.0 ? 0 : (IntensityMax * pow(Blue * factor, Gamma)) / 255.0;
+}
+
+// source: https://openstax.org/books/university-physics-volume-3/pages/6-4-bohrs-model-of-the-hydrogen-atom
+double balmerFormula(double ni, double nf) 
+{
+    return 1.0/(RydbergConstant*((1/(nf*nf))-(1/(ni*ni)))) * 10E8;
 }
 
 void init(void)
@@ -215,10 +221,14 @@ void display(void)
     printText(-2, 14, 1, 1, 1, GLUT_BITMAP_HELVETICA_12, (char *)"Equipe Atomos");
 
     char energyStr[30];
+    char waveLenStr[30];
 
     sprintf(energyStr, "Nivel de energia(n): %d", n);
     printText(-16, -14, 1, 1, 1, GLUT_BITMAP_HELVETICA_18, energyStr);
     printText(-16, -16, 1, 1, 1, GLUT_BITMAP_HELVETICA_12, (char *)"W/S ou CIMA/BAIXO: Alterar nivel de energia");
+
+    sprintf(waveLenStr, "Comprimento de onda: %lf nm", waveLength);
+    printText(-16, -17, 1, 1, 1, GLUT_BITMAP_HELVETICA_12, (char *)waveLenStr);
 
     glEnable(GL_LIGHTING);
 
@@ -263,7 +273,9 @@ void Timer(int value)
     glutTimerFunc(33, Timer, 1);
 }
 
-void emitPhoton() {
+void emitPhoton(int ni, int nf) {
+    waveLength = balmerFormula(ni, nf);
+    waveLengthToRGB(waveLength);
     glEnable(GL_LIGHT1);
     fotonAngle = randAngle();
     fotonPosition = 1.0;
@@ -274,7 +286,7 @@ void setOrbital(int x)
     if (x > 0 && x < 7)
     {
         if (x < n) {
-            emitPhoton();
+            emitPhoton(n, x);
         }
         
         n = x;
@@ -313,14 +325,8 @@ void keyboard(unsigned char key, int x, int y)
     case 'S':
         decreaseOrbital();
         break;
-    case '2':
-        // diffuse1[0] = 1.0;
-        // diffuse1[1] = .0;
-        // diffuse1[2] = .0;
-        waveLengthToRGB(656.0);
-        setOrbital(key - '0');
-        break;
     case '1':
+    case '2':
     case '3':
     case '4':
     case '5':
