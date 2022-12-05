@@ -224,12 +224,12 @@ void display(void)
     char waveLenStr[30];
 
     sprintf(energyStr, "Nivel de energia(n): %d", n);
-    printText(-16, -14, 1, 1, 1, GLUT_BITMAP_HELVETICA_18, energyStr);
-    printText(-16, -16, 1, 1, 1, GLUT_BITMAP_HELVETICA_12, (char *)"W/S ou CIMA/BAIXO: Alterar nivel de energia");
+    printText(-16, -12, 1, 1, 1, GLUT_BITMAP_HELVETICA_18, energyStr);
 
-    sprintf(waveLenStr, "Comprimento de onda: %lf nm", waveLength);
-    printText(-16, -17, 1, 1, 1, GLUT_BITMAP_HELVETICA_12, (char *)waveLenStr);
+    sprintf(waveLenStr, "Comprimento de onda: %0.2f nm", waveLength);
+    printText(-16, -14, 1, 1, 1, GLUT_BITMAP_HELVETICA_18, (char *)waveLenStr);
 
+    printText(-16, -16, 1, 1, 1, GLUT_BITMAP_HELVETICA_12, (char *)"Use o teclado numerico, W/S ou CIMA/BAIXO para alterar nivel de energia");
     glEnable(GL_LIGHTING);
 
     glutSwapBuffers();
