@@ -18,6 +18,8 @@ static int current_angle = 0, rotation = 0, n = 2, angular_velocity = 50, nuclea
 static GLfloat spin = 0.0;
 static int fotonAngle = 0;
 static GLfloat fotonPosition = 50.0;
+static GLfloat diffuse1[] = {.0, .0, 0.0, 1.0};
+static double RydbergConstant = 10973731.6;
 
 int randAngle()
 {
@@ -25,6 +27,61 @@ int randAngle()
     int max = 360;
 
     return rand() % (max - min + 1) + min;
+}
+
+// source https://stackoverflow.com/a/14917481
+void waveLengthToRGB(double Wavelength) {
+    double Gamma = 0.80;
+    double IntensityMax = 255;
+    double factor;
+    double Red, Green, Blue;
+
+    if((Wavelength >= 380) && (Wavelength < 440)) {
+        Red = -(Wavelength - 440) / (440 - 380);
+        Green = 0.0;
+        Blue = 1.0;
+    } else if((Wavelength >= 440) && (Wavelength < 490)) {
+        Red = 0.0;
+        Green = (Wavelength - 440) / (490 - 440);
+        Blue = 1.0;
+    } else if((Wavelength >= 490) && (Wavelength < 510)) {
+        Red = 0.0;
+        Green = 1.0;
+        Blue = -(Wavelength - 510) / (510 - 490);
+    } else if((Wavelength >= 510) && (Wavelength < 580)) {
+        Red = (Wavelength - 510) / (580 - 510);
+        Green = 1.0;
+        Blue = 0.0;
+    } else if((Wavelength >= 580) && (Wavelength < 645)) {
+        Red = 1.0;
+        Green = -(Wavelength - 645) / (645 - 580);
+        Blue = 0.0;
+    } else if((Wavelength >= 645) && (Wavelength < 781)) {
+        Red = 1.0;
+        Green = 0.0;
+        Blue = 0.0;
+    } else {
+        Red = 0.0;
+        Green = 0.0;
+        Blue = 0.0;
+    }
+
+    // Let the intensity fall off near the vision limits
+
+    if((Wavelength >= 380) && (Wavelength < 420)) {
+        factor = 0.3 + 0.7 * (Wavelength - 380) / (420 - 380);
+    } else if((Wavelength >= 420) && (Wavelength < 701)) {
+        factor = 1.0;
+    } else if((Wavelength >= 701) && (Wavelength < 781)) {
+        factor = 0.3 + 0.7 * (780 - Wavelength) / (780 - 700);
+    } else {
+        factor = 0.0;
+    }
+
+    // Don't want 0^x = 1 for x <> 0
+    diffuse1[0] = Red == 0.0 ? 0 : (IntensityMax * pow(Red * factor, Gamma)) / 255.0;
+    diffuse1[1] = Green == 0.0 ? 0 : (IntensityMax * pow(Green * factor, Gamma)) / 255.0;
+    diffuse1[2] = Blue == 0.0 ? 0 : (IntensityMax * pow(Blue * factor, Gamma)) / 255.0;
 }
 
 void init(void)
@@ -47,20 +104,12 @@ void init(void)
     glLightfv(GL_LIGHT0, GL_POSITION, position);
     glLightModelfv(GL_LIGHT_MODEL_AMBIENT, lmodel_ambient);
     glLightModelfv(GL_LIGHT_MODEL_LOCAL_VIEWER, local_view);
+    
 
-    GLfloat high_shininess[] = {100.0};
-    GLfloat mat_specular[] = {1.0, 1.0, 1.0, 1.0};
-    GLfloat diffuse1[] = {.0, .0, 1.0, 1.0};
-
-    glLightfv(GL_LIGHT1, GL_SPECULAR, mat_specular);
-    glMaterialfv(GL_FRONT, GL_SHININESS, high_shininess);
-    glLightfv(GL_LIGHT1, GL_DIFFUSE, diffuse1);
     // glLightfv(GL_LIGHT0, GL_AMBIENT, ambient);
     glEnable(GL_LIGHTING);
     glEnable(GL_LIGHT0);
-    glEnable(GL_LIGHT1);
     glDisable(GL_LIGHT0);
-    glDisable(GL_LIGHT1);
 
     // GLfloat lmodel_ambient[] = {0.4, 0.4, 0.4, 1.0};
     // glLightModelfv(GL_LIGHT_MODEL_AMBIENT, lmodel_ambient);
@@ -85,6 +134,13 @@ void display(void)
 {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
+    GLfloat high_shininess[] = {100.0};
+    GLfloat mat_specular1[] = {1.0, 1.0, 1.0, 1.0};
+
+    glLightfv(GL_LIGHT1, GL_SPECULAR, mat_specular1);
+    glMaterialfv(GL_FRONT, GL_SHININESS, high_shininess);
+    glLightfv(GL_LIGHT1, GL_DIFFUSE, diffuse1);
+
     GLfloat no_mat[] = {0.0, 0.0, 0.0, 1.0};
     GLfloat mat_ambient[] = {0.7, 0.7, 0.7, 1.0};
     GLfloat mat_ambient_color[] = {0.8, 0.8, 0.2, 1.0};
@@ -93,7 +149,6 @@ void display(void)
     GLfloat mat_specular[] = {.5, .5, .5, 1.0};
     GLfloat no_shininess[] = {0.0};
     GLfloat low_shininess[] = {5.0};
-    GLfloat high_shininess[] = {100.0};
     GLfloat mat_emission[] = {0.3, 0.2, 0.2, 0.0};
 
     GLfloat position[] = {fotonPosition, 0.0, .1, 1.0};
@@ -107,7 +162,7 @@ void display(void)
     glTranslated(fotonPosition, 0.0, .1);
     glDisable(GL_LIGHTING);
     glColor3f(1.0, 1.0, 1.0);
-    glutWireCube (0.1);
+    // glutWireCube (0.1);
     glEnable(GL_LIGHTING);
     glPopMatrix();
 
@@ -208,7 +263,7 @@ void Timer(int value)
     glutTimerFunc(33, Timer, 1);
 }
 
-void emitFoton() {
+void emitPhoton() {
     glEnable(GL_LIGHT1);
     fotonAngle = randAngle();
     fotonPosition = 1.0;
@@ -219,7 +274,7 @@ void setOrbital(int x)
     if (x > 0 && x < 7)
     {
         if (x < n) {
-            emitFoton();
+            emitPhoton();
         }
         
         n = x;
@@ -258,8 +313,14 @@ void keyboard(unsigned char key, int x, int y)
     case 'S':
         decreaseOrbital();
         break;
-    case '1':
     case '2':
+        // diffuse1[0] = 1.0;
+        // diffuse1[1] = .0;
+        // diffuse1[2] = .0;
+        waveLengthToRGB(656.0);
+        setOrbital(key - '0');
+        break;
+    case '1':
     case '3':
     case '4':
     case '5':
@@ -300,7 +361,6 @@ int main(int argc, char **argv)
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
     glutInitWindowSize(800, 500);
     glutInitWindowPosition(100, 100);
-    // glutCreateWindow(argv[0]);
     glutCreateWindow("MODELO DE BOHR");
     init();
     glutDisplayFunc(display);
