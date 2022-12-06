@@ -137,7 +137,6 @@
                     o código sem grande dificuldade, e possa observar as mudanças de níveis de energia que ocorrem no
                     modelo atômico de Bohr.
                 </p>
-                <h3>Implementação</h3>
 
                 <h3>Implementação - Fórmulas Bohr</h3>
 
@@ -233,13 +232,14 @@
                     Para a segunda etapa do projeto, também incluimos a emissão e absorção de elétrons de acordo com as
                     mudanças nos níveis de energia. Diferentes mudanças de níveis de energia emitem fótons de diferentes
                     tonalidades. Para saber a tonalidade resultante usamos a Fórmula Balmer que da os comprimentos de
-                    ondas visiveis que são causados quando o elétron pula entre as camadas da imagem a seguir:
+                    ondas visiveis que são causados quando o elétron pula entre camadas especificas, como mostra a
+                    imagem a seguir:
                 </p>
 
                 <img src="../assets/img/seminario/formula-08.png" alt="formula 08" />
 
                 <p>
-                    A seguir temos a Fórmula Balmer:
+                    Fórmula Balmer:
                 </p>
 
                 <img src="../assets/img/seminario/formula-09.png" alt="formula 09" />
@@ -254,14 +254,15 @@
                     Como OpenGL trabalha com valores de cores entre 0 e 1, também foi necessário criar uma função para
                     fazer a conversão dos valores de comprimentos de ondas para RGB. Mais informações sobre como isso
                     funciona podem ser encontradas no link a seguir:
-                    <a href="https://www.fourmilab.ch/documents/specrend/"
-                        target="_blank">https://www.fourmilab.ch/documents/specrend/</a>
+                    <a href="https://stackoverflow.com/questions/1472514/convert-light-frequency-to-rgb"
+                        target="_blank">https://stackoverflow.com/questions/1472514/convert-light-frequency-to-rgb</a>
                 </p>
 
 
                 <p>E aqui há uma visualização da função de conversão:</p>
 
                 <img src="../assets/img/seminario/formula-11.jpg" alt="formula 11" />
+                <img src="../assets/img/seminario/formula-12.png" alt="formula 12" />
 
 
                 <h3>Implementação - Modelagem</h3>
@@ -353,20 +354,21 @@
 
                 <p>
                 <ul>
-                    <li>Ao apertar "w"/"s" ou "up"/"down" altera o nível de energia.</li>
+                    <li>Com o teclado númerico, "w"/"s" ou "up"/"down" podemos alterar o nível de energia.</li>
                     <li>Mudanças do orbital com raio mudando ao quadrado do nível de energia.</li>
                     <li>A velocidade linear do elétron é inversamente proporcional ao nível de energia.</li>
                     <b>Pontos positivos:</b>
                     <ul>
                         <li>Representação simples através da aplicação de modelagem;</li>
                         <li>Conseguimos executar o que foi aprendido em aulas;</li>
-                        <li>Zero bugs.</li>
+                        <li>Representação fiel dos comprimentos de ondas e cores visíveis;</li>
+                        <li>Zero bugs;</li>
                     </ul>
                     <b>Pontos negativos:</b>
 
                     <ul>
-                        <li>Limitação de nível de energia porque não movimentamos a câmera ;</li>
-                        <li>O Modelo de Bohr não reflete necessariamente a realidade.</li>
+                        <li>O Modelo de Bohr não reflete necessariamente a realidade;</li>
+                        <li>O comprimento de onda não visível é meramente ilustrativo;</li>
                     </ul>
                 </ul>
                 </p>
@@ -374,7 +376,7 @@
 
                 <p>Vídeo do funcionamento do programa:</p>
 
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/0jggH_59ATc"
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/MBCcpCotgoU"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
@@ -410,13 +412,31 @@
                         target="_blank">https://www.physicslens.com/angular-velocity/</a>
                 </p>
 
+                <p><a href="https://stackoverflow.com/questions/1472514/convert-light-frequency-to-rgb"
+                        target="_blank">https://stackoverflow.com/questions/1472514/convert-light-frequency-to-rgb</a>
+                </p>
+
+                <p><a href="https://www.fourmilab.ch/documents/specrend/"
+                        target="_blank">https://www.fourmilab.ch/documents/specrend/</a>
+                </p>
+
+                <p><a href="https://openstax.org/books/university-physics-volume-3/pages/6-4-bohrs-model-of-the-hydrogen-atom"
+                        target="_blank">https://openstax.org/books/university-physics-volume-3/pages/6-4-bohrs-model-of-the-hydrogen-atom</a>
+                </p>
+
+                <p><a href="https://www.khanacademy.org/science/physics/quantum-physics/atoms-and-electrons/a/bohrs-model-of-hydrogen"
+                        target="_blank">https://www.khanacademy.org/science/physics/quantum-physics/atoms-and-electrons/a/bohrs-model-of-hydrogen</a>
+                </p>
+
                 <h2>Anexo 1 - funcionamento</h2>
 
                 <p>
                 <ul>
-                    <li>Ao apertar "w"/"s" ou "up"/"down" altera o nível de energia.</li>
+                    <li>Com o teclado númerico, "w"/"s" ou "up"/"down" podemos alterar o nível de energia.</li>
                     <li>Mudanças do orbital com raio mudando ao quadrado do nível de energia.</li>
                     <li>A velocidade linear do elétron é inversamente proporcional ao nível de energia.</li>
+                    <li>Representação fiel dos comprimentos de ondas e cores visíveis no momento de mudança de energia;
+                    </li>
                 </ul>
                 </p>
 
